@@ -1,74 +1,86 @@
-# PCEHR Compiled WSDL Library
+# PCEHR compiled WSDL library (Java 11 / Jakarta)
 
-Introduction
-============
+Maven artifact **`au.gov.nehta:pcehr-compiled-wsdl`** — My Health Record **B2B WSDL resources** and **pre-generated Jakarta JAX-WS / JAXB types** for PCEHR client development.
 
-This library provides the required artefacts required to support B2B clients.
+For hand-written facade clients, TLS, and signing, use **[mhr-b2b-client-java](https://github.com/AuDigitalHealth/mhr-b2b-client-java)**. This repository supplies the **generated type layer** only.
 
-Setup
-=====
+## Dependency
 
--   To build and test the distributable package, an appropriate Java IDE or
-    build environment must be installed.
+```xml
+<dependency>
+  <groupId>au.gov.nehta</groupId>
+  <artifactId>pcehr-compiled-wsdl</artifactId>
+  <version>1.7.0-SNAPSHOT</version>
+</dependency>
+```
 
--   WSDL/XSD source files should be used in conjunction with JAX-WS and wsimport
-    to build the generated Java classes/source files. These WSDL/XSD files can be
-    found at:
-    /src/main/java/wsdls/*
+Runtime (transitive in this repo): Eclipse **`jaxws-rt`** 4.x. Align Jakarta XML Web Services versions with **`mhr-b2b-client`** if both are on the classpath.
 
-    Generated Java source files can be found in:
-    /pcehr-compiled-wsdl-<version>-sources.jar
+## What is in the JAR
 
--   For detailed API documentation, refer to the included Javadoc package.
+| Content | Location in repo |
+| ------- | ---------------- |
+| MHR B2B WSDL (classpath) | `src/main/resources/wsdl/B2B_*.wsdl` |
+| JAX-WS/JAXB bindings | `src/main/resources/binding/` |
+| Jakarta generated stubs | `src/main/java/` |
+| Date adapter | `src/main/java/au/gov/nehta/schema/DateAdapter.java` |
 
-Solution
-========
+The published JAR includes WSDL under **`/wsdl/`** (for example `/wsdl/B2B_PCEHRProfile.wsdl`). Generated **`Service`** classes reference those locations.
 
-The package consists of these components:
+**JAXB binding fragments** under **`src/main/resources/binding/`** are maintainer build configuration (aligned with **mhr-b2b-client-java**). They reference XSD paths but do **not** contain licensed schema content — **commit them** for reproducible regeneration.
 
-    -   /pcehr-compiled-wsdl-<version>.jar
-        Contains the required classes for B2B client
-        development, deployment and invocation.
+## Licensed PCEHR schemas (regeneration only)
 
-    -   /pcehr-compiled-wsdl-<version>-docs.jar
-        Contains Javadoc for generated code.
+WSDL files reference **`../schema/...`** relative to **`src/main/resources/wsdl/`**. The **PCEHR XSD tree is not in Git** — stage it locally when **regenerating** types (see **`schema/readme.txt`**).
 
-    -   /pcehr-compiled-wsdl-<version>-sources.jar
-        Contains artefact Java and WSDL/XSD source files.
+A normal **`mvn verify`** on committed sources does **not** require the schema tree.
 
-Pre-Requisites
-==============
+Confirm your organisation's redistribution terms for MHR B2B WSDL before mirroring this repository.
 
-Java Development Kit (JDK)
-------------------------------------
-1.  Download and install JDK 8 Update 271 or later:
-    URL: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+## Build from source
 
-2.  Unpack the JDK distribution into a directory of your choice.
+Prerequisites: **JDK 11+**, **Maven 3.6+**. Generated Java is **committed**; default build does not run **`wsimport`**. CI runs the same **`mvn verify`** on every push/PR (see **`.github/workflows/ci.yml`**).
 
-    This directory will be your <JDK_HOME>and will be used in this document
-    to refer to the root directory of the JDK installation.
+```text
+mvn -B "-Dgpg.skip=true" clean verify
+```
 
-    <JRE_HOME> will be used in this document to refer to <JDK_HOME>/jre.
+Or **`build.ps1`**, **`build.sh`**, **`build.bat`**.
 
-3.  Create a JAVA_HOME environment variable pointing to the <JDK_HOME>
-    directory in Step 2.
+## Relationship to mhr-b2b-client-java
 
-4.  Add <JDK_HOME>/bin to the system path.
+| | **pcehr-compiled-wsdl-java** (this repo) | **mhr-b2b-client-java** |
+| --- | --- | --- |
+| Artifact | `pcehr-compiled-wsdl` | `mhr-b2b-client` |
+| Facade clients | No | Yes (`au.gov.nehta.vendorlibrary.pcehr.clients.*`) |
+| Codegen | Pre-generated, committed | In-repo **`wsimport`** (12 executions) |
+| WSDL in this repo | `src/main/resources/wsdl/` (shipped in JAR) | `wsdls/src/main/resources/` (not in published JAR) |
 
+Current **`mhr-b2b-client-java`** builds its own generated types and does **not** depend on **`pcehr-compiled-wsdl`**. Use **`pcehr-compiled-wsdl`** when you need MHR types and classpath WSDL without the full client library.
 
-Licensing
-=========
-Copyright 2012 NEHTA
+## Documentation
 
-Copyright 2021 ADHA
+| Document | Audience |
+| -------- | -------- |
+| **README.md** (this file) | Integrators |
+| **CONTRIBUTING.md** | Contributors building from source |
+| **MAINTAINERS.md** | Release and codegen alignment |
+| **SECURITY.md** | Security reporting and secrets hygiene |
+| **CHANGELOG.md** | Release history |
+| **schema/readme.txt** | Licensed XSD staging (regeneration only) |
 
-Licensed under the NEHTA/ADHA Open Source (Apache) License; you may not use this
-file except in compliance with the License. A copy of the License is in the
-'LICENSE.txt' file, which should be provided with this work.
+## What belongs in Git
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
-License for the specific language governing permissions and limitations
-under the License.
+| Path | Commit? |
+| ---- | ------- |
+| `src/main/resources/wsdl/` | Yes — published WSDL |
+| `src/main/resources/binding/` | Yes — JAXB/JAX-WS customisation (not licensed XSD) |
+| `src/main/java/` | Yes — committed generated types + `DateAdapter` |
+| `schema/readme.txt` | Yes — staging instructions only |
+| `src/main/resources/schema/` (XSD files) | **No** — licensed; local staging for `-Pregenerate-sources` only |
+
+Before pushing to a **public** remote, run **`git status`** and confirm no **`*.xsd`** under **`src/main/resources/schema/`** appear in the index. See **SECURITY.md**.
+
+## License
+
+Apache License 2.0. See **LICENSE.txt**.

@@ -3,38 +3,38 @@ package oasis.names.tc.ebxml_regrep.xsd.rim._3;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlSeeAlso;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for RegistryObjectType complex type.
+ * &lt;p&gt;Java class for RegistryObjectType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="RegistryObjectType">
- *   &lt;complexContent>
- *     &lt;extension base="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}IdentifiableType">
- *       &lt;sequence minOccurs="0">
- *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}Name" minOccurs="0"/>
- *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}Description" minOccurs="0"/>
- *         &lt;element name="VersionInfo" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}VersionInfoType" minOccurs="0"/>
- *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}Classification" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}ExternalIdentifier" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="lid" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
- *       &lt;attribute name="objectType" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}referenceURI" />
- *       &lt;attribute name="status" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}referenceURI" />
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="RegistryObjectType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}IdentifiableType"&gt;
+ *       &lt;sequence minOccurs="0"&gt;
+ *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}Name" minOccurs="0"/&gt;
+ *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}Description" minOccurs="0"/&gt;
+ *         &lt;element name="VersionInfo" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}VersionInfoType" minOccurs="0"/&gt;
+ *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}Classification" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}ExternalIdentifier" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="lid" type="{http://www.w3.org/2001/XMLSchema}anyURI" /&gt;
+ *       &lt;attribute name="objectType" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}referenceURI" /&gt;
+ *       &lt;attribute name="status" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}referenceURI" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -43,29 +43,29 @@ import javax.xml.bind.annotation.XmlType;
     "name",
     "description",
     "versionInfo",
-    "classifications",
-    "externalIdentifiers"
+    "classification",
+    "externalIdentifier"
 })
 @XmlSeeAlso({
-    ClassificationSchemeType.class,
-    ServiceType.class,
-    ClassificationNodeType.class,
+    AdhocQueryType.class,
     AssociationType1 .class,
+    AuditableEventType.class,
+    ClassificationType.class,
+    ClassificationNodeType.class,
+    ClassificationSchemeType.class,
+    ExternalIdentifierType.class,
+    ExternalLinkType.class,
     ExtrinsicObjectType.class,
     OrganizationType.class,
-    AdhocQueryType.class,
-    RegistryType.class,
-    ClassificationType.class,
     RegistryPackageType.class,
-    FederationType.class,
+    ServiceType.class,
     ServiceBindingType.class,
-    ExternalIdentifierType.class,
     SpecificationLinkType.class,
-    ExternalLinkType.class,
-    AuditableEventType.class,
-    SubscriptionType.class,
     PersonType.class,
-    Notification.class
+    RegistryType.class,
+    FederationType.class,
+    NotificationType.class,
+    SubscriptionType.class
 })
 public class RegistryObjectType
     extends IdentifiableType
@@ -78,9 +78,9 @@ public class RegistryObjectType
     @XmlElement(name = "VersionInfo")
     protected VersionInfoType versionInfo;
     @XmlElement(name = "Classification")
-    protected List<ClassificationType> classifications;
+    protected List<ClassificationType> classification;
     @XmlElement(name = "ExternalIdentifier")
-    protected List<ExternalIdentifierType> externalIdentifiers;
+    protected List<ExternalIdentifierType> externalIdentifier;
     @XmlAttribute(name = "lid")
     @XmlSchemaType(name = "anyURI")
     protected String lid;
@@ -162,61 +162,67 @@ public class RegistryObjectType
     }
 
     /**
-     * Gets the value of the classifications property.
+     * Gets the value of the classification property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the classifications property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the classification property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getClassifications().add(newItem);
+     * getClassification().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ClassificationType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the classification property.
      */
-    public List<ClassificationType> getClassifications() {
-        if (classifications == null) {
-            classifications = new ArrayList<ClassificationType>();
+    public List<ClassificationType> getClassification() {
+        if (classification == null) {
+            classification = new ArrayList<>();
         }
-        return this.classifications;
+        return this.classification;
     }
 
     /**
-     * Gets the value of the externalIdentifiers property.
+     * Gets the value of the externalIdentifier property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the externalIdentifiers property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the externalIdentifier property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getExternalIdentifiers().add(newItem);
+     * getExternalIdentifier().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ExternalIdentifierType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the externalIdentifier property.
      */
-    public List<ExternalIdentifierType> getExternalIdentifiers() {
-        if (externalIdentifiers == null) {
-            externalIdentifiers = new ArrayList<ExternalIdentifierType>();
+    public List<ExternalIdentifierType> getExternalIdentifier() {
+        if (externalIdentifier == null) {
+            externalIdentifier = new ArrayList<>();
         }
-        return this.externalIdentifiers;
+        return this.externalIdentifier;
     }
 
     /**

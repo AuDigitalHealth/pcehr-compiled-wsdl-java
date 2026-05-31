@@ -3,85 +3,88 @@ package oasis.names.tc.ebxml_regrep.xsd.query._3;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSeeAlso;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for PersonQueryType complex type.
+ * &lt;p&gt;Java class for PersonQueryType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="PersonQueryType">
- *   &lt;complexContent>
- *     &lt;extension base="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}RegistryObjectQueryType">
- *       &lt;sequence>
- *         &lt;element name="AddressFilter" type="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}FilterType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="PersonNameFilter" type="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}FilterType" minOccurs="0"/>
- *         &lt;element name="TelephoneNumberFilter" type="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}FilterType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="EmailAddressFilter" type="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}FilterType" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="PersonQueryType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}RegistryObjectQueryType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="AddressFilter" type="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}FilterType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="PersonNameFilter" type="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}FilterType" minOccurs="0"/&gt;
+ *         &lt;element name="TelephoneNumberFilter" type="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}FilterType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="EmailAddressFilter" type="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}FilterType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PersonQueryType", propOrder = {
-    "addressFilters",
+    "addressFilter",
     "personNameFilter",
-    "telephoneNumberFilters",
-    "emailAddressFilters"
+    "telephoneNumberFilter",
+    "emailAddressFilter"
 })
 @XmlSeeAlso({
-    UserQuery.class
+    UserQueryType.class
 })
 public class PersonQueryType
     extends RegistryObjectQueryType
 {
 
     @XmlElement(name = "AddressFilter")
-    protected List<FilterType> addressFilters;
+    protected List<FilterType> addressFilter;
     @XmlElement(name = "PersonNameFilter")
     protected FilterType personNameFilter;
     @XmlElement(name = "TelephoneNumberFilter")
-    protected List<FilterType> telephoneNumberFilters;
+    protected List<FilterType> telephoneNumberFilter;
     @XmlElement(name = "EmailAddressFilter")
-    protected List<FilterType> emailAddressFilters;
+    protected List<FilterType> emailAddressFilter;
 
     /**
-     * Gets the value of the addressFilters property.
+     * Gets the value of the addressFilter property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the addressFilters property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the addressFilter property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getAddressFilters().add(newItem);
+     * getAddressFilter().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link FilterType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the addressFilter property.
      */
-    public List<FilterType> getAddressFilters() {
-        if (addressFilters == null) {
-            addressFilters = new ArrayList<FilterType>();
+    public List<FilterType> getAddressFilter() {
+        if (addressFilter == null) {
+            addressFilter = new ArrayList<>();
         }
-        return this.addressFilters;
+        return this.addressFilter;
     }
 
     /**
@@ -109,61 +112,67 @@ public class PersonQueryType
     }
 
     /**
-     * Gets the value of the telephoneNumberFilters property.
+     * Gets the value of the telephoneNumberFilter property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the telephoneNumberFilters property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the telephoneNumberFilter property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getTelephoneNumberFilters().add(newItem);
+     * getTelephoneNumberFilter().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link FilterType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the telephoneNumberFilter property.
      */
-    public List<FilterType> getTelephoneNumberFilters() {
-        if (telephoneNumberFilters == null) {
-            telephoneNumberFilters = new ArrayList<FilterType>();
+    public List<FilterType> getTelephoneNumberFilter() {
+        if (telephoneNumberFilter == null) {
+            telephoneNumberFilter = new ArrayList<>();
         }
-        return this.telephoneNumberFilters;
+        return this.telephoneNumberFilter;
     }
 
     /**
-     * Gets the value of the emailAddressFilters property.
+     * Gets the value of the emailAddressFilter property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the emailAddressFilters property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the emailAddressFilter property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getEmailAddressFilters().add(newItem);
+     * getEmailAddressFilter().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link FilterType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the emailAddressFilter property.
      */
-    public List<FilterType> getEmailAddressFilters() {
-        if (emailAddressFilters == null) {
-            emailAddressFilters = new ArrayList<FilterType>();
+    public List<FilterType> getEmailAddressFilter() {
+        if (emailAddressFilter == null) {
+            emailAddressFilter = new ArrayList<>();
         }
-        return this.emailAddressFilters;
+        return this.emailAddressFilter;
     }
 
 }

@@ -1,62 +1,60 @@
 
 package au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for accessConditionsType complex type.
+ * &lt;p&gt;Java class for accessConditionsType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="accessConditionsType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="accessLevel" minOccurs="0">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *               &lt;enumeration value="Self"/>
- *               &lt;enumeration value="General"/>
- *               &lt;enumeration value="Limited"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
- *         &lt;element name="accessPermission" minOccurs="0">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *               &lt;enumeration value="Permit"/>
- *               &lt;enumeration value="Deny"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
- *         &lt;element name="accessConditions" minOccurs="0">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *               &lt;enumeration value="OpenAccess"/>
- *               &lt;enumeration value="AccessRevoked"/>
- *               &lt;enumeration value="PACAccess"/>
- *               &lt;enumeration value="PACXAccess"/>
- *               &lt;enumeration value="EmergencyAccess"/>
- *               &lt;enumeration value="LocalConsentAccess"/>
- *               &lt;enumeration value="AuthorisedRepresentativeAccess"/>
- *               &lt;enumeration value="NominatedRepresentativeAccess"/>
- *               &lt;enumeration value="IncorrectCode"/>
- *               &lt;enumeration value="LocalConsentAccessDenied"/>
- *               &lt;enumeration value="AccessRevoked"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="accessConditionsType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="accessLevel" minOccurs="0"&gt;
+ *           &lt;simpleType&gt;
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *               &lt;enumeration value="Self"/&gt;
+ *               &lt;enumeration value="General"/&gt;
+ *               &lt;enumeration value="Limited"/&gt;
+ *             &lt;/restriction&gt;
+ *           &lt;/simpleType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="accessPermission" minOccurs="0"&gt;
+ *           &lt;simpleType&gt;
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *               &lt;enumeration value="Permit"/&gt;
+ *               &lt;enumeration value="Deny"/&gt;
+ *             &lt;/restriction&gt;
+ *           &lt;/simpleType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="accessConditions" minOccurs="0"&gt;
+ *           &lt;simpleType&gt;
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *               &lt;enumeration value="OpenAccess"/&gt;
+ *               &lt;enumeration value="AccessRevoked"/&gt;
+ *               &lt;enumeration value="PACAccess"/&gt;
+ *               &lt;enumeration value="PACXAccess"/&gt;
+ *               &lt;enumeration value="EmergencyAccess"/&gt;
+ *               &lt;enumeration value="LocalConsentAccess"/&gt;
+ *               &lt;enumeration value="AuthorisedRepresentativeAccess"/&gt;
+ *               &lt;enumeration value="NominatedRepresentativeAccess"/&gt;
+ *               &lt;enumeration value="IncorrectCode"/&gt;
+ *               &lt;enumeration value="LocalConsentAccessDenied"/&gt;
+ *               &lt;enumeration value="AccessRevoked"/&gt;
+ *             &lt;/restriction&gt;
+ *           &lt;/simpleType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -68,19 +66,19 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class AccessConditionsType {
 
-    protected AccessConditionsType.AccessLevel accessLevel;
-    protected AccessConditionsType.AccessPermission accessPermission;
-    protected AccessConditionsType.AccessConditions accessConditions;
+    protected String accessLevel;
+    protected String accessPermission;
+    protected String accessConditions;
 
     /**
      * Gets the value of the accessLevel property.
      * 
      * @return
      *     possible object is
-     *     {@link AccessConditionsType.AccessLevel }
+     *     {@link String }
      *     
      */
-    public AccessConditionsType.AccessLevel getAccessLevel() {
+    public String getAccessLevel() {
         return accessLevel;
     }
 
@@ -89,10 +87,10 @@ public class AccessConditionsType {
      * 
      * @param value
      *     allowed object is
-     *     {@link AccessConditionsType.AccessLevel }
+     *     {@link String }
      *     
      */
-    public void setAccessLevel(AccessConditionsType.AccessLevel value) {
+    public void setAccessLevel(String value) {
         this.accessLevel = value;
     }
 
@@ -101,10 +99,10 @@ public class AccessConditionsType {
      * 
      * @return
      *     possible object is
-     *     {@link AccessConditionsType.AccessPermission }
+     *     {@link String }
      *     
      */
-    public AccessConditionsType.AccessPermission getAccessPermission() {
+    public String getAccessPermission() {
         return accessPermission;
     }
 
@@ -113,10 +111,10 @@ public class AccessConditionsType {
      * 
      * @param value
      *     allowed object is
-     *     {@link AccessConditionsType.AccessPermission }
+     *     {@link String }
      *     
      */
-    public void setAccessPermission(AccessConditionsType.AccessPermission value) {
+    public void setAccessPermission(String value) {
         this.accessPermission = value;
     }
 
@@ -125,10 +123,10 @@ public class AccessConditionsType {
      * 
      * @return
      *     possible object is
-     *     {@link AccessConditionsType.AccessConditions }
+     *     {@link String }
      *     
      */
-    public AccessConditionsType.AccessConditions getAccessConditions() {
+    public String getAccessConditions() {
         return accessConditions;
     }
 
@@ -137,174 +135,11 @@ public class AccessConditionsType {
      * 
      * @param value
      *     allowed object is
-     *     {@link AccessConditionsType.AccessConditions }
+     *     {@link String }
      *     
      */
-    public void setAccessConditions(AccessConditionsType.AccessConditions value) {
+    public void setAccessConditions(String value) {
         this.accessConditions = value;
-    }
-
-
-    /**
-     * <p>Java class for null.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * <p>
-     * <pre>
-     * &lt;simpleType>
-     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *     &lt;enumeration value="OpenAccess"/>
-     *     &lt;enumeration value="AccessRevoked"/>
-     *     &lt;enumeration value="PACAccess"/>
-     *     &lt;enumeration value="PACXAccess"/>
-     *     &lt;enumeration value="EmergencyAccess"/>
-     *     &lt;enumeration value="LocalConsentAccess"/>
-     *     &lt;enumeration value="AuthorisedRepresentativeAccess"/>
-     *     &lt;enumeration value="NominatedRepresentativeAccess"/>
-     *     &lt;enumeration value="IncorrectCode"/>
-     *     &lt;enumeration value="LocalConsentAccessDenied"/>
-     *     &lt;enumeration value="AccessRevoked"/>
-     *   &lt;/restriction>
-     * &lt;/simpleType>
-     * </pre>
-     * 
-     */
-    @XmlType(name = "")
-    @XmlEnum
-    public enum AccessConditions {
-
-        @XmlEnumValue("OpenAccess")
-        OPEN_ACCESS("OpenAccess"),
-        @XmlEnumValue("AccessRevoked")
-        ACCESS_REVOKED("AccessRevoked"),
-        @XmlEnumValue("PACAccess")
-        PAC_ACCESS("PACAccess"),
-        @XmlEnumValue("PACXAccess")
-        PACX_ACCESS("PACXAccess"),
-        @XmlEnumValue("EmergencyAccess")
-        EMERGENCY_ACCESS("EmergencyAccess"),
-        @XmlEnumValue("LocalConsentAccess")
-        LOCAL_CONSENT_ACCESS("LocalConsentAccess"),
-        @XmlEnumValue("AuthorisedRepresentativeAccess")
-        AUTHORISED_REPRESENTATIVE_ACCESS("AuthorisedRepresentativeAccess"),
-        @XmlEnumValue("NominatedRepresentativeAccess")
-        NOMINATED_REPRESENTATIVE_ACCESS("NominatedRepresentativeAccess"),
-        @XmlEnumValue("IncorrectCode")
-        INCORRECT_CODE("IncorrectCode"),
-        @XmlEnumValue("LocalConsentAccessDenied")
-        LOCAL_CONSENT_ACCESS_DENIED("LocalConsentAccessDenied");
-        private final String value;
-
-        AccessConditions(String v) {
-            value = v;
-        }
-
-        public String value() {
-            return value;
-        }
-
-        public static AccessConditionsType.AccessConditions fromValue(String v) {
-            for (AccessConditionsType.AccessConditions c: AccessConditionsType.AccessConditions.values()) {
-                if (c.value.equals(v)) {
-                    return c;
-                }
-            }
-            throw new IllegalArgumentException(v);
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for null.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * <p>
-     * <pre>
-     * &lt;simpleType>
-     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *     &lt;enumeration value="Self"/>
-     *     &lt;enumeration value="General"/>
-     *     &lt;enumeration value="Limited"/>
-     *   &lt;/restriction>
-     * &lt;/simpleType>
-     * </pre>
-     * 
-     */
-    @XmlType(name = "")
-    @XmlEnum
-    public enum AccessLevel {
-
-        @XmlEnumValue("Self")
-        SELF("Self"),
-        @XmlEnumValue("General")
-        GENERAL("General"),
-        @XmlEnumValue("Limited")
-        LIMITED("Limited");
-        private final String value;
-
-        AccessLevel(String v) {
-            value = v;
-        }
-
-        public String value() {
-            return value;
-        }
-
-        public static AccessConditionsType.AccessLevel fromValue(String v) {
-            for (AccessConditionsType.AccessLevel c: AccessConditionsType.AccessLevel.values()) {
-                if (c.value.equals(v)) {
-                    return c;
-                }
-            }
-            throw new IllegalArgumentException(v);
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for null.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * <p>
-     * <pre>
-     * &lt;simpleType>
-     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *     &lt;enumeration value="Permit"/>
-     *     &lt;enumeration value="Deny"/>
-     *   &lt;/restriction>
-     * &lt;/simpleType>
-     * </pre>
-     * 
-     */
-    @XmlType(name = "")
-    @XmlEnum
-    public enum AccessPermission {
-
-        @XmlEnumValue("Permit")
-        PERMIT("Permit"),
-        @XmlEnumValue("Deny")
-        DENY("Deny");
-        private final String value;
-
-        AccessPermission(String v) {
-            value = v;
-        }
-
-        public String value() {
-            return value;
-        }
-
-        public static AccessConditionsType.AccessPermission fromValue(String v) {
-            for (AccessConditionsType.AccessPermission c: AccessConditionsType.AccessPermission.values()) {
-                if (c.value.equals(v)) {
-                    return c;
-                }
-            }
-            throw new IllegalArgumentException(v);
-        }
-
     }
 
 }

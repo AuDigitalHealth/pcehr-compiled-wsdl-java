@@ -3,63 +3,62 @@ package au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for organisationType complex type.
+ * &lt;p&gt;Java class for organisationType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="organisationType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/>
- *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded"/>
- *         &lt;element name="organisationService" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}organisationServiceType" maxOccurs="unbounded"/>
- *         &lt;element name="participatingOrganisation" maxOccurs="unbounded" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/>
- *                   &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded"/>
- *                   &lt;element name="organisationService" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}organisationServiceType" maxOccurs="unbounded"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="organisationType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/&gt;
+ *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="organisationService" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}organisationServiceType" maxOccurs="unbounded"/&gt;
+ *         &lt;element name="participatingOrganisation" maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/&gt;
+ *                   &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded"/&gt;
+ *                   &lt;element name="organisationService" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}organisationServiceType" maxOccurs="unbounded"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "organisationType", propOrder = {
     "ihiNumber",
-    "names",
-    "organisationServices",
-    "participatingOrganisations"
+    "name",
+    "organisationService",
+    "participatingOrganisation"
 })
 public class OrganisationType {
 
     @XmlElement(required = true)
     protected String ihiNumber;
-    @XmlElement(name = "name", required = true)
-    protected List<String> names;
-    @XmlElement(name = "organisationService", required = true)
-    protected List<OrganisationServiceType> organisationServices;
-    @XmlElement(name = "participatingOrganisation")
-    protected List<OrganisationType.ParticipatingOrganisation> participatingOrganisations;
+    @XmlElement(required = true)
+    protected List<String> name;
+    @XmlElement(required = true)
+    protected List<OrganisationServiceType> organisationService;
+    protected List<OrganisationType.ParticipatingOrganisation> participatingOrganisation;
 
     /**
      * Gets the value of the ihiNumber property.
@@ -86,128 +85,137 @@ public class OrganisationType {
     }
 
     /**
-     * Gets the value of the names property.
+     * Gets the value of the name property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the names property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the name property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getNames().add(newItem);
+     * getName().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the name property.
      */
-    public List<String> getNames() {
-        if (names == null) {
-            names = new ArrayList<String>();
+    public List<String> getName() {
+        if (name == null) {
+            name = new ArrayList<>();
         }
-        return this.names;
+        return this.name;
     }
 
     /**
-     * Gets the value of the organisationServices property.
+     * Gets the value of the organisationService property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the organisationServices property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the organisationService property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getOrganisationServices().add(newItem);
+     * getOrganisationService().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link OrganisationServiceType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the organisationService property.
      */
-    public List<OrganisationServiceType> getOrganisationServices() {
-        if (organisationServices == null) {
-            organisationServices = new ArrayList<OrganisationServiceType>();
+    public List<OrganisationServiceType> getOrganisationService() {
+        if (organisationService == null) {
+            organisationService = new ArrayList<>();
         }
-        return this.organisationServices;
+        return this.organisationService;
     }
 
     /**
-     * Gets the value of the participatingOrganisations property.
+     * Gets the value of the participatingOrganisation property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the participatingOrganisations property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the participatingOrganisation property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getParticipatingOrganisations().add(newItem);
+     * getParticipatingOrganisation().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link OrganisationType.ParticipatingOrganisation }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the participatingOrganisation property.
      */
-    public List<OrganisationType.ParticipatingOrganisation> getParticipatingOrganisations() {
-        if (participatingOrganisations == null) {
-            participatingOrganisations = new ArrayList<OrganisationType.ParticipatingOrganisation>();
+    public List<OrganisationType.ParticipatingOrganisation> getParticipatingOrganisation() {
+        if (participatingOrganisation == null) {
+            participatingOrganisation = new ArrayList<>();
         }
-        return this.participatingOrganisations;
+        return this.participatingOrganisation;
     }
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
      * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/>
-     *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded"/>
-     *         &lt;element name="organisationService" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}organisationServiceType" maxOccurs="unbounded"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/&gt;
+     *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded"/&gt;
+     *         &lt;element name="organisationService" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}organisationServiceType" maxOccurs="unbounded"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
+     * }&lt;/pre&gt;
      * 
      * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
         "ihiNumber",
-        "names",
-        "organisationServices"
+        "name",
+        "organisationService"
     })
     public static class ParticipatingOrganisation {
 
         @XmlElement(required = true)
         protected String ihiNumber;
-        @XmlElement(name = "name", required = true)
-        protected List<String> names;
-        @XmlElement(name = "organisationService", required = true)
-        protected List<OrganisationServiceType> organisationServices;
+        @XmlElement(required = true)
+        protected List<String> name;
+        @XmlElement(required = true)
+        protected List<OrganisationServiceType> organisationService;
 
         /**
          * Gets the value of the ihiNumber property.
@@ -234,61 +242,67 @@ public class OrganisationType {
         }
 
         /**
-         * Gets the value of the names property.
+         * Gets the value of the name property.
          * 
-         * <p>
-         * This accessor method returns a reference to the live list,
+         * <p>This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the names property.
+         * returned list will be present inside the Jakarta XML Binding object.
+         * This is why there is not a {@code set} method for the name property.</p>
          * 
          * <p>
          * For example, to add a new item, do as follows:
+         * </p>
          * <pre>
-         *    getNames().add(newItem);
+         * getName().add(newItem);
          * </pre>
          * 
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link String }
+         * </p>
          * 
          * 
+         * @return
+         *     The value of the name property.
          */
-        public List<String> getNames() {
-            if (names == null) {
-                names = new ArrayList<String>();
+        public List<String> getName() {
+            if (name == null) {
+                name = new ArrayList<>();
             }
-            return this.names;
+            return this.name;
         }
 
         /**
-         * Gets the value of the organisationServices property.
+         * Gets the value of the organisationService property.
          * 
-         * <p>
-         * This accessor method returns a reference to the live list,
+         * <p>This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the organisationServices property.
+         * returned list will be present inside the Jakarta XML Binding object.
+         * This is why there is not a {@code set} method for the organisationService property.</p>
          * 
          * <p>
          * For example, to add a new item, do as follows:
+         * </p>
          * <pre>
-         *    getOrganisationServices().add(newItem);
+         * getOrganisationService().add(newItem);
          * </pre>
          * 
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link OrganisationServiceType }
+         * </p>
          * 
          * 
+         * @return
+         *     The value of the organisationService property.
          */
-        public List<OrganisationServiceType> getOrganisationServices() {
-            if (organisationServices == null) {
-                organisationServices = new ArrayList<OrganisationServiceType>();
+        public List<OrganisationServiceType> getOrganisationService() {
+            if (organisationService == null) {
+                organisationService = new ArrayList<>();
             }
-            return this.organisationServices;
+            return this.organisationService;
         }
 
     }

@@ -3,10 +3,10 @@
 <wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/PCEHRProfile/1.0" xmlns:tns="http://ns.electronichealth.net.au/wsp/xsd/StandardError/2010" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:ns4="http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0" xmlns:pcehr_b2b="http://ns.electronichealth.net.au/pcehr/b2b/svc/PCEHRProfile/1.1" xmlns:sig="http://www.w3.org/2000/09/xmldsig#" name="PCEHRProfile" targetNamespace="http://ns.electronichealth.net.au/pcehr/b2b/svc/PCEHRProfile/1.1">
 	<wsdl:types>
 		<xsd:schema targetNamespace="http://ns.electronichealth.net.au/pcehr/b2b/svc/PCEHRProfile/1.1" elementFormDefault="qualified">
-			<xsd:import namespace="http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0" schemaLocation="../../schema/Common/PCEHR_CommonTypes.xsd"/>
-			<xsd:import namespace="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/PCEHRProfile/1.0" schemaLocation="../../schema/External/PCEHR_DoesPCEHRExist.xsd"/>
-			<xsd:import namespace="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/PCEHRProfile/1.0" schemaLocation="../../schema/External/PCEHR_GainPCEHRAccess.xsd"/>
-			<xsd:import namespace="http://ns.electronichealth.net.au/wsp/xsd/StandardError/2010" schemaLocation="../../schema/Common/wsp-StandardError-2010.xsd"/>
+			<xsd:import namespace="http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0" schemaLocation="../schema/Common/PCEHR_CommonTypes.xsd"/>
+			<xsd:import namespace="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/PCEHRProfile/1.0" schemaLocation="../schema/External/PCEHR_DoesPCEHRExist.xsd"/>
+			<xsd:import namespace="http://ns.electronichealth.net.au/pcehr/xsd/interfaces/PCEHRProfile/1.0" schemaLocation="../schema/External/PCEHR_GainPCEHRAccess.xsd"/>
+			<xsd:import namespace="http://ns.electronichealth.net.au/wsp/xsd/StandardError/2010" schemaLocation="../schema/Common/wsp-StandardError-2010.xsd"/>
 		</xsd:schema>
 	</wsdl:types>
 	<wsdl:message name="headerMsg">

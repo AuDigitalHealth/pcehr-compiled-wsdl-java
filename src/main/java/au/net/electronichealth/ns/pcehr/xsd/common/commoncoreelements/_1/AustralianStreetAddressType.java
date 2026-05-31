@@ -1,38 +1,39 @@
 
 package au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for australianStreetAddressType complex type.
+ * &lt;p&gt;Java class for australianStreetAddressType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="australianStreetAddressType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="state" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}stateType"/>
- *         &lt;element name="postcode" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}postcodeType"/>
- *         &lt;element name="suburb" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}suburbType"/>
- *         &lt;element name="addressSiteName" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}addressSiteNameType" minOccurs="0"/>
- *         &lt;element name="unitGroup" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}unitGroupType" minOccurs="0"/>
- *         &lt;element name="levelGroup" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}levelGroupType" minOccurs="0"/>
- *         &lt;element name="lotNumber" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}lotNumberType" minOccurs="0"/>
- *         &lt;element name="streetNumber" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}streetNumberType" minOccurs="0"/>
- *         &lt;element name="streetName" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}streetNameType"/>
- *         &lt;element name="streetType" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}streetType" minOccurs="0"/>
- *         &lt;element name="streetSuffix" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}streetSuffixType" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="australianStreetAddressType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="state" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}stateType"/&gt;
+ *         &lt;element name="postcode" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}postcodeType"/&gt;
+ *         &lt;element name="suburb" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}suburbType"/&gt;
+ *         &lt;element name="addressSiteName" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}addressSiteNameType" minOccurs="0"/&gt;
+ *         &lt;element name="unitGroup" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}unitGroupType" minOccurs="0"/&gt;
+ *         &lt;element name="levelGroup" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}levelGroupType" minOccurs="0"/&gt;
+ *         &lt;element name="lotNumber" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}lotNumberType" minOccurs="0"/&gt;
+ *         &lt;element name="streetNumber" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}streetNumberType" minOccurs="0"/&gt;
+ *         &lt;element name="streetName" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}streetNameType"/&gt;
+ *         &lt;element name="streetType" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}streetType" minOccurs="0"/&gt;
+ *         &lt;element name="streetSuffix" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}streetSuffixType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -53,6 +54,7 @@ import javax.xml.bind.annotation.XmlType;
 public class AustralianStreetAddressType {
 
     @XmlElement(required = true)
+    @XmlSchemaType(name = "string")
     protected StateType state;
     @XmlElement(required = true)
     protected String postcode;
@@ -65,7 +67,9 @@ public class AustralianStreetAddressType {
     protected String streetNumber;
     @XmlElement(required = true)
     protected String streetName;
+    @XmlSchemaType(name = "string")
     protected StreetType streetType;
+    @XmlSchemaType(name = "string")
     protected StreetSuffixType streetSuffix;
 
     /**

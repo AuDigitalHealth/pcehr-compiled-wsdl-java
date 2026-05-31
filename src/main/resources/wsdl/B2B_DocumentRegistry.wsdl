@@ -5,21 +5,21 @@
 	<types>
 		<xsd:schema elementFormDefault="qualified" targetNamespace="urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0">
 			<!-- Include the message schema -->
-			<xsd:include schemaLocation="../../schema/External/query.xsd"/>
+			<xsd:include schemaLocation="../schema/External/query.xsd"/>
 		</xsd:schema>
 		<xsd:schema elementFormDefault="qualified" targetNamespace="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0">
 			<!-- Include the message schema -->
-			<xsd:include schemaLocation="../../schema/External/rs.xsd"/>
+			<xsd:include schemaLocation="../schema/External/rs.xsd"/>
 		</xsd:schema>
 		<xsd:schema elementFormDefault="qualified" targetNamespace="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:3.0">
 			<!-- Include the message schema -->
-			<xsd:include schemaLocation="../../schema/External/lcm.xsd"/>
+			<xsd:include schemaLocation="../schema/External/lcm.xsd"/>
 		</xsd:schema>
 		<!-- While no elements are directly used from this schema in the WSDL, it needs to be present here in order for
 		code generating toolkits to work properly -->
 		<xsd:schema elementFormDefault="qualified" targetNamespace="http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0">
 			<!-- Include the message schema -->
-			<xsd:include schemaLocation="../../schema/Common/PCEHR_CommonTypes.xsd"/>
+			<xsd:include schemaLocation="../schema/Common/PCEHR_CommonTypes.xsd"/>
 		</xsd:schema>
 	</types>
 	<message name="RegistryStoredQuery_Message">

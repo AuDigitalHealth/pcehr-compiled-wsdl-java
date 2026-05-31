@@ -1,95 +1,93 @@
 
 package au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="User">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="IDType">
- *                     &lt;simpleType>
- *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                         &lt;enumeration value="HPII"/>
- *                         &lt;enumeration value="PortalUserIdentifier"/>
- *                         &lt;enumeration value="LocalSystemIdentifier"/>
- *                       &lt;/restriction>
- *                     &lt;/simpleType>
- *                   &lt;/element>
- *                   &lt;element name="ID" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                   &lt;element name="role" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                   &lt;element name="userName" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                   &lt;element name="useRoleForAudit" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber" minOccurs="0"/>
- *         &lt;element name="productType">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="vendor" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                   &lt;element name="productName" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                   &lt;element name="productVersion" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                   &lt;element name="platform" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="clientSystemType">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *               &lt;enumeration value="CIS"/>
- *               &lt;enumeration value="CSP"/>
- *               &lt;enumeration value="CRP"/>
- *               &lt;enumeration value="HI"/>
- *               &lt;enumeration value="Medicare"/>
- *               &lt;enumeration value="CPP"/>
- *               &lt;enumeration value="CCP"/>
- *               &lt;enumeration value="Other"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
- *         &lt;element name="accessingOrganisation" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="organisationID" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                   &lt;element name="organisationName" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                   &lt;element name="alternateOrganisationName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="User"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="IDType"&gt;
+ *                     &lt;simpleType&gt;
+ *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                         &lt;enumeration value="HPII"/&gt;
+ *                         &lt;enumeration value="PortalUserIdentifier"/&gt;
+ *                         &lt;enumeration value="LocalSystemIdentifier"/&gt;
+ *                       &lt;/restriction&gt;
+ *                     &lt;/simpleType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="ID" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                   &lt;element name="role" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *                   &lt;element name="userName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                   &lt;element name="useRoleForAudit" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber" minOccurs="0"/&gt;
+ *         &lt;element name="productType"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="vendor" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                   &lt;element name="productName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                   &lt;element name="productVersion" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                   &lt;element name="platform" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="clientSystemType"&gt;
+ *           &lt;simpleType&gt;
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *               &lt;enumeration value="CIS"/&gt;
+ *               &lt;enumeration value="CSP"/&gt;
+ *               &lt;enumeration value="CRP"/&gt;
+ *               &lt;enumeration value="HI"/&gt;
+ *               &lt;enumeration value="Medicare"/&gt;
+ *               &lt;enumeration value="CPP"/&gt;
+ *               &lt;enumeration value="CCP"/&gt;
+ *               &lt;enumeration value="Other"/&gt;
+ *             &lt;/restriction&gt;
+ *           &lt;/simpleType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="accessingOrganisation" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="organisationID" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                   &lt;element name="organisationName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                   &lt;element name="alternateOrganisationName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -110,7 +108,7 @@ public class PCEHRHeader {
     @XmlElement(required = true)
     protected PCEHRHeader.ProductType productType;
     @XmlElement(required = true)
-    protected PCEHRHeader.ClientSystemType clientSystemType;
+    protected String clientSystemType;
     protected PCEHRHeader.AccessingOrganisation accessingOrganisation;
 
     /**
@@ -190,10 +188,10 @@ public class PCEHRHeader {
      * 
      * @return
      *     possible object is
-     *     {@link PCEHRHeader.ClientSystemType }
+     *     {@link String }
      *     
      */
-    public PCEHRHeader.ClientSystemType getClientSystemType() {
+    public String getClientSystemType() {
         return clientSystemType;
     }
 
@@ -202,10 +200,10 @@ public class PCEHRHeader {
      * 
      * @param value
      *     allowed object is
-     *     {@link PCEHRHeader.ClientSystemType }
+     *     {@link String }
      *     
      */
-    public void setClientSystemType(PCEHRHeader.ClientSystemType value) {
+    public void setClientSystemType(String value) {
         this.clientSystemType = value;
     }
 
@@ -235,23 +233,23 @@ public class PCEHRHeader {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
      * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="organisationID" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *         &lt;element name="organisationName" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *         &lt;element name="alternateOrganisationName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="organisationID" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *         &lt;element name="organisationName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *         &lt;element name="alternateOrganisationName" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
+     * }&lt;/pre&gt;
      * 
      * 
      */
@@ -345,81 +343,24 @@ public class PCEHRHeader {
 
 
     /**
-     * <p>Java class for null.
+     * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * <p>
-     * <pre>
-     * &lt;simpleType>
-     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *     &lt;enumeration value="CIS"/>
-     *     &lt;enumeration value="CSP"/>
-     *     &lt;enumeration value="CRP"/>
-     *     &lt;enumeration value="HI"/>
-     *     &lt;enumeration value="Medicare"/>
-     *     &lt;enumeration value="CPP"/>
-     *     &lt;enumeration value="CCP"/>
-     *     &lt;enumeration value="Other"/>
-     *   &lt;/restriction>
-     * &lt;/simpleType>
-     * </pre>
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
      * 
-     */
-    @XmlType(name = "")
-    @XmlEnum
-    public enum ClientSystemType {
-
-        CIS("CIS"),
-        CSP("CSP"),
-        CRP("CRP"),
-        HI("HI"),
-        @XmlEnumValue("Medicare")
-        MEDICARE("Medicare"),
-        CPP("CPP"),
-        CCP("CCP"),
-        @XmlEnumValue("Other")
-        OTHER("Other");
-        private final String value;
-
-        ClientSystemType(String v) {
-            value = v;
-        }
-
-        public String value() {
-            return value;
-        }
-
-        public static PCEHRHeader.ClientSystemType fromValue(String v) {
-            for (PCEHRHeader.ClientSystemType c: PCEHRHeader.ClientSystemType.values()) {
-                if (c.value.equals(v)) {
-                    return c;
-                }
-            }
-            throw new IllegalArgumentException(v);
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="vendor" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *         &lt;element name="productName" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *         &lt;element name="productVersion" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *         &lt;element name="platform" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="vendor" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *         &lt;element name="productName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *         &lt;element name="productVersion" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *         &lt;element name="platform" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
+     * }&lt;/pre&gt;
      * 
      * 
      */
@@ -541,33 +482,33 @@ public class PCEHRHeader {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
      * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="IDType">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *               &lt;enumeration value="HPII"/>
-     *               &lt;enumeration value="PortalUserIdentifier"/>
-     *               &lt;enumeration value="LocalSystemIdentifier"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="ID" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *         &lt;element name="role" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="userName" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *         &lt;element name="useRoleForAudit" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="IDType"&gt;
+     *           &lt;simpleType&gt;
+     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *               &lt;enumeration value="HPII"/&gt;
+     *               &lt;enumeration value="PortalUserIdentifier"/&gt;
+     *               &lt;enumeration value="LocalSystemIdentifier"/&gt;
+     *             &lt;/restriction&gt;
+     *           &lt;/simpleType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="ID" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *         &lt;element name="role" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+     *         &lt;element name="userName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *         &lt;element name="useRoleForAudit" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
+     * }&lt;/pre&gt;
      * 
      * 
      */
@@ -582,7 +523,7 @@ public class PCEHRHeader {
     public static class User {
 
         @XmlElement(name = "IDType", required = true)
-        protected PCEHRHeader.User.IDType idType;
+        protected String idType;
         @XmlElement(name = "ID", required = true)
         protected String id;
         protected String role;
@@ -595,10 +536,10 @@ public class PCEHRHeader {
          * 
          * @return
          *     possible object is
-         *     {@link PCEHRHeader.User.IDType }
+         *     {@link String }
          *     
          */
-        public PCEHRHeader.User.IDType getIDType() {
+        public String getIDType() {
             return idType;
         }
 
@@ -607,10 +548,10 @@ public class PCEHRHeader {
          * 
          * @param value
          *     allowed object is
-         *     {@link PCEHRHeader.User.IDType }
+         *     {@link String }
          *     
          */
-        public void setIDType(PCEHRHeader.User.IDType value) {
+        public void setIDType(String value) {
             this.idType = value;
         }
 
@@ -700,53 +641,6 @@ public class PCEHRHeader {
          */
         public void setUseRoleForAudit(boolean value) {
             this.useRoleForAudit = value;
-        }
-
-
-        /**
-         * <p>Java class for null.
-         * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
-         * <pre>
-         * &lt;simpleType>
-         *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-         *     &lt;enumeration value="HPII"/>
-         *     &lt;enumeration value="PortalUserIdentifier"/>
-         *     &lt;enumeration value="LocalSystemIdentifier"/>
-         *   &lt;/restriction>
-         * &lt;/simpleType>
-         * </pre>
-         * 
-         */
-        @XmlType(name = "")
-        @XmlEnum
-        public enum IDType {
-
-            HPII("HPII"),
-            @XmlEnumValue("PortalUserIdentifier")
-            PORTAL_USER_IDENTIFIER("PortalUserIdentifier"),
-            @XmlEnumValue("LocalSystemIdentifier")
-            LOCAL_SYSTEM_IDENTIFIER("LocalSystemIdentifier");
-            private final String value;
-
-            IDType(String v) {
-                value = v;
-            }
-
-            public String value() {
-                return value;
-            }
-
-            public static PCEHRHeader.User.IDType fromValue(String v) {
-                for (PCEHRHeader.User.IDType c: PCEHRHeader.User.IDType.values()) {
-                    if (c.value.equals(v)) {
-                        return c;
-                    }
-                }
-                throw new IllegalArgumentException(v);
-            }
-
         }
 
     }

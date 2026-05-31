@@ -1,25 +1,26 @@
 
 package au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for IDType.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;simpleType name="IDType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;length value="3"/>
- *     &lt;enumeration value="IHI"/>
- *     &lt;enumeration value="MCA"/>
- *     &lt;enumeration value="DVA"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
- * </pre>
+ * 
+ * &lt;p&gt;Java class for IDType&lt;/p&gt;.
+ * 
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+ * &lt;pre&gt;{&#064;code
+ * &lt;simpleType name="IDType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;length value="3"/&gt;
+ *     &lt;enumeration value="IHI"/&gt;
+ *     &lt;enumeration value="MCA"/&gt;
+ *     &lt;enumeration value="DVA"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
+ * }&lt;/pre&gt;
  * 
  */
 @XmlType(name = "IDType")

@@ -3,145 +3,153 @@ package oasis.names.tc.ebxml_regrep.xsd.rim._3;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * Mapping of the same named interface in ebRIM.
- *       
  * 
- * <p>Java class for OrganizationType complex type.
+ * &lt;p&gt;Java class for OrganizationType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="OrganizationType">
- *   &lt;complexContent>
- *     &lt;extension base="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}RegistryObjectType">
- *       &lt;sequence>
- *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}Address" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}TelephoneNumber" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}EmailAddress" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="parent" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}referenceURI" />
- *       &lt;attribute name="primaryContact" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}referenceURI" />
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="OrganizationType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}RegistryObjectType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}Address" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}TelephoneNumber" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}EmailAddress" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="parent" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}referenceURI" /&gt;
+ *       &lt;attribute name="primaryContact" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}referenceURI" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "OrganizationType", propOrder = {
-    "addresses",
-    "telephoneNumbers",
-    "emailAddresses"
+    "address",
+    "telephoneNumber",
+    "emailAddress"
 })
 public class OrganizationType
     extends RegistryObjectType
 {
 
     @XmlElement(name = "Address")
-    protected List<PostalAddressType> addresses;
+    protected List<PostalAddressType> address;
     @XmlElement(name = "TelephoneNumber")
-    protected List<TelephoneNumber> telephoneNumbers;
+    protected List<TelephoneNumberType> telephoneNumber;
     @XmlElement(name = "EmailAddress")
-    protected List<EmailAddress> emailAddresses;
+    protected List<EmailAddressType> emailAddress;
     @XmlAttribute(name = "parent")
     protected String parent;
     @XmlAttribute(name = "primaryContact")
     protected String primaryContact;
 
     /**
-     * Gets the value of the addresses property.
+     * Gets the value of the address property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the addresses property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the address property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getAddresses().add(newItem);
+     * getAddress().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PostalAddressType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the address property.
      */
-    public List<PostalAddressType> getAddresses() {
-        if (addresses == null) {
-            addresses = new ArrayList<PostalAddressType>();
+    public List<PostalAddressType> getAddress() {
+        if (address == null) {
+            address = new ArrayList<>();
         }
-        return this.addresses;
+        return this.address;
     }
 
     /**
-     * Gets the value of the telephoneNumbers property.
+     * Gets the value of the telephoneNumber property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the telephoneNumbers property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the telephoneNumber property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getTelephoneNumbers().add(newItem);
+     * getTelephoneNumber().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link TelephoneNumber }
+     * {@link TelephoneNumberType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the telephoneNumber property.
      */
-    public List<TelephoneNumber> getTelephoneNumbers() {
-        if (telephoneNumbers == null) {
-            telephoneNumbers = new ArrayList<TelephoneNumber>();
+    public List<TelephoneNumberType> getTelephoneNumber() {
+        if (telephoneNumber == null) {
+            telephoneNumber = new ArrayList<>();
         }
-        return this.telephoneNumbers;
+        return this.telephoneNumber;
     }
 
     /**
-     * Gets the value of the emailAddresses property.
+     * Gets the value of the emailAddress property.
      * 
-     * <p>
-     * This accessor method returns a reference to the live list,
+     * <p>This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the emailAddresses property.
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a {@code set} method for the emailAddress property.</p>
      * 
      * <p>
      * For example, to add a new item, do as follows:
+     * </p>
      * <pre>
-     *    getEmailAddresses().add(newItem);
+     * getEmailAddress().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link EmailAddress }
+     * {@link EmailAddressType }
+     * </p>
      * 
      * 
+     * @return
+     *     The value of the emailAddress property.
      */
-    public List<EmailAddress> getEmailAddresses() {
-        if (emailAddresses == null) {
-            emailAddresses = new ArrayList<EmailAddress>();
+    public List<EmailAddressType> getEmailAddress() {
+        if (emailAddress == null) {
+            emailAddress = new ArrayList<>();
         }
-        return this.emailAddresses;
+        return this.emailAddress;
     }
 
     /**

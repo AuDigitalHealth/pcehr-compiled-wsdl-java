@@ -5,15 +5,15 @@
 	<types>
 		<xsd:schema elementFormDefault="qualified" targetNamespace="urn:ihe:iti:xds-b:2007">
 			<!-- Include the message schema -->
-			<xsd:include schemaLocation="../../schema/External/XDS.b_DocumentRepository.xsd"/>
+			<xsd:include schemaLocation="../schema/External/XDS.b_DocumentRepository.xsd"/>
 		</xsd:schema>
 		<xsd:schema elementFormDefault="qualified" targetNamespace="http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0">
 			<!-- Include the message schema -->
-			<xsd:include schemaLocation="../../schema/Common/PCEHR_CommonTypes.xsd"/>
+			<xsd:include schemaLocation="../schema/Common/PCEHR_CommonTypes.xsd"/>
 		</xsd:schema>
 		 <xsd:schema elementFormDefault="qualified" targetNamespace="urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0">
 			<!-- Include the message schema -->
-			<xsd:include schemaLocation="../../schema/External/rs.xsd"/>
+			<xsd:include schemaLocation="../schema/External/rs.xsd"/>
 		</xsd:schema>
 	</types>
 	<message name="RetrieveDocumentSet_Message">

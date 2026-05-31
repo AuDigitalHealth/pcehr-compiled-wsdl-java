@@ -1,27 +1,28 @@
 
 package au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for usage.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;simpleType name="usage">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="M"/>
- *     &lt;enumeration value="N"/>
- *     &lt;enumeration value="O"/>
- *     &lt;enumeration value="B"/>
- *     &lt;enumeration value="L"/>
- *     &lt;enumeration value="R"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
- * </pre>
+ * 
+ * &lt;p&gt;Java class for usage&lt;/p&gt;.
+ * 
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+ * &lt;pre&gt;{&#064;code
+ * &lt;simpleType name="usage"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="M"/&gt;
+ *     &lt;enumeration value="N"/&gt;
+ *     &lt;enumeration value="O"/&gt;
+ *     &lt;enumeration value="B"/&gt;
+ *     &lt;enumeration value="L"/&gt;
+ *     &lt;enumeration value="R"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
+ * }&lt;/pre&gt;
  * 
  */
 @XmlType(name = "usage")

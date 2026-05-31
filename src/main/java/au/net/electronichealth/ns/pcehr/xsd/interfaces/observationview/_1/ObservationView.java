@@ -1,62 +1,59 @@
 
 package au.net.electronichealth.ns.pcehr.xsd.interfaces.observationview._1;
 
-import java.util.Calendar;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import au.gov.nehta.schema.DateAdapter;
+import javax.xml.datatype.XMLGregorianCalendar;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for observationView complex type.
+ * &lt;p&gt;Java class for observationView complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="observationView">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="versionNumber" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="fromDate" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *         &lt;element name="toDate" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *         &lt;element name="observationType">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *               &lt;enumeration value="HEADCIRCUMFERENCE"/>
- *               &lt;enumeration value="HEIGHT"/>
- *               &lt;enumeration value="WEIGHT"/>
- *               &lt;enumeration value="BMI"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
- *         &lt;element name="documentSource">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *               &lt;enumeration value="PERSONAL"/>
- *               &lt;enumeration value="PROVIDER"/>
- *               &lt;enumeration value="ALL"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
- *         &lt;element name="referenceData">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *               &lt;enumeration value="CDC"/>
- *               &lt;enumeration value="WHO"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="observationView"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="versionNumber" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="fromDate" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
+ *         &lt;element name="toDate" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
+ *         &lt;element name="observationType"&gt;
+ *           &lt;simpleType&gt;
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *               &lt;enumeration value="HEADCIRCUMFERENCE"/&gt;
+ *               &lt;enumeration value="HEIGHT"/&gt;
+ *               &lt;enumeration value="WEIGHT"/&gt;
+ *               &lt;enumeration value="BMI"/&gt;
+ *             &lt;/restriction&gt;
+ *           &lt;/simpleType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="documentSource"&gt;
+ *           &lt;simpleType&gt;
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *               &lt;enumeration value="PERSONAL"/&gt;
+ *               &lt;enumeration value="PROVIDER"/&gt;
+ *               &lt;enumeration value="ALL"/&gt;
+ *             &lt;/restriction&gt;
+ *           &lt;/simpleType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="referenceData"&gt;
+ *           &lt;simpleType&gt;
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *               &lt;enumeration value="CDC"/&gt;
+ *               &lt;enumeration value="WHO"/&gt;
+ *             &lt;/restriction&gt;
+ *           &lt;/simpleType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -69,19 +66,16 @@ import au.gov.nehta.schema.DateAdapter;
     "documentSource",
     "referenceData"
 })
-@XmlRootElement(name = "observationView")
 public class ObservationView {
 
     @XmlElement(required = true)
     protected String versionNumber;
-    @XmlElement(required = true, type = String.class)
-    @XmlJavaTypeAdapter(DateAdapter.class)
+    @XmlElement(required = true)
     @XmlSchemaType(name = "date")
-    protected Calendar fromDate;
-    @XmlElement(required = true, type = String.class)
-    @XmlJavaTypeAdapter(DateAdapter.class)
+    protected XMLGregorianCalendar fromDate;
+    @XmlElement(required = true)
     @XmlSchemaType(name = "date")
-    protected Calendar toDate;
+    protected XMLGregorianCalendar toDate;
     @XmlElement(required = true)
     protected String observationType;
     @XmlElement(required = true)
@@ -118,10 +112,10 @@ public class ObservationView {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link XMLGregorianCalendar }
      *     
      */
-    public Calendar getFromDate() {
+    public XMLGregorianCalendar getFromDate() {
         return fromDate;
     }
 
@@ -130,10 +124,10 @@ public class ObservationView {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setFromDate(Calendar value) {
+    public void setFromDate(XMLGregorianCalendar value) {
         this.fromDate = value;
     }
 
@@ -142,10 +136,10 @@ public class ObservationView {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link XMLGregorianCalendar }
      *     
      */
-    public Calendar getToDate() {
+    public XMLGregorianCalendar getToDate() {
         return toDate;
     }
 
@@ -154,10 +148,10 @@ public class ObservationView {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setToDate(Calendar value) {
+    public void setToDate(XMLGregorianCalendar value) {
         this.toDate = value;
     }
 
