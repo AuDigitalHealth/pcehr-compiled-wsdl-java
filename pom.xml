@@ -297,6 +297,9 @@
                                                 }
                                                 log.info('Synced generated sources to src/main/java')
                                             }
+                                            if (base.isDirectory()) {
+                                                base.deleteDir()
+                                            }
                                         ]]></script>
                                     </scripts>
                                 </configuration>

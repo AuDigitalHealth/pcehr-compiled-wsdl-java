@@ -14,6 +14,8 @@ Maven coordinates:
 
 **Not** included: PCEHR facade clients, TLS/signing handlers, or runtime filesystem WSDL resolution used by **mhr-b2b-client-java**.
 
+Sibling: **mhr-wsdl-java** (`au.gov.nehta:mhr-wsdl`) — same generated types and WSDL layout; keep in sync when changing codegen. **hi-wsdl-java** (`au.gov.nehta:hi-wsdl`) for Healthcare Identifiers.
+
 ---
 
 ## 2. Layout
@@ -27,6 +29,7 @@ Maven coordinates:
 | `schema/readme.txt` | Licensed XSD staging instructions (tracked) |
 | `src/main/resources/schema/` | Local licensed XSD for regeneration (**gitignored**) |
 | `scripts/` | Maintainer helpers to regenerate **`pom.xml`** wsimport block |
+| `.github/workflows/ci.yml` | GitHub Actions **`mvn verify`** on push/PR |
 
 ---
 

@@ -28,7 +28,7 @@ Or use **`build.ps1`**, **`build.sh`**, or **`build.bat`**. Set **`MVN_SETTINGS`
 | Skip tests | `mvn -B "-Dgpg.skip=true" clean verify "-DskipTests=true"` |
 | Install to local repo | `mvn -B "-Dgpg.skip=true" clean install` |
 
-Default tests: **`GeneratedWsdlBindingsTest`** (offline smoke tests; no licensed schema or network required).
+Default tests: **`GeneratedWsdlBindingsTest`** in **`au.gov.nehta.pcehrwsdl`** (offline smoke tests; no licensed schema or network required).
 
 GPG signing is skipped by default (**`-Dgpg.skip=true`**). Release builds: **`-Dgpg.skip=false`**.
 
