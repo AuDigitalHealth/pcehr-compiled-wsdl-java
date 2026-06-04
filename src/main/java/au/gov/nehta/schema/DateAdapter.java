@@ -5,17 +5,18 @@ import java.util.Calendar;
 
 import jakarta.xml.bind.annotation.adapters.XmlAdapter;
 
-public class DateAdapter extends XmlAdapter<String, Calendar> {
 
+public class DateAdapter extends XmlAdapter<String, Calendar>
+{
     public Calendar unmarshal(String value) {
-        return jakarta.xml.bind.DatatypeConverter.parseDate(value);
+        return (jakarta.xml.bind.DatatypeConverter.parseDate(value));
     }
 
     public String marshal(Calendar value) {
         if (value == null) {
             return null;
         }
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        return sdf.format(value.getTime());
+        SimpleDateFormat sdf = new SimpleDateFormat( "yyyy-MM-dd" );
+        return sdf.format( value.getTime() );
     }
 }

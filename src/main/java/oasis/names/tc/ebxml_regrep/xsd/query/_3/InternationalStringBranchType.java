@@ -30,45 +30,42 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "InternationalStringBranchType", propOrder = {
-    "localizedStringFilter"
+    "localizedStringFilters"
 })
 public class InternationalStringBranchType
     extends BranchType
 {
 
     @XmlElement(name = "LocalizedStringFilter")
-    protected List<FilterType> localizedStringFilter;
+    protected List<FilterType> localizedStringFilters;
 
     /**
-     * Gets the value of the localizedStringFilter property.
+     * Gets the value of the localizedStringFilters property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the localizedStringFilter property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the localizedStringFilters property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getLocalizedStringFilter().add(newItem);
+     *    getLocalizedStringFilters().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link FilterType }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the localizedStringFilter property.
      */
-    public List<FilterType> getLocalizedStringFilter() {
-        if (localizedStringFilter == null) {
-            localizedStringFilter = new ArrayList<>();
+    public List<FilterType> getLocalizedStringFilters() {
+        if (localizedStringFilters == null) {
+            localizedStringFilters = new ArrayList<FilterType>();
         }
-        return this.localizedStringFilter;
+        return this.localizedStringFilters;
     }
 
 }

@@ -1,3 +1,5 @@
+# Text files: LF in the index and on checkout (see *.bat / *.cmd below for CRLF).
+# Windows: git config core.autocrlf false once per clone so Git does not fight these rules.
 * text=auto eol=lf
 
 *.class binary

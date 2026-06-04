@@ -30,43 +30,40 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "TelephoneNumberListType", propOrder = {
-    "telephoneNumber"
+    "telephoneNumbers"
 })
 public class TelephoneNumberListType {
 
     @XmlElement(name = "TelephoneNumber")
-    protected List<TelephoneNumberType> telephoneNumber;
+    protected List<TelephoneNumber> telephoneNumbers;
 
     /**
-     * Gets the value of the telephoneNumber property.
+     * Gets the value of the telephoneNumbers property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the telephoneNumber property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the telephoneNumbers property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getTelephoneNumber().add(newItem);
+     *    getTelephoneNumbers().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link TelephoneNumberType }
-     * </p>
+     * {@link TelephoneNumber }
      * 
      * 
-     * @return
-     *     The value of the telephoneNumber property.
      */
-    public List<TelephoneNumberType> getTelephoneNumber() {
-        if (telephoneNumber == null) {
-            telephoneNumber = new ArrayList<>();
+    public List<TelephoneNumber> getTelephoneNumbers() {
+        if (telephoneNumbers == null) {
+            telephoneNumbers = new ArrayList<TelephoneNumber>();
         }
-        return this.telephoneNumber;
+        return this.telephoneNumbers;
     }
 
 }

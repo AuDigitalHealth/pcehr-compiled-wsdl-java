@@ -36,49 +36,46 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ClassificationSchemeType", propOrder = {
-    "classificationNode"
+    "classificationNodes"
 })
 public class ClassificationSchemeType
     extends RegistryObjectType
 {
 
     @XmlElement(name = "ClassificationNode")
-    protected List<ClassificationNodeType> classificationNode;
+    protected List<ClassificationNodeType> classificationNodes;
     @XmlAttribute(name = "isInternal", required = true)
     protected boolean isInternal;
     @XmlAttribute(name = "nodeType", required = true)
     protected String nodeType;
 
     /**
-     * Gets the value of the classificationNode property.
+     * Gets the value of the classificationNodes property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the classificationNode property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the classificationNodes property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getClassificationNode().add(newItem);
+     *    getClassificationNodes().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ClassificationNodeType }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the classificationNode property.
      */
-    public List<ClassificationNodeType> getClassificationNode() {
-        if (classificationNode == null) {
-            classificationNode = new ArrayList<>();
+    public List<ClassificationNodeType> getClassificationNodes() {
+        if (classificationNodes == null) {
+            classificationNodes = new ArrayList<ClassificationNodeType>();
         }
-        return this.classificationNode;
+        return this.classificationNodes;
     }
 
     /**

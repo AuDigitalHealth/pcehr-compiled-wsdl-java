@@ -1,9 +1,7 @@
 
 package au.net.electronichealth.ns.pcehr.xsd.interfaces.registerpcehr._2;
 
-import javax.xml.datatype.XMLGregorianCalendar;
-import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.IndividualTypeSupp;
-import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ResponseStatusType;
+import java.util.Calendar;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -12,6 +10,9 @@ import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import au.gov.nehta.schema.DateAdapter;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.IndividualTypeSupp;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ResponseStatusType;
 
 
 /**
@@ -437,9 +438,10 @@ public class RegisterPCEHRResponse {
 
         @XmlElement(required = true)
         protected String code;
-        @XmlElement(required = true)
+        @XmlElement(required = true, type = String.class)
+        @XmlJavaTypeAdapter(DateAdapter.class)
         @XmlSchemaType(name = "date")
-        protected XMLGregorianCalendar expiryDate;
+        protected Calendar expiryDate;
 
         /**
          * Gets the value of the code property.
@@ -470,10 +472,10 @@ public class RegisterPCEHRResponse {
          * 
          * @return
          *     possible object is
-         *     {@link XMLGregorianCalendar }
+         *     {@link String }
          *     
          */
-        public XMLGregorianCalendar getExpiryDate() {
+        public Calendar getExpiryDate() {
             return expiryDate;
         }
 
@@ -482,10 +484,10 @@ public class RegisterPCEHRResponse {
          * 
          * @param value
          *     allowed object is
-         *     {@link XMLGregorianCalendar }
+         *     {@link String }
          *     
          */
-        public void setExpiryDate(XMLGregorianCalendar value) {
+        public void setExpiryDate(Calendar value) {
             this.expiryDate = value;
         }
 

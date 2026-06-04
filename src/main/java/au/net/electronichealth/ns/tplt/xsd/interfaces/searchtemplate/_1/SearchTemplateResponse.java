@@ -3,14 +3,14 @@ package au.net.electronichealth.ns.tplt.xsd.interfaces.searchtemplate._1;
 
 import java.util.ArrayList;
 import java.util.List;
-import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ResponseStatusType;
-import au.net.electronichealth.ns.tplt.xsd.common.templatescoreelements._1.TemplateMetadataType;
-import au.net.electronichealth.ns.tplt.xsd.common.templatescoreelements._1.TemplateUsageMetadataType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ResponseStatusType;
+import au.net.electronichealth.ns.tplt.xsd.common.templatescoreelements._1.TemplateMetadataType;
+import au.net.electronichealth.ns.tplt.xsd.common.templatescoreelements._1.TemplateUsageMetadataType;
 
 
 /**
@@ -47,14 +47,15 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
     "responseStatus",
-    "template"
+    "templates"
 })
 @XmlRootElement(name = "searchTemplateResponse")
 public class SearchTemplateResponse {
 
     @XmlElement(required = true)
     protected ResponseStatusType responseStatus;
-    protected List<SearchTemplateResponse.Template> template;
+    @XmlElement(name = "template")
+    protected List<SearchTemplateResponse.Template> templates;
 
     /**
      * Gets the value of the responseStatus property.
@@ -81,35 +82,32 @@ public class SearchTemplateResponse {
     }
 
     /**
-     * Gets the value of the template property.
+     * Gets the value of the templates property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the template property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the templates property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getTemplate().add(newItem);
+     *    getTemplates().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SearchTemplateResponse.Template }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the template property.
      */
-    public List<SearchTemplateResponse.Template> getTemplate() {
-        if (template == null) {
-            template = new ArrayList<>();
+    public List<SearchTemplateResponse.Template> getTemplates() {
+        if (templates == null) {
+            templates = new ArrayList<SearchTemplateResponse.Template>();
         }
-        return this.template;
+        return this.templates;
     }
 
 

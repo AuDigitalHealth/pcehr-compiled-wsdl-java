@@ -13,9 +13,7 @@ For **security vulnerabilities in this library** (not routine support):
 
 ## This repository
 
-- **Do not commit secrets to git.** That includes passwords, API tokens, private keys, mutual-TLS keystores, and vendor registration material.
-- **Licensed PCEHR XSD (`src/main/resources/schema/...`)** must **not** be pushed to a public fork. **`.gitignore`** excludes **`/src/main/resources/schema/*`** except **`src/main/resources/schema/.gitkeep`**; verify with **`git status`** before every push. Obtain schemas from the My Health Record / PCEHR B2B integration pack (or **mhr-b2b-client-java** `wsdls/src/main/resources/schema/`) for local regeneration only.
-- **JAXB binding fragments** under **`src/main/resources/binding/`** are safe to commit — they are build customisation, not vendor schema content.
-- **Do not commit** populated **`settings.xml`** (see **`settings.xml.example`**). Use **`MVN_SETTINGS`** or merge release credentials into **`~/.m2/settings.xml`** locally.
-- **B2B WSDL files** under **`src/main/resources/wsdl/`** are published as part of this open-source artifact. Confirm redistribution terms with ADHA before mirroring.
-- **Do not commit** populated **`local.properties`**.
+- **Do not commit secrets to git.** That includes passwords, API tokens, private keys, mutual-TLS keystores, and vendor registration material — even in comments, tests, or documentation tracked in this repository.
+- **Do not commit** populated **`local.properties`** or a repo-root **`settings.xml`** containing credentials.
+- **B2B WSDL and XSD** under **`src/main/resources/wsdl/`** and **`src/main/java/wsdls/`** are part of this open-source artifact. Confirm redistribution terms with ADHA before mirroring to a public fork.
+- Generated Java under **`src/main/java/`** is safe to commit; it contains no credentials.

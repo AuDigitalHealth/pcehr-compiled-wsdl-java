@@ -6,7 +6,7 @@ import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
-import oasis.names.tc.ebxml_regrep.xsd.rim._3.RegistryObjectListType;
+import oasis.names.tc.ebxml_regrep.xsd.rim._3.RegistryObjectList;
 import oasis.names.tc.ebxml_regrep.xsd.rs._3.RegistryRequestType;
 
 
@@ -39,17 +39,17 @@ public class UpdateObjectsRequest
 {
 
     @XmlElement(name = "RegistryObjectList", namespace = "urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0", required = true)
-    protected RegistryObjectListType registryObjectList;
+    protected RegistryObjectList registryObjectList;
 
     /**
      * Gets the value of the registryObjectList property.
      * 
      * @return
      *     possible object is
-     *     {@link RegistryObjectListType }
+     *     {@link RegistryObjectList }
      *     
      */
-    public RegistryObjectListType getRegistryObjectList() {
+    public RegistryObjectList getRegistryObjectList() {
         return registryObjectList;
     }
 
@@ -58,10 +58,10 @@ public class UpdateObjectsRequest
      * 
      * @param value
      *     allowed object is
-     *     {@link RegistryObjectListType }
+     *     {@link RegistryObjectList }
      *     
      */
-    public void setRegistryObjectList(RegistryObjectListType value) {
+    public void setRegistryObjectList(RegistryObjectList value) {
         this.registryObjectList = value;
     }
 

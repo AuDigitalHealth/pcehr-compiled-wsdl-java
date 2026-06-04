@@ -8,7 +8,7 @@ import jakarta.xml.bind.annotation.XmlRegistry;
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.tplt.xsd.interfaces.searchtemplate._1 package. 
- * <p>An ObjectFactory allows you to programmatically 
+ * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -32,31 +32,25 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link SearchTemplateResponse }
      * 
-     * @return
-     *     the new instance of {@link SearchTemplateResponse }
      */
     public SearchTemplateResponse createSearchTemplateResponse() {
         return new SearchTemplateResponse();
     }
 
     /**
-     * Create an instance of {@link SearchTemplate }
-     * 
-     * @return
-     *     the new instance of {@link SearchTemplate }
-     */
-    public SearchTemplate createSearchTemplate() {
-        return new SearchTemplate();
-    }
-
-    /**
      * Create an instance of {@link SearchTemplateResponse.Template }
      * 
-     * @return
-     *     the new instance of {@link SearchTemplateResponse.Template }
      */
     public SearchTemplateResponse.Template createSearchTemplateResponseTemplate() {
         return new SearchTemplateResponse.Template();
+    }
+
+    /**
+     * Create an instance of {@link SearchTemplate }
+     * 
+     */
+    public SearchTemplate createSearchTemplate() {
+        return new SearchTemplate();
     }
 
 }

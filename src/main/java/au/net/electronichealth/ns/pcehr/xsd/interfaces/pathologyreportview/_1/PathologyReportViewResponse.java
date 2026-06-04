@@ -2,18 +2,21 @@
 package au.net.electronichealth.ns.pcehr.xsd.interfaces.pathologyreportview._1;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
-import javax.xml.datatype.XMLGregorianCalendar;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import au.gov.nehta.schema.DateAdapter;
 import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.IndividualTypeSupp;
 import au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1.CodedType;
 import au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1.PathologyReportInformationDT;
 import au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1.ProviderInformationDT;
 import au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1.RequesterInformationDT;
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlSchemaType;
-import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -102,13 +105,15 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "pathologyReportViewResponse", propOrder = {
     "viewMetadata",
-    "pathologyReport"
+    "pathologyReports"
 })
+@XmlRootElement(name = "pathologyReportViewResponse")
 public class PathologyReportViewResponse {
 
     @XmlElement(required = true)
     protected PathologyReportViewResponse.ViewMetadata viewMetadata;
-    protected List<PathologyReportViewResponse.PathologyReport> pathologyReport;
+    @XmlElement(name = "pathologyReport")
+    protected List<PathologyReportViewResponse.PathologyReport> pathologyReports;
 
     /**
      * Gets the value of the viewMetadata property.
@@ -135,35 +140,32 @@ public class PathologyReportViewResponse {
     }
 
     /**
-     * Gets the value of the pathologyReport property.
+     * Gets the value of the pathologyReports property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the pathologyReport property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the pathologyReports property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getPathologyReport().add(newItem);
+     *    getPathologyReports().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PathologyReportViewResponse.PathologyReport }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the pathologyReport property.
      */
-    public List<PathologyReportViewResponse.PathologyReport> getPathologyReport() {
-        if (pathologyReport == null) {
-            pathologyReport = new ArrayList<>();
+    public List<PathologyReportViewResponse.PathologyReport> getPathologyReports() {
+        if (pathologyReports == null) {
+            pathologyReports = new ArrayList<PathologyReportViewResponse.PathologyReport>();
         }
-        return this.pathologyReport;
+        return this.pathologyReports;
     }
 
 
@@ -211,7 +213,7 @@ public class PathologyReportViewResponse {
         "clinicalDocumentAuthor",
         "reportingPathologistInformation",
         "testRequesterInformation",
-        "pathologyTestResult"
+        "pathologyTestResults"
     })
     public static class PathologyReport {
 
@@ -225,8 +227,8 @@ public class PathologyReportViewResponse {
         protected ProviderInformationDT reportingPathologistInformation;
         @XmlElement(required = true)
         protected RequesterInformationDT testRequesterInformation;
-        @XmlElement(required = true)
-        protected List<PathologyReportViewResponse.PathologyReport.PathologyTestResult> pathologyTestResult;
+        @XmlElement(name = "pathologyTestResult", required = true)
+        protected List<PathologyReportViewResponse.PathologyReport.PathologyTestResult> pathologyTestResults;
 
         /**
          * Gets the value of the dateAvailableToConsumer property.
@@ -349,35 +351,32 @@ public class PathologyReportViewResponse {
         }
 
         /**
-         * Gets the value of the pathologyTestResult property.
+         * Gets the value of the pathologyTestResults property.
          * 
-         * <p>This accessor method returns a reference to the live list,
+         * <p>
+         * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the Jakarta XML Binding object.
-         * This is why there is not a {@code set} method for the pathologyTestResult property.</p>
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the pathologyTestResults property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
-         * </p>
          * <pre>
-         * getPathologyTestResult().add(newItem);
+         *    getPathologyTestResults().add(newItem);
          * </pre>
          * 
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link PathologyReportViewResponse.PathologyReport.PathologyTestResult }
-         * </p>
          * 
          * 
-         * @return
-         *     The value of the pathologyTestResult property.
          */
-        public List<PathologyReportViewResponse.PathologyReport.PathologyTestResult> getPathologyTestResult() {
-            if (pathologyTestResult == null) {
-                pathologyTestResult = new ArrayList<>();
+        public List<PathologyReportViewResponse.PathologyReport.PathologyTestResult> getPathologyTestResults() {
+            if (pathologyTestResults == null) {
+                pathologyTestResults = new ArrayList<PathologyReportViewResponse.PathologyReport.PathologyTestResult>();
             }
-            return this.pathologyTestResult;
+            return this.pathologyTestResults;
         }
 
 
@@ -757,12 +756,14 @@ public class PathologyReportViewResponse {
         })
         public static class ViewParameters {
 
-            @XmlElement(required = true)
+            @XmlElement(required = true, type = String.class)
+            @XmlJavaTypeAdapter(DateAdapter.class)
             @XmlSchemaType(name = "date")
-            protected XMLGregorianCalendar dateFromFilter;
-            @XmlElement(required = true)
+            protected Calendar dateFromFilter;
+            @XmlElement(required = true, type = String.class)
+            @XmlJavaTypeAdapter(DateAdapter.class)
             @XmlSchemaType(name = "date")
-            protected XMLGregorianCalendar dateToFilter;
+            protected Calendar dateToFilter;
             @XmlElement(required = true)
             protected String viewVersionNumber;
 
@@ -771,10 +772,10 @@ public class PathologyReportViewResponse {
              * 
              * @return
              *     possible object is
-             *     {@link XMLGregorianCalendar }
+             *     {@link String }
              *     
              */
-            public XMLGregorianCalendar getDateFromFilter() {
+            public Calendar getDateFromFilter() {
                 return dateFromFilter;
             }
 
@@ -783,10 +784,10 @@ public class PathologyReportViewResponse {
              * 
              * @param value
              *     allowed object is
-             *     {@link XMLGregorianCalendar }
+             *     {@link String }
              *     
              */
-            public void setDateFromFilter(XMLGregorianCalendar value) {
+            public void setDateFromFilter(Calendar value) {
                 this.dateFromFilter = value;
             }
 
@@ -795,10 +796,10 @@ public class PathologyReportViewResponse {
              * 
              * @return
              *     possible object is
-             *     {@link XMLGregorianCalendar }
+             *     {@link String }
              *     
              */
-            public XMLGregorianCalendar getDateToFilter() {
+            public Calendar getDateToFilter() {
                 return dateToFilter;
             }
 
@@ -807,10 +808,10 @@ public class PathologyReportViewResponse {
              * 
              * @param value
              *     allowed object is
-             *     {@link XMLGregorianCalendar }
+             *     {@link String }
              *     
              */
-            public void setDateToFilter(XMLGregorianCalendar value) {
+            public void setDateToFilter(Calendar value) {
                 this.dateToFilter = value;
             }
 

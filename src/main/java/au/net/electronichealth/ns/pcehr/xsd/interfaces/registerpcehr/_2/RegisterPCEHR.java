@@ -3,8 +3,6 @@ package au.net.electronichealth.ns.pcehr.xsd.interfaces.registerpcehr._2;
 
 import java.util.ArrayList;
 import java.util.List;
-import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ContactDetailsType;
-import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.IndividualTypeSupp;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -12,6 +10,8 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ContactDetailsType;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.IndividualTypeSupp;
 
 
 /**
@@ -603,43 +603,40 @@ public class RegisterPCEHR {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "document"
+            "documents"
         })
         public static class DocumentConsent {
 
-            @XmlElement(required = true)
-            protected List<RegisterPCEHR.Assertions.DocumentConsent.Document> document;
+            @XmlElement(name = "document", required = true)
+            protected List<RegisterPCEHR.Assertions.DocumentConsent.Document> documents;
 
             /**
-             * Gets the value of the document property.
+             * Gets the value of the documents property.
              * 
-             * <p>This accessor method returns a reference to the live list,
+             * <p>
+             * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
-             * returned list will be present inside the Jakarta XML Binding object.
-             * This is why there is not a {@code set} method for the document property.</p>
+             * returned list will be present inside the JAXB object.
+             * This is why there is not a <CODE>set</CODE> method for the documents property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
-             * </p>
              * <pre>
-             * getDocument().add(newItem);
+             *    getDocuments().add(newItem);
              * </pre>
              * 
              * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link RegisterPCEHR.Assertions.DocumentConsent.Document }
-             * </p>
              * 
              * 
-             * @return
-             *     The value of the document property.
              */
-            public List<RegisterPCEHR.Assertions.DocumentConsent.Document> getDocument() {
-                if (document == null) {
-                    document = new ArrayList<>();
+            public List<RegisterPCEHR.Assertions.DocumentConsent.Document> getDocuments() {
+                if (documents == null) {
+                    documents = new ArrayList<RegisterPCEHR.Assertions.DocumentConsent.Document>();
                 }
-                return this.document;
+                return this.documents;
             }
 
 

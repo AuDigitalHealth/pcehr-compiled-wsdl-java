@@ -35,17 +35,17 @@ public class QueryExpressionBranchType
 {
 
     @XmlElement(name = "QueryLanguageQuery")
-    protected ClassificationNodeQueryType queryLanguageQuery;
+    protected ClassificationNodeQuery queryLanguageQuery;
 
     /**
      * Gets the value of the queryLanguageQuery property.
      * 
      * @return
      *     possible object is
-     *     {@link ClassificationNodeQueryType }
+     *     {@link ClassificationNodeQuery }
      *     
      */
-    public ClassificationNodeQueryType getQueryLanguageQuery() {
+    public ClassificationNodeQuery getQueryLanguageQuery() {
         return queryLanguageQuery;
     }
 
@@ -54,10 +54,10 @@ public class QueryExpressionBranchType
      * 
      * @param value
      *     allowed object is
-     *     {@link ClassificationNodeQueryType }
+     *     {@link ClassificationNodeQuery }
      *     
      */
-    public void setQueryLanguageQuery(ClassificationNodeQueryType value) {
+    public void setQueryLanguageQuery(ClassificationNodeQuery value) {
         this.queryLanguageQuery = value;
     }
 

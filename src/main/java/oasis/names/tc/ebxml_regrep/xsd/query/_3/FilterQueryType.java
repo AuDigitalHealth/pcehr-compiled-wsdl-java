@@ -32,8 +32,8 @@ import jakarta.xml.bind.annotation.XmlType;
     "primaryFilter"
 })
 @XmlSeeAlso({
-    RegistryObjectQueryType.class,
-    BranchType.class
+    BranchType.class,
+    RegistryObjectQueryType.class
 })
 public abstract class FilterQueryType {
 

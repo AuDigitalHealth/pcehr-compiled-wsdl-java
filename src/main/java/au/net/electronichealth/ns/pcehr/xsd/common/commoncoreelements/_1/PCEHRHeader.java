@@ -4,6 +4,8 @@ package au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -108,7 +110,7 @@ public class PCEHRHeader {
     @XmlElement(required = true)
     protected PCEHRHeader.ProductType productType;
     @XmlElement(required = true)
-    protected String clientSystemType;
+    protected PCEHRHeader.ClientSystemType clientSystemType;
     protected PCEHRHeader.AccessingOrganisation accessingOrganisation;
 
     /**
@@ -188,10 +190,10 @@ public class PCEHRHeader {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link PCEHRHeader.ClientSystemType }
      *     
      */
-    public String getClientSystemType() {
+    public PCEHRHeader.ClientSystemType getClientSystemType() {
         return clientSystemType;
     }
 
@@ -200,10 +202,10 @@ public class PCEHRHeader {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link PCEHRHeader.ClientSystemType }
      *     
      */
-    public void setClientSystemType(String value) {
+    public void setClientSystemType(PCEHRHeader.ClientSystemType value) {
         this.clientSystemType = value;
     }
 
@@ -337,6 +339,62 @@ public class PCEHRHeader {
          */
         public void setAlternateOrganisationName(String value) {
             this.alternateOrganisationName = value;
+        }
+
+    }
+
+
+    /**
+     * &lt;p&gt;Java class for null&lt;/p&gt;.
+     * 
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+     * &lt;pre&gt;{&#064;code
+     * &lt;simpleType&gt;
+     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *     &lt;enumeration value="CIS"/&gt;
+     *     &lt;enumeration value="CSP"/&gt;
+     *     &lt;enumeration value="CRP"/&gt;
+     *     &lt;enumeration value="HI"/&gt;
+     *     &lt;enumeration value="Medicare"/&gt;
+     *     &lt;enumeration value="CPP"/&gt;
+     *     &lt;enumeration value="CCP"/&gt;
+     *     &lt;enumeration value="Other"/&gt;
+     *   &lt;/restriction&gt;
+     * &lt;/simpleType&gt;
+     * }&lt;/pre&gt;
+     * 
+     */
+    @XmlType(name = "")
+    @XmlEnum
+    public enum ClientSystemType {
+
+        CIS("CIS"),
+        CSP("CSP"),
+        CRP("CRP"),
+        HI("HI"),
+        @XmlEnumValue("Medicare")
+        MEDICARE("Medicare"),
+        CPP("CPP"),
+        CCP("CCP"),
+        @XmlEnumValue("Other")
+        OTHER("Other");
+        private final String value;
+
+        ClientSystemType(String v) {
+            value = v;
+        }
+
+        public String value() {
+            return value;
+        }
+
+        public static PCEHRHeader.ClientSystemType fromValue(String v) {
+            for (PCEHRHeader.ClientSystemType c: PCEHRHeader.ClientSystemType.values()) {
+                if (c.value.equals(v)) {
+                    return c;
+                }
+            }
+            throw new IllegalArgumentException(v);
         }
 
     }
@@ -523,7 +581,7 @@ public class PCEHRHeader {
     public static class User {
 
         @XmlElement(name = "IDType", required = true)
-        protected String idType;
+        protected PCEHRHeader.User.IDType idType;
         @XmlElement(name = "ID", required = true)
         protected String id;
         protected String role;
@@ -536,10 +594,10 @@ public class PCEHRHeader {
          * 
          * @return
          *     possible object is
-         *     {@link String }
+         *     {@link PCEHRHeader.User.IDType }
          *     
          */
-        public String getIDType() {
+        public PCEHRHeader.User.IDType getIDType() {
             return idType;
         }
 
@@ -548,10 +606,10 @@ public class PCEHRHeader {
          * 
          * @param value
          *     allowed object is
-         *     {@link String }
+         *     {@link PCEHRHeader.User.IDType }
          *     
          */
-        public void setIDType(String value) {
+        public void setIDType(PCEHRHeader.User.IDType value) {
             this.idType = value;
         }
 
@@ -641,6 +699,52 @@ public class PCEHRHeader {
          */
         public void setUseRoleForAudit(boolean value) {
             this.useRoleForAudit = value;
+        }
+
+
+        /**
+         * &lt;p&gt;Java class for null&lt;/p&gt;.
+         * 
+         * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+         * &lt;pre&gt;{&#064;code
+         * &lt;simpleType&gt;
+         *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+         *     &lt;enumeration value="HPII"/&gt;
+         *     &lt;enumeration value="PortalUserIdentifier"/&gt;
+         *     &lt;enumeration value="LocalSystemIdentifier"/&gt;
+         *   &lt;/restriction&gt;
+         * &lt;/simpleType&gt;
+         * }&lt;/pre&gt;
+         * 
+         */
+        @XmlType(name = "")
+        @XmlEnum
+        public enum IDType {
+
+            HPII("HPII"),
+            @XmlEnumValue("PortalUserIdentifier")
+            PORTAL_USER_IDENTIFIER("PortalUserIdentifier"),
+            @XmlEnumValue("LocalSystemIdentifier")
+            LOCAL_SYSTEM_IDENTIFIER("LocalSystemIdentifier");
+            private final String value;
+
+            IDType(String v) {
+                value = v;
+            }
+
+            public String value() {
+                return value;
+            }
+
+            public static PCEHRHeader.User.IDType fromValue(String v) {
+                for (PCEHRHeader.User.IDType c: PCEHRHeader.User.IDType.values()) {
+                    if (c.value.equals(v)) {
+                        return c;
+                    }
+                }
+                throw new IllegalArgumentException(v);
+            }
+
         }
 
     }

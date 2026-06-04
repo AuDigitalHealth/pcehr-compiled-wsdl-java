@@ -44,11 +44,11 @@ import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SimpleFilterType")
 @XmlSeeAlso({
-    BooleanFilterType.class,
-    IntegerFilterType.class,
-    FloatFilterType.class,
-    DateTimeFilterType.class,
-    StringFilterType.class
+    FloatFilter.class,
+    StringFilter.class,
+    IntegerFilter.class,
+    BooleanFilter.class,
+    DateTimeFilter.class
 })
 public abstract class SimpleFilterType
     extends FilterType

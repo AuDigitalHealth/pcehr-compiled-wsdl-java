@@ -10,6 +10,7 @@ import jakarta.xml.bind.annotation.XmlType;
 
 /**
  * Abstract Base type for all types of Notify Actions
+ *       
  * 
  * &lt;p&gt;Java class for NotifyActionType complex type&lt;/p&gt;.
  * 

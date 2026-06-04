@@ -8,13 +8,10 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
-import oasis.names.tc.ebxml_regrep.xsd.query._3.AdhocQueryResponse;
-import oasis.names.tc.ebxml_regrep.xsd.rim._3.SlotListType;
+import oasis.names.tc.ebxml_regrep.xsd.rim._3.SlotList;
 
 
 /**
- * Base type for all ebXML Registry responses
- * 
  * &lt;p&gt;Java class for RegistryResponseType complex type&lt;/p&gt;.
  * 
  * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
@@ -27,7 +24,7 @@ import oasis.names.tc.ebxml_regrep.xsd.rim._3.SlotListType;
  *         &lt;element name="ResponseSlotList" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}SlotListType" minOccurs="0"/&gt;
  *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0}RegistryErrorList" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
- *       &lt;attribute name="status" use="required" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}referenceURI" /&gt;
+ *       &lt;attribute name="status" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
  *       &lt;attribute name="requestId" type="{http://www.w3.org/2001/XMLSchema}anyURI" /&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -42,17 +39,12 @@ import oasis.names.tc.ebxml_regrep.xsd.rim._3.SlotListType;
     "registryErrorList"
 })
 @XmlSeeAlso({
-    AdhocQueryResponse.class
+    au.net.electronichealth.ns.pcehr.xsd.interfaces.getchangehistoryview._1.GetChangeHistoryViewResponse.AdhocQueryResponse.class
 })
 public class RegistryResponseType {
 
     @XmlElement(name = "ResponseSlotList")
-    protected SlotListType responseSlotList;
-    /**
-     * The RegistryErrorList is derived from the ErrorList
-     *         element from the ebXML Message Service Specification
-     * 
-     */
+    protected SlotList responseSlotList;
     @XmlElement(name = "RegistryErrorList")
     protected RegistryErrorList registryErrorList;
     @XmlAttribute(name = "status", required = true)
@@ -66,10 +58,10 @@ public class RegistryResponseType {
      * 
      * @return
      *     possible object is
-     *     {@link SlotListType }
+     *     {@link SlotList }
      *     
      */
-    public SlotListType getResponseSlotList() {
+    public SlotList getResponseSlotList() {
         return responseSlotList;
     }
 
@@ -78,16 +70,15 @@ public class RegistryResponseType {
      * 
      * @param value
      *     allowed object is
-     *     {@link SlotListType }
+     *     {@link SlotList }
      *     
      */
-    public void setResponseSlotList(SlotListType value) {
+    public void setResponseSlotList(SlotList value) {
         this.responseSlotList = value;
     }
 
     /**
-     * The RegistryErrorList is derived from the ErrorList
-     *         element from the ebXML Message Service Specification
+     * Gets the value of the registryErrorList property.
      * 
      * @return
      *     possible object is
@@ -105,7 +96,6 @@ public class RegistryResponseType {
      *     allowed object is
      *     {@link RegistryErrorList }
      *     
-     * @see #getRegistryErrorList()
      */
     public void setRegistryErrorList(RegistryErrorList value) {
         this.registryErrorList = value;

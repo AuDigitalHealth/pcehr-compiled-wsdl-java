@@ -1,15 +1,16 @@
 
 package oasis.names.tc.ebxml_regrep.xsd.rim._3;
 
-import javax.xml.datatype.Duration;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlType;
+import javax.xml.datatype.Duration;
 
 
 /**
  * Mapping of the same named interface in ebRIM.
+ *       
  * 
  * &lt;p&gt;Java class for FederationType complex type&lt;/p&gt;.
  * 

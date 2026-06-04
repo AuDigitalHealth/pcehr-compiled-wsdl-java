@@ -30,43 +30,40 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "InternationalStringType", propOrder = {
-    "localizedString"
+    "localizedStrings"
 })
 public class InternationalStringType {
 
     @XmlElement(name = "LocalizedString")
-    protected List<LocalizedStringType> localizedString;
+    protected List<LocalizedString> localizedStrings;
 
     /**
-     * Gets the value of the localizedString property.
+     * Gets the value of the localizedStrings property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the localizedString property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the localizedStrings property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getLocalizedString().add(newItem);
+     *    getLocalizedStrings().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link LocalizedStringType }
-     * </p>
+     * {@link LocalizedString }
      * 
      * 
-     * @return
-     *     The value of the localizedString property.
      */
-    public List<LocalizedStringType> getLocalizedString() {
-        if (localizedString == null) {
-            localizedString = new ArrayList<>();
+    public List<LocalizedString> getLocalizedStrings() {
+        if (localizedStrings == null) {
+            localizedStrings = new ArrayList<LocalizedString>();
         }
-        return this.localizedString;
+        return this.localizedStrings;
     }
 
 }

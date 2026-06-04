@@ -8,7 +8,6 @@
 
 - **JDK 11+** with **`JAVA_HOME`** set.
 - **Maven 3.6+** on **`PATH`**.
-- **`src/main/resources/schema/`** only when **regenerating** Jakarta stubs from WSDL (not required for default **`mvn verify`**). See **`schema/readme.txt`**.
 
 ---
 
@@ -17,46 +16,43 @@
 From the project root (directory containing **`pom.xml`**):
 
 ```text
-mvn -B "-Dgpg.skip=true" clean verify
+mvn -B clean verify
 ```
 
-Or use **`build.ps1`**, **`build.sh`**, or **`build.bat`**. Set **`MVN_SETTINGS`** if you must pass **`-s`** to Maven.
+Or **`build.ps1`**, **`build.sh`**, or **`build.bat`**. Set **`MVN_SETTINGS`** only if you need **`mvn -s`**.
 
 | Goal | Command |
 | ---- | ------- |
-| Compile + unit tests | `mvn -B "-Dgpg.skip=true" clean verify` |
-| Skip tests | `mvn -B "-Dgpg.skip=true" clean verify "-DskipTests=true"` |
-| Install to local repo | `mvn -B "-Dgpg.skip=true" clean install` |
+| Compile + attach sources/javadoc | `mvn -B clean verify` |
+| Signed release (GPG on **`PATH`**) | `mvn -B -Dgpg.skip=false clean verify` |
+| Install to local repo | `mvn -B clean install` |
 
-Default tests: **`GeneratedWsdlBindingsTest`** in **`au.gov.nehta.pcehrwsdl`** (offline smoke tests; no licensed schema or network required).
+**`pom.xml`** matches **`master`** (compile committed sources, attach sources/javadoc, GPG at **`verify`**) except for **Java 11**, **Jakarta compile dependencies**, and **`gpg.skip`** defaulting to **`true`**. There is **no** in-repo **`wsimport`**, no **`src/test/`**, no **`src/main/resources/binding/`**, and no extra Maven profiles.
 
-GPG signing is skipped by default (**`-Dgpg.skip=true`**). Release builds: **`-Dgpg.skip=false`**.
+For release publishing, set **`-Dgpg.skip=false`** (**MAINTAINERS.md**).
 
 ---
 
 ## Regenerating Jakarta sources
 
-Generated Java under **`src/main/java`** is **committed**. Regeneration is maintainer-only and requires:
+Generated Java under **`src/main/java`** (outside **`wsdls/`**) is **committed**. The root **`pom.xml`** does **not** run **`wsimport`**.
 
-1. Current B2B WSDL under **`src/main/resources/wsdl/`**.
-2. **`src/main/resources/schema/`** present locally (see **`schema/readme.txt`**).
-3. Jakarta **`wsimport`** tooling aligned with **`MAINTAINERS.md`** (**`jaxws-rt`** 4.0.x, Java 11).
+To refresh types after a WSDL change:
 
-```text
-mvn -B clean -Pregenerate-sources generate-sources process-sources -Dpcehr.wsdl.sync.generated=true
-mvn -B "-Dgpg.skip=true" clean verify
-```
+1. Regenerate from the WSDL/XSD in **this** repository (**`src/main/resources/wsdl/`**, **`src/main/java/wsdls/`** — use **`wsdls/schema/`** for XSD, not **`src/main/resources/schema/`**) using Jakarta **`wsimport`** (Java 11, **`jaxws-rt`** 4.x). Put **`jaxb-xjc`** **${jaxb.xjc.version}** (currently **4.0.7**) on the **`jaxws-maven-plugin`** classpath so schema-fragment Javadoc escapes **`<`**/**`>`** correctly and **`mvn verify`** javadoc attachment is clean.
+2. Preserve **`master`** public API: same class names, packages, and **`pcehr_override`** xmldsig layout.
+3. If the generator still emits legacy **`javax.*`** XML API imports, apply **`javax.*` → `jakarta.*`** only where required (`jakarta.xml.bind`, `jakarta.xml.ws`, `jakarta.jws`).
+4. Run **`mvn -B clean verify`** and update **CHANGELOG.md**.
 
-The **`regenerate-sources`** profile runs **12** **`wsimport`** executions with **`jaxb-xjc` 4.0.7**. Update **CHANGELOG.md** after regeneration.
+See **MAINTAINERS.md** for layout and release notes.
 
 ---
 
 ## Repository hygiene
 
-- **Do not commit:** populated **`local.properties`**, **`settings.xml`** (use **`settings.xml.example`** as a template only), licensed **`src/main/resources/schema/`** XSD files (only **`.gitkeep`** is tracked), keystores, or production MHR URLs. See **SECURITY.md**.
-- **Do commit:** **`src/main/resources/binding/`** (JAXB customisation), WSDL, and committed generated Java under **`src/main/java/`**.
-- **Before a public push:** run **`git status`** and confirm no **`*.xsd`** under **`src/main/resources/schema/`** are staged.
+- **Do not commit:** populated **`local.properties`**, a repo-root **`settings.xml`** with secrets, keystores, passwords, API tokens, private keys, or production MHR endpoint URLs. See **SECURITY.md**.
 - **Line endings:** LF per **`.gitattributes`**. On Windows: **`git config core.autocrlf false`** in this clone before committing.
+- **Changes:** Keep commits focused; match existing generated-code style.
 - Maintainer notes: **MAINTAINERS.md**.
 
 ## Copyright

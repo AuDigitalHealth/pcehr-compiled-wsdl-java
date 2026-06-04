@@ -1,11 +1,7 @@
 
 package au.net.electronichealth.ns.pcehr.xsd.interfaces.pcehrprofile._1;
 
-import javax.xml.datatype.XMLGregorianCalendar;
-import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.NameType;
-import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.RecordStatusType;
-import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ResponseStatusType;
-import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.StatusType;
+import java.util.Calendar;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
@@ -14,6 +10,13 @@ import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import au.gov.nehta.schema.DateAdapter;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.DateAccuracyIndicatorType;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.NameType;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.RecordStatusType;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ResponseStatusType;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.Sex;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.StatusType;
 
 
 /**
@@ -175,18 +178,17 @@ public class GainPCEHRAccessResponse {
         @XmlElement(namespace = "http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0")
         protected String militaryHealthNumber;
         @XmlElement(required = true)
-        @XmlSchemaType(name = "string")
         protected RecordStatusType ihiRecordStatus;
         @XmlElement(required = true)
-        @XmlSchemaType(name = "string")
         protected StatusType ihiStatus;
-        @XmlElement(required = true)
+        @XmlElement(required = true, type = String.class)
+        @XmlJavaTypeAdapter(DateAdapter.class)
         @XmlSchemaType(name = "date")
-        protected XMLGregorianCalendar dateOfBirth;
+        protected Calendar dateOfBirth;
         @XmlElement(namespace = "http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0", required = true)
-        protected String dateAccuracyIndicatorType;
+        protected DateAccuracyIndicatorType dateAccuracyIndicatorType;
         @XmlElement(namespace = "http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0", required = true)
-        protected String sex;
+        protected Sex sex;
         @XmlElement(required = true)
         protected NameType name;
 
@@ -363,10 +365,10 @@ public class GainPCEHRAccessResponse {
          * 
          * @return
          *     possible object is
-         *     {@link XMLGregorianCalendar }
+         *     {@link String }
          *     
          */
-        public XMLGregorianCalendar getDateOfBirth() {
+        public Calendar getDateOfBirth() {
             return dateOfBirth;
         }
 
@@ -375,10 +377,10 @@ public class GainPCEHRAccessResponse {
          * 
          * @param value
          *     allowed object is
-         *     {@link XMLGregorianCalendar }
+         *     {@link String }
          *     
          */
-        public void setDateOfBirth(XMLGregorianCalendar value) {
+        public void setDateOfBirth(Calendar value) {
             this.dateOfBirth = value;
         }
 
@@ -387,10 +389,10 @@ public class GainPCEHRAccessResponse {
          * 
          * @return
          *     possible object is
-         *     {@link String }
+         *     {@link DateAccuracyIndicatorType }
          *     
          */
-        public String getDateAccuracyIndicatorType() {
+        public DateAccuracyIndicatorType getDateAccuracyIndicatorType() {
             return dateAccuracyIndicatorType;
         }
 
@@ -399,10 +401,10 @@ public class GainPCEHRAccessResponse {
          * 
          * @param value
          *     allowed object is
-         *     {@link String }
+         *     {@link DateAccuracyIndicatorType }
          *     
          */
-        public void setDateAccuracyIndicatorType(String value) {
+        public void setDateAccuracyIndicatorType(DateAccuracyIndicatorType value) {
             this.dateAccuracyIndicatorType = value;
         }
 
@@ -411,10 +413,10 @@ public class GainPCEHRAccessResponse {
          * 
          * @return
          *     possible object is
-         *     {@link String }
+         *     {@link Sex }
          *     
          */
-        public String getSex() {
+        public Sex getSex() {
             return sex;
         }
 
@@ -423,10 +425,10 @@ public class GainPCEHRAccessResponse {
          * 
          * @param value
          *     allowed object is
-         *     {@link String }
+         *     {@link Sex }
          *     
          */
-        public void setSex(String value) {
+        public void setSex(Sex value) {
             this.sex = value;
         }
 

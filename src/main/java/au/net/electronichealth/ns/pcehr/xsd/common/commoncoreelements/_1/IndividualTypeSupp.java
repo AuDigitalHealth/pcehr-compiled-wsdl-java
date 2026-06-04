@@ -1,13 +1,15 @@
 
 package au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1;
 
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.Calendar;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlSeeAlso;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import au.gov.nehta.schema.DateAdapter;
 
 
 /**
@@ -38,17 +40,20 @@ import jakarta.xml.bind.annotation.XmlType;
     "dateOfBirth"
 })
 @XmlSeeAlso({
-    au.net.electronichealth.ns.pcehr.xsd.interfaces.getindividualdetailsview._2.GetIndividualDetailsViewResponse.Individual.class
+    au.net.electronichealth.ns.pcehr.xsd.interfaces.registerpcehr._2.RegisterPCEHRResponse.Individual.Demographics.class,
+    au.net.electronichealth.ns.pcehr.xsd.interfaces.registerpcehr._2.RegisterPCEHR.Representative.Demographics.class,
+    au.net.electronichealth.ns.pcehr.xsd.interfaces.registerpcehr._2.RegisterPCEHR.Individual.Demographics.class
 })
 public class IndividualTypeSupp {
 
     @XmlElement(required = true)
     protected NameTypeSupp name;
     @XmlElement(required = true)
-    protected String sex;
-    @XmlElement(required = true)
+    protected Sex sex;
+    @XmlElement(required = true, type = String.class)
+    @XmlJavaTypeAdapter(DateAdapter.class)
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar dateOfBirth;
+    protected Calendar dateOfBirth;
 
     /**
      * Gets the value of the name property.
@@ -79,10 +84,10 @@ public class IndividualTypeSupp {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Sex }
      *     
      */
-    public String getSex() {
+    public Sex getSex() {
         return sex;
     }
 
@@ -91,10 +96,10 @@ public class IndividualTypeSupp {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Sex }
      *     
      */
-    public void setSex(String value) {
+    public void setSex(Sex value) {
         this.sex = value;
     }
 
@@ -103,10 +108,10 @@ public class IndividualTypeSupp {
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getDateOfBirth() {
+    public Calendar getDateOfBirth() {
         return dateOfBirth;
     }
 
@@ -115,10 +120,10 @@ public class IndividualTypeSupp {
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setDateOfBirth(XMLGregorianCalendar value) {
+    public void setDateOfBirth(Calendar value) {
         this.dateOfBirth = value;
     }
 

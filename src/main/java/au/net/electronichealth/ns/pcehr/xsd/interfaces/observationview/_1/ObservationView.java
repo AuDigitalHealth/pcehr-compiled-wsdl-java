@@ -1,12 +1,15 @@
 
 package au.net.electronichealth.ns.pcehr.xsd.interfaces.observationview._1;
 
-import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.Calendar;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import au.gov.nehta.schema.DateAdapter;
 
 
 /**
@@ -66,16 +69,19 @@ import jakarta.xml.bind.annotation.XmlType;
     "documentSource",
     "referenceData"
 })
+@XmlRootElement(name = "observationView")
 public class ObservationView {
 
     @XmlElement(required = true)
     protected String versionNumber;
-    @XmlElement(required = true)
+    @XmlElement(required = true, type = String.class)
+    @XmlJavaTypeAdapter(DateAdapter.class)
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar fromDate;
-    @XmlElement(required = true)
+    protected Calendar fromDate;
+    @XmlElement(required = true, type = String.class)
+    @XmlJavaTypeAdapter(DateAdapter.class)
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar toDate;
+    protected Calendar toDate;
     @XmlElement(required = true)
     protected String observationType;
     @XmlElement(required = true)
@@ -112,10 +118,10 @@ public class ObservationView {
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getFromDate() {
+    public Calendar getFromDate() {
         return fromDate;
     }
 
@@ -124,10 +130,10 @@ public class ObservationView {
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setFromDate(XMLGregorianCalendar value) {
+    public void setFromDate(Calendar value) {
         this.fromDate = value;
     }
 
@@ -136,10 +142,10 @@ public class ObservationView {
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getToDate() {
+    public Calendar getToDate() {
         return toDate;
     }
 
@@ -148,10 +154,10 @@ public class ObservationView {
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setToDate(XMLGregorianCalendar value) {
+    public void setToDate(Calendar value) {
         this.toDate = value;
     }
 

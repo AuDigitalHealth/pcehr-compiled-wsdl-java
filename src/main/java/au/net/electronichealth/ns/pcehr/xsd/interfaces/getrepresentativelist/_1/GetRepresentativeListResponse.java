@@ -3,14 +3,14 @@ package au.net.electronichealth.ns.pcehr.xsd.interfaces.getrepresentativelist._1
 
 import java.util.ArrayList;
 import java.util.List;
-import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.AddressTypeSupp;
-import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.NameTypeSupp;
-import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ResponseStatusType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.AddressTypeSupp;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.NameTypeSupp;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ResponseStatusType;
 
 
 /**
@@ -268,43 +268,40 @@ public class GetRepresentativeListResponse {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "representative"
+            "representatives"
         })
         public static class RepresentativeList {
 
-            @XmlElement(required = true)
-            protected List<GetRepresentativeListResponse.PCEHRRecord.RepresentativeList.Representative> representative;
+            @XmlElement(name = "representative", required = true)
+            protected List<GetRepresentativeListResponse.PCEHRRecord.RepresentativeList.Representative> representatives;
 
             /**
-             * Gets the value of the representative property.
+             * Gets the value of the representatives property.
              * 
-             * <p>This accessor method returns a reference to the live list,
+             * <p>
+             * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
-             * returned list will be present inside the Jakarta XML Binding object.
-             * This is why there is not a {@code set} method for the representative property.</p>
+             * returned list will be present inside the JAXB object.
+             * This is why there is not a <CODE>set</CODE> method for the representatives property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
-             * </p>
              * <pre>
-             * getRepresentative().add(newItem);
+             *    getRepresentatives().add(newItem);
              * </pre>
              * 
              * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link GetRepresentativeListResponse.PCEHRRecord.RepresentativeList.Representative }
-             * </p>
              * 
              * 
-             * @return
-             *     The value of the representative property.
              */
-            public List<GetRepresentativeListResponse.PCEHRRecord.RepresentativeList.Representative> getRepresentative() {
-                if (representative == null) {
-                    representative = new ArrayList<>();
+            public List<GetRepresentativeListResponse.PCEHRRecord.RepresentativeList.Representative> getRepresentatives() {
+                if (representatives == null) {
+                    representatives = new ArrayList<GetRepresentativeListResponse.PCEHRRecord.RepresentativeList.Representative>();
                 }
-                return this.representative;
+                return this.representatives;
             }
 
 

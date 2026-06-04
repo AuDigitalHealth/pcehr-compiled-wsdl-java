@@ -17,6 +17,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *         identity. If id is provided and is not in proper URN syntax then it is used for linkage
  *         within document and is ignored by the registry. In this case the registry generates a UUID
  *         URN for id attribute. id must not be null when object is retrieved from the registry.
+ *       
  * 
  * &lt;p&gt;Java class for IdentifiableType complex type&lt;/p&gt;.
  * 
@@ -40,7 +41,7 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "IdentifiableType", propOrder = {
-    "slot"
+    "slots"
 })
 @XmlSeeAlso({
     ObjectRefType.class,
@@ -49,7 +50,7 @@ import jakarta.xml.bind.annotation.XmlType;
 public class IdentifiableType {
 
     @XmlElement(name = "Slot")
-    protected List<SlotType1> slot;
+    protected List<Slot> slots;
     @XmlAttribute(name = "id", required = true)
     @XmlSchemaType(name = "anyURI")
     protected String id;
@@ -58,35 +59,32 @@ public class IdentifiableType {
     protected String home;
 
     /**
-     * Gets the value of the slot property.
+     * Gets the value of the slots property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the slot property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the slots property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getSlot().add(newItem);
+     *    getSlots().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link SlotType1 }
-     * </p>
+     * {@link Slot }
      * 
      * 
-     * @return
-     *     The value of the slot property.
      */
-    public List<SlotType1> getSlot() {
-        if (slot == null) {
-            slot = new ArrayList<>();
+    public List<Slot> getSlots() {
+        if (slots == null) {
+            slots = new ArrayList<Slot>();
         }
-        return this.slot;
+        return this.slots;
     }
 
     /**

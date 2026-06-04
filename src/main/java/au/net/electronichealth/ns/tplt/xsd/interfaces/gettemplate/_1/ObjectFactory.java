@@ -8,7 +8,7 @@ import jakarta.xml.bind.annotation.XmlRegistry;
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.tplt.xsd.interfaces.gettemplate._1 package. 
- * <p>An ObjectFactory allows you to programmatically 
+ * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -32,8 +32,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetTemplateResponse }
      * 
-     * @return
-     *     the new instance of {@link GetTemplateResponse }
      */
     public GetTemplateResponse createGetTemplateResponse() {
         return new GetTemplateResponse();
@@ -42,8 +40,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetTemplate }
      * 
-     * @return
-     *     the new instance of {@link GetTemplate }
      */
     public GetTemplate createGetTemplate() {
         return new GetTemplate();
@@ -52,8 +48,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link GetTemplateResponse.Template }
      * 
-     * @return
-     *     the new instance of {@link GetTemplateResponse.Template }
      */
     public GetTemplateResponse.Template createGetTemplateResponseTemplate() {
         return new GetTemplateResponse.Template();

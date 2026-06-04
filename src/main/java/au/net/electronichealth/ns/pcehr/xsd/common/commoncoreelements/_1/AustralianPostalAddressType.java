@@ -4,7 +4,6 @@ package au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -40,7 +39,6 @@ import jakarta.xml.bind.annotation.XmlType;
 public class AustralianPostalAddressType {
 
     @XmlElement(required = true)
-    @XmlSchemaType(name = "string")
     protected StateType state;
     @XmlElement(required = true)
     protected String postcode;

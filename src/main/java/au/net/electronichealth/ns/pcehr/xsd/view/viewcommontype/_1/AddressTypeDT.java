@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -46,13 +47,13 @@ import jakarta.xml.bind.annotation.XmlType;
     "country",
     "unitType",
     "unitID",
-    "additionalLocator",
+    "additionalLocators",
     "streetName",
     "houseNumber",
     "usage",
     "streetNameType",
     "direction",
-    "deliveryAddressLine",
+    "deliveryAddressLines",
     "city",
     "state",
     "postalCode"
@@ -63,13 +64,15 @@ public class AddressTypeDT {
     protected String country;
     protected String unitType;
     protected String unitID;
-    protected List<String> additionalLocator;
+    @XmlElement(name = "additionalLocator")
+    protected List<String> additionalLocators;
     protected String streetName;
     protected String houseNumber;
     protected String usage;
     protected String streetNameType;
     protected String direction;
-    protected List<String> deliveryAddressLine;
+    @XmlElement(name = "deliveryAddressLine")
+    protected List<String> deliveryAddressLines;
     protected String city;
     protected String state;
     protected String postalCode;
@@ -171,35 +174,32 @@ public class AddressTypeDT {
     }
 
     /**
-     * Gets the value of the additionalLocator property.
+     * Gets the value of the additionalLocators property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the additionalLocator property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the additionalLocators property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getAdditionalLocator().add(newItem);
+     *    getAdditionalLocators().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the additionalLocator property.
      */
-    public List<String> getAdditionalLocator() {
-        if (additionalLocator == null) {
-            additionalLocator = new ArrayList<>();
+    public List<String> getAdditionalLocators() {
+        if (additionalLocators == null) {
+            additionalLocators = new ArrayList<String>();
         }
-        return this.additionalLocator;
+        return this.additionalLocators;
     }
 
     /**
@@ -323,35 +323,32 @@ public class AddressTypeDT {
     }
 
     /**
-     * Gets the value of the deliveryAddressLine property.
+     * Gets the value of the deliveryAddressLines property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the deliveryAddressLine property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the deliveryAddressLines property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getDeliveryAddressLine().add(newItem);
+     *    getDeliveryAddressLines().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the deliveryAddressLine property.
      */
-    public List<String> getDeliveryAddressLine() {
-        if (deliveryAddressLine == null) {
-            deliveryAddressLine = new ArrayList<>();
+    public List<String> getDeliveryAddressLines() {
+        if (deliveryAddressLines == null) {
+            deliveryAddressLines = new ArrayList<String>();
         }
-        return this.deliveryAddressLine;
+        return this.deliveryAddressLines;
     }
 
     /**

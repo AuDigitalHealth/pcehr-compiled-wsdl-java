@@ -68,7 +68,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlType(name = "nameType", propOrder = {
     "nameTitle",
     "familyName",
-    "givenName",
+    "givenNames",
     "nameSuffix",
     "nameAlias"
 })
@@ -77,7 +77,8 @@ public class NameType {
     protected String nameTitle;
     @XmlElement(required = true)
     protected String familyName;
-    protected List<String> givenName;
+    @XmlElement(name = "givenName")
+    protected List<String> givenNames;
     protected String nameSuffix;
     protected String nameAlias;
 
@@ -130,35 +131,32 @@ public class NameType {
     }
 
     /**
-     * Gets the value of the givenName property.
+     * Gets the value of the givenNames property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the givenName property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the givenNames property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getGivenName().add(newItem);
+     *    getGivenNames().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the givenName property.
      */
-    public List<String> getGivenName() {
-        if (givenName == null) {
-            givenName = new ArrayList<>();
+    public List<String> getGivenNames() {
+        if (givenNames == null) {
+            givenNames = new ArrayList<String>();
         }
-        return this.givenName;
+        return this.givenNames;
     }
 
     /**

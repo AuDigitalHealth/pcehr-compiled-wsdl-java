@@ -2,18 +2,21 @@
 package au.net.electronichealth.ns.pcehr.xsd.interfaces.diagnosticimagingreportview._1;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
-import javax.xml.datatype.XMLGregorianCalendar;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import au.gov.nehta.schema.DateAdapter;
 import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.IndividualTypeSupp;
 import au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1.CodedType;
 import au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1.DiagnosticReportInformationDT;
 import au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1.ProviderInformationDT;
 import au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1.RequesterInformationDT;
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlSchemaType;
-import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -126,13 +129,15 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "diagnosticImagingReportViewResponse", propOrder = {
     "viewMetadata",
-    "diagnosticImagingReport"
+    "diagnosticImagingReports"
 })
+@XmlRootElement(name = "diagnosticImagingReportViewResponse")
 public class DiagnosticImagingReportViewResponse {
 
     @XmlElement(required = true)
     protected DiagnosticImagingReportViewResponse.ViewMetadata viewMetadata;
-    protected List<DiagnosticImagingReportViewResponse.DiagnosticImagingReport> diagnosticImagingReport;
+    @XmlElement(name = "diagnosticImagingReport")
+    protected List<DiagnosticImagingReportViewResponse.DiagnosticImagingReport> diagnosticImagingReports;
 
     /**
      * Gets the value of the viewMetadata property.
@@ -159,35 +164,32 @@ public class DiagnosticImagingReportViewResponse {
     }
 
     /**
-     * Gets the value of the diagnosticImagingReport property.
+     * Gets the value of the diagnosticImagingReports property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the diagnosticImagingReport property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the diagnosticImagingReports property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getDiagnosticImagingReport().add(newItem);
+     *    getDiagnosticImagingReports().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link DiagnosticImagingReportViewResponse.DiagnosticImagingReport }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the diagnosticImagingReport property.
      */
-    public List<DiagnosticImagingReportViewResponse.DiagnosticImagingReport> getDiagnosticImagingReport() {
-        if (diagnosticImagingReport == null) {
-            diagnosticImagingReport = new ArrayList<>();
+    public List<DiagnosticImagingReportViewResponse.DiagnosticImagingReport> getDiagnosticImagingReports() {
+        if (diagnosticImagingReports == null) {
+            diagnosticImagingReports = new ArrayList<DiagnosticImagingReportViewResponse.DiagnosticImagingReport>();
         }
-        return this.diagnosticImagingReport;
+        return this.diagnosticImagingReports;
     }
 
 
@@ -259,7 +261,7 @@ public class DiagnosticImagingReportViewResponse {
         "clinicalDocumentAuthor",
         "reportingRadiologistInformation",
         "imagingRequesterInformation",
-        "imagingExaminationResult"
+        "imagingExaminationResults"
     })
     public static class DiagnosticImagingReport {
 
@@ -273,8 +275,8 @@ public class DiagnosticImagingReportViewResponse {
         protected ProviderInformationDT reportingRadiologistInformation;
         @XmlElement(required = true)
         protected RequesterInformationDT imagingRequesterInformation;
-        @XmlElement(required = true)
-        protected List<DiagnosticImagingReportViewResponse.DiagnosticImagingReport.ImagingExaminationResult> imagingExaminationResult;
+        @XmlElement(name = "imagingExaminationResult", required = true)
+        protected List<DiagnosticImagingReportViewResponse.DiagnosticImagingReport.ImagingExaminationResult> imagingExaminationResults;
 
         /**
          * Gets the value of the dateAvailableToConsumer property.
@@ -397,35 +399,32 @@ public class DiagnosticImagingReportViewResponse {
         }
 
         /**
-         * Gets the value of the imagingExaminationResult property.
+         * Gets the value of the imagingExaminationResults property.
          * 
-         * <p>This accessor method returns a reference to the live list,
+         * <p>
+         * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the Jakarta XML Binding object.
-         * This is why there is not a {@code set} method for the imagingExaminationResult property.</p>
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the imagingExaminationResults property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
-         * </p>
          * <pre>
-         * getImagingExaminationResult().add(newItem);
+         *    getImagingExaminationResults().add(newItem);
          * </pre>
          * 
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link DiagnosticImagingReportViewResponse.DiagnosticImagingReport.ImagingExaminationResult }
-         * </p>
          * 
          * 
-         * @return
-         *     The value of the imagingExaminationResult property.
          */
-        public List<DiagnosticImagingReportViewResponse.DiagnosticImagingReport.ImagingExaminationResult> getImagingExaminationResult() {
-            if (imagingExaminationResult == null) {
-                imagingExaminationResult = new ArrayList<>();
+        public List<DiagnosticImagingReportViewResponse.DiagnosticImagingReport.ImagingExaminationResult> getImagingExaminationResults() {
+            if (imagingExaminationResults == null) {
+                imagingExaminationResults = new ArrayList<DiagnosticImagingReportViewResponse.DiagnosticImagingReport.ImagingExaminationResult>();
             }
-            return this.imagingExaminationResult;
+            return this.imagingExaminationResults;
         }
 
 
@@ -571,31 +570,28 @@ public class DiagnosticImagingReportViewResponse {
             /**
              * Gets the value of the anatomicalSiteDetails property.
              * 
-             * <p>This accessor method returns a reference to the live list,
+             * <p>
+             * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
-             * returned list will be present inside the Jakarta XML Binding object.
-             * This is why there is not a {@code set} method for the anatomicalSiteDetails property.</p>
+             * returned list will be present inside the JAXB object.
+             * This is why there is not a <CODE>set</CODE> method for the anatomicalSiteDetails property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
-             * </p>
              * <pre>
-             * getAnatomicalSiteDetails().add(newItem);
+             *    getAnatomicalSiteDetails().add(newItem);
              * </pre>
              * 
              * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link DiagnosticImagingReportViewResponse.DiagnosticImagingReport.ImagingExaminationResult.AnatomicalSiteDetails }
-             * </p>
              * 
              * 
-             * @return
-             *     The value of the anatomicalSiteDetails property.
              */
             public List<DiagnosticImagingReportViewResponse.DiagnosticImagingReport.ImagingExaminationResult.AnatomicalSiteDetails> getAnatomicalSiteDetails() {
                 if (anatomicalSiteDetails == null) {
-                    anatomicalSiteDetails = new ArrayList<>();
+                    anatomicalSiteDetails = new ArrayList<DiagnosticImagingReportViewResponse.DiagnosticImagingReport.ImagingExaminationResult.AnatomicalSiteDetails>();
                 }
                 return this.anatomicalSiteDetails;
             }
@@ -683,12 +679,13 @@ public class DiagnosticImagingReportViewResponse {
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
                 "anatomicalRegion",
-                "anatomicalLocation"
+                "anatomicalLocations"
             })
             public static class AnatomicalSiteDetails {
 
                 protected CodedType anatomicalRegion;
-                protected List<DiagnosticImagingReportViewResponse.DiagnosticImagingReport.ImagingExaminationResult.AnatomicalSiteDetails.AnatomicalLocation> anatomicalLocation;
+                @XmlElement(name = "anatomicalLocation")
+                protected List<DiagnosticImagingReportViewResponse.DiagnosticImagingReport.ImagingExaminationResult.AnatomicalSiteDetails.AnatomicalLocation> anatomicalLocations;
 
                 /**
                  * Gets the value of the anatomicalRegion property.
@@ -715,35 +712,32 @@ public class DiagnosticImagingReportViewResponse {
                 }
 
                 /**
-                 * Gets the value of the anatomicalLocation property.
+                 * Gets the value of the anatomicalLocations property.
                  * 
-                 * <p>This accessor method returns a reference to the live list,
+                 * <p>
+                 * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
-                 * returned list will be present inside the Jakarta XML Binding object.
-                 * This is why there is not a {@code set} method for the anatomicalLocation property.</p>
+                 * returned list will be present inside the JAXB object.
+                 * This is why there is not a <CODE>set</CODE> method for the anatomicalLocations property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
-                 * </p>
                  * <pre>
-                 * getAnatomicalLocation().add(newItem);
+                 *    getAnatomicalLocations().add(newItem);
                  * </pre>
                  * 
                  * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link DiagnosticImagingReportViewResponse.DiagnosticImagingReport.ImagingExaminationResult.AnatomicalSiteDetails.AnatomicalLocation }
-                 * </p>
                  * 
                  * 
-                 * @return
-                 *     The value of the anatomicalLocation property.
                  */
-                public List<DiagnosticImagingReportViewResponse.DiagnosticImagingReport.ImagingExaminationResult.AnatomicalSiteDetails.AnatomicalLocation> getAnatomicalLocation() {
-                    if (anatomicalLocation == null) {
-                        anatomicalLocation = new ArrayList<>();
+                public List<DiagnosticImagingReportViewResponse.DiagnosticImagingReport.ImagingExaminationResult.AnatomicalSiteDetails.AnatomicalLocation> getAnatomicalLocations() {
+                    if (anatomicalLocations == null) {
+                        anatomicalLocations = new ArrayList<DiagnosticImagingReportViewResponse.DiagnosticImagingReport.ImagingExaminationResult.AnatomicalSiteDetails.AnatomicalLocation>();
                     }
-                    return this.anatomicalLocation;
+                    return this.anatomicalLocations;
                 }
 
 
@@ -1070,12 +1064,14 @@ public class DiagnosticImagingReportViewResponse {
         })
         public static class ViewParameters {
 
-            @XmlElement(required = true)
+            @XmlElement(required = true, type = String.class)
+            @XmlJavaTypeAdapter(DateAdapter.class)
             @XmlSchemaType(name = "date")
-            protected XMLGregorianCalendar dateFromFilter;
-            @XmlElement(required = true)
+            protected Calendar dateFromFilter;
+            @XmlElement(required = true, type = String.class)
+            @XmlJavaTypeAdapter(DateAdapter.class)
             @XmlSchemaType(name = "date")
-            protected XMLGregorianCalendar dateToFilter;
+            protected Calendar dateToFilter;
             @XmlElement(required = true)
             protected String viewVersionNumber;
 
@@ -1084,10 +1080,10 @@ public class DiagnosticImagingReportViewResponse {
              * 
              * @return
              *     possible object is
-             *     {@link XMLGregorianCalendar }
+             *     {@link String }
              *     
              */
-            public XMLGregorianCalendar getDateFromFilter() {
+            public Calendar getDateFromFilter() {
                 return dateFromFilter;
             }
 
@@ -1096,10 +1092,10 @@ public class DiagnosticImagingReportViewResponse {
              * 
              * @param value
              *     allowed object is
-             *     {@link XMLGregorianCalendar }
+             *     {@link String }
              *     
              */
-            public void setDateFromFilter(XMLGregorianCalendar value) {
+            public void setDateFromFilter(Calendar value) {
                 this.dateFromFilter = value;
             }
 
@@ -1108,10 +1104,10 @@ public class DiagnosticImagingReportViewResponse {
              * 
              * @return
              *     possible object is
-             *     {@link XMLGregorianCalendar }
+             *     {@link String }
              *     
              */
-            public XMLGregorianCalendar getDateToFilter() {
+            public Calendar getDateToFilter() {
                 return dateToFilter;
             }
 
@@ -1120,10 +1116,10 @@ public class DiagnosticImagingReportViewResponse {
              * 
              * @param value
              *     allowed object is
-             *     {@link XMLGregorianCalendar }
+             *     {@link String }
              *     
              */
-            public void setDateToFilter(XMLGregorianCalendar value) {
+            public void setDateToFilter(Calendar value) {
                 this.dateToFilter = value;
             }
 

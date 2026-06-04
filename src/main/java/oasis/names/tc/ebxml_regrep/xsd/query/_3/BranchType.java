@@ -26,8 +26,8 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "BranchType")
 @XmlSeeAlso({
-    InternationalStringBranchType.class,
     SlotBranchType.class,
+    InternationalStringBranchType.class,
     QueryExpressionBranchType.class
 })
 public abstract class BranchType

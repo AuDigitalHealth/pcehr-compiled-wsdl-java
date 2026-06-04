@@ -35,7 +35,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SpecificationLinkType", propOrder = {
     "usageDescription",
-    "usageParameter"
+    "usageParameters"
 })
 public class SpecificationLinkType
     extends RegistryObjectType
@@ -44,7 +44,7 @@ public class SpecificationLinkType
     @XmlElement(name = "UsageDescription")
     protected InternationalStringType usageDescription;
     @XmlElement(name = "UsageParameter")
-    protected List<String> usageParameter;
+    protected List<String> usageParameters;
     @XmlAttribute(name = "serviceBinding", required = true)
     protected String serviceBinding;
     @XmlAttribute(name = "specificationObject", required = true)
@@ -75,35 +75,32 @@ public class SpecificationLinkType
     }
 
     /**
-     * Gets the value of the usageParameter property.
+     * Gets the value of the usageParameters property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the usageParameter property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the usageParameters property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getUsageParameter().add(newItem);
+     *    getUsageParameters().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the usageParameter property.
      */
-    public List<String> getUsageParameter() {
-        if (usageParameter == null) {
-            usageParameter = new ArrayList<>();
+    public List<String> getUsageParameters() {
+        if (usageParameters == null) {
+            usageParameters = new ArrayList<String>();
         }
-        return this.usageParameter;
+        return this.usageParameters;
     }
 
     /**

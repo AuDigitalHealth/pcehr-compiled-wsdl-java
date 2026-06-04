@@ -3,8 +3,6 @@ package oasis.names.tc.ebxml_regrep.xsd.rim._3;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.datatype.Duration;
-import javax.xml.datatype.XMLGregorianCalendar;
 import jakarta.xml.bind.JAXBElement;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -12,6 +10,8 @@ import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElementRef;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
+import javax.xml.datatype.Duration;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -42,14 +42,14 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "SubscriptionType", propOrder = {
-    "action"
+    "actions"
 })
 public class SubscriptionType
     extends RegistryObjectType
 {
 
     @XmlElementRef(name = "Action", namespace = "urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0", type = JAXBElement.class, required = false)
-    protected List<JAXBElement<? extends ActionType>> action;
+    protected List<JAXBElement<? extends ActionType>> actions;
     @XmlAttribute(name = "selector", required = true)
     protected String selector;
     @XmlAttribute(name = "startTime")
@@ -62,36 +62,33 @@ public class SubscriptionType
     protected Duration notificationInterval;
 
     /**
-     * Gets the value of the action property.
+     * Gets the value of the actions property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the action property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the actions property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getAction().add(newItem);
+     *    getActions().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link JAXBElement }{@code <}{@link ActionType }{@code >}
      * {@link JAXBElement }{@code <}{@link NotifyActionType }{@code >}
-     * </p>
+     * {@link JAXBElement }{@code <}{@link ActionType }{@code >}
      * 
      * 
-     * @return
-     *     The value of the action property.
      */
-    public List<JAXBElement<? extends ActionType>> getAction() {
-        if (action == null) {
-            action = new ArrayList<>();
+    public List<JAXBElement<? extends ActionType>> getActions() {
+        if (actions == null) {
+            actions = new ArrayList<JAXBElement<? extends ActionType>>();
         }
-        return this.action;
+        return this.actions;
     }
 
     /**

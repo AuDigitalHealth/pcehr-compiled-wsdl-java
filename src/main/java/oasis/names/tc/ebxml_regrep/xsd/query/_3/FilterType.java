@@ -28,7 +28,7 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "FilterType")
 @XmlSeeAlso({
-    CompoundFilterType.class,
+    CompoundFilter.class,
     SimpleFilterType.class
 })
 public class FilterType {

@@ -4,6 +4,7 @@ package au.net.electronichealth.ns.pcehr.xsd.interfaces.healthrecordoverview._1;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -32,6 +33,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "versionNumber",
     "clinicalSynopsisLength"
 })
+@XmlRootElement(name = "healthRecordOverView")
 public class HealthRecordOverView {
 
     @XmlElement(required = true)

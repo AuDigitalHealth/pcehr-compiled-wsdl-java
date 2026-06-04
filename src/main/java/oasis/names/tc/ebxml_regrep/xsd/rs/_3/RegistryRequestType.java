@@ -17,11 +17,12 @@ import oasis.names.tc.ebxml_regrep.xsd.lcm._3.SubmitObjectsRequest;
 import oasis.names.tc.ebxml_regrep.xsd.lcm._3.UndeprecateObjectsRequest;
 import oasis.names.tc.ebxml_regrep.xsd.lcm._3.UpdateObjectsRequest;
 import oasis.names.tc.ebxml_regrep.xsd.query._3.AdhocQueryRequest;
-import oasis.names.tc.ebxml_regrep.xsd.rim._3.SlotListType;
+import oasis.names.tc.ebxml_regrep.xsd.rim._3.SlotList;
 
 
 /**
  * Base type for all ebXML Registry requests
+ *       
  * 
  * &lt;p&gt;Java class for RegistryRequestType complex type&lt;/p&gt;.
  * 
@@ -48,20 +49,20 @@ import oasis.names.tc.ebxml_regrep.xsd.rim._3.SlotListType;
     "requestSlotList"
 })
 @XmlSeeAlso({
-    AcceptObjectsRequest.class,
-    RelocateObjectsRequest.class,
-    RemoveObjectsRequest.class,
-    UndeprecateObjectsRequest.class,
-    DeprecateObjectsRequest.class,
+    AdhocQueryRequest.class,
     ApproveObjectsRequest.class,
     UpdateObjectsRequest.class,
-    SubmitObjectsRequest.class,
-    AdhocQueryRequest.class
+    RelocateObjectsRequest.class,
+    DeprecateObjectsRequest.class,
+    RemoveObjectsRequest.class,
+    AcceptObjectsRequest.class,
+    UndeprecateObjectsRequest.class,
+    SubmitObjectsRequest.class
 })
 public class RegistryRequestType {
 
     @XmlElement(name = "RequestSlotList")
-    protected SlotListType requestSlotList;
+    protected SlotList requestSlotList;
     @XmlAttribute(name = "id")
     @XmlSchemaType(name = "anyURI")
     protected String id;
@@ -73,10 +74,10 @@ public class RegistryRequestType {
      * 
      * @return
      *     possible object is
-     *     {@link SlotListType }
+     *     {@link SlotList }
      *     
      */
-    public SlotListType getRequestSlotList() {
+    public SlotList getRequestSlotList() {
         return requestSlotList;
     }
 
@@ -85,10 +86,10 @@ public class RegistryRequestType {
      * 
      * @param value
      *     allowed object is
-     *     {@link SlotListType }
+     *     {@link SlotList }
      *     
      */
-    public void setRequestSlotList(SlotListType value) {
+    public void setRequestSlotList(SlotList value) {
         this.requestSlotList = value;
     }
 

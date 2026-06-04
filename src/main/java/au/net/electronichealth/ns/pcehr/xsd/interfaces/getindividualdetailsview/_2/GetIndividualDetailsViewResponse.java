@@ -3,18 +3,18 @@ package au.net.electronichealth.ns.pcehr.xsd.interfaces.getindividualdetailsview
 
 import java.util.ArrayList;
 import java.util.List;
-import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ContactDetailsType;
-import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ContactPersonTypeSupp;
-import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.IndividualTypeSupp;
-import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.RecordStatusType;
-import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ResponseStatusType;
-import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.StatusType;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
-import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ContactDetailsType;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ContactPersonTypeSupp;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.DateAccuracyIndicatorType;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.IndividualTypeSupp;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.RecordStatusType;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ResponseStatusType;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.StatusType;
 
 
 /**
@@ -196,10 +196,8 @@ public class GetIndividualDetailsViewResponse {
     {
 
         @XmlElement(namespace = "http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0")
-        protected String dateAccuracyIndicatorType;
-        @XmlSchemaType(name = "string")
+        protected DateAccuracyIndicatorType dateAccuracyIndicatorType;
         protected RecordStatusType ihiRecordStatus;
-        @XmlSchemaType(name = "string")
         protected StatusType ihiStatus;
         @XmlElement(namespace = "http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0", required = true)
         protected String ihiNumber;
@@ -213,10 +211,10 @@ public class GetIndividualDetailsViewResponse {
          * 
          * @return
          *     possible object is
-         *     {@link String }
+         *     {@link DateAccuracyIndicatorType }
          *     
          */
-        public String getDateAccuracyIndicatorType() {
+        public DateAccuracyIndicatorType getDateAccuracyIndicatorType() {
             return dateAccuracyIndicatorType;
         }
 
@@ -225,10 +223,10 @@ public class GetIndividualDetailsViewResponse {
          * 
          * @param value
          *     allowed object is
-         *     {@link String }
+         *     {@link DateAccuracyIndicatorType }
          *     
          */
-        public void setDateAccuracyIndicatorType(String value) {
+        public void setDateAccuracyIndicatorType(DateAccuracyIndicatorType value) {
             this.dateAccuracyIndicatorType = value;
         }
 
@@ -398,43 +396,40 @@ public class GetIndividualDetailsViewResponse {
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "contactPerson"
+            "contactPersons"
         })
         public static class ContactPersons {
 
-            @XmlElement(required = true)
-            protected List<ContactPersonTypeSupp> contactPerson;
+            @XmlElement(name = "contactPerson", required = true)
+            protected List<ContactPersonTypeSupp> contactPersons;
 
             /**
-             * Gets the value of the contactPerson property.
+             * Gets the value of the contactPersons property.
              * 
-             * <p>This accessor method returns a reference to the live list,
+             * <p>
+             * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
-             * returned list will be present inside the Jakarta XML Binding object.
-             * This is why there is not a {@code set} method for the contactPerson property.</p>
+             * returned list will be present inside the JAXB object.
+             * This is why there is not a <CODE>set</CODE> method for the contactPersons property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
-             * </p>
              * <pre>
-             * getContactPerson().add(newItem);
+             *    getContactPersons().add(newItem);
              * </pre>
              * 
              * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link ContactPersonTypeSupp }
-             * </p>
              * 
              * 
-             * @return
-             *     The value of the contactPerson property.
              */
-            public List<ContactPersonTypeSupp> getContactPerson() {
-                if (contactPerson == null) {
-                    contactPerson = new ArrayList<>();
+            public List<ContactPersonTypeSupp> getContactPersons() {
+                if (contactPersons == null) {
+                    contactPersons = new ArrayList<ContactPersonTypeSupp>();
                 }
-                return this.contactPerson;
+                return this.contactPersons;
             }
 
         }

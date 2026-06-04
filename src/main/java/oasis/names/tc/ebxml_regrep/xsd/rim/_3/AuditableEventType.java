@@ -1,17 +1,18 @@
 
 package oasis.names.tc.ebxml_regrep.xsd.rim._3;
 
-import javax.xml.datatype.XMLGregorianCalendar;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * An Event that forms an audit trail in ebXML Registry.
+ *       
  * 
  * &lt;p&gt;Java class for AuditableEventType complex type&lt;/p&gt;.
  * 
@@ -44,7 +45,7 @@ public class AuditableEventType
 {
 
     @XmlElement(required = true)
-    protected ObjectRefListType affectedObjects;
+    protected ObjectRefList affectedObjects;
     @XmlAttribute(name = "eventType", required = true)
     protected String eventType;
     @XmlAttribute(name = "timestamp", required = true)
@@ -60,10 +61,10 @@ public class AuditableEventType
      * 
      * @return
      *     possible object is
-     *     {@link ObjectRefListType }
+     *     {@link ObjectRefList }
      *     
      */
-    public ObjectRefListType getAffectedObjects() {
+    public ObjectRefList getAffectedObjects() {
         return affectedObjects;
     }
 
@@ -72,10 +73,10 @@ public class AuditableEventType
      * 
      * @param value
      *     allowed object is
-     *     {@link ObjectRefListType }
+     *     {@link ObjectRefList }
      *     
      */
-    public void setAffectedObjects(ObjectRefListType value) {
+    public void setAffectedObjects(ObjectRefList value) {
         this.affectedObjects = value;
     }
 

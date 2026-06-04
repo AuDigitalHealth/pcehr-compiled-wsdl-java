@@ -9,5 +9,8 @@ if ($null -ne $env:MVN_SETTINGS -and $env:MVN_SETTINGS.Trim().Length -gt 0) {
 }
 Write-Output 'Building pcehr-compiled-wsdl JAR'
 $mvnArgs += @('-Dgpg.skip=true', 'clean', 'verify')
+if ($args.Count -gt 0) {
+    $mvnArgs += $args
+}
 & mvn @mvnArgs
 exit $LASTEXITCODE

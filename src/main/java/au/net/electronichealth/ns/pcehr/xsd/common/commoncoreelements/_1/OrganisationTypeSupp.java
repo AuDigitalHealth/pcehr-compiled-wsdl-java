@@ -46,19 +46,20 @@ import jakarta.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "organisationTypeSupp", propOrder = {
     "hpioNumber",
-    "name",
-    "organisationService",
-    "participatingOrganisation"
+    "names",
+    "organisationServices",
+    "participatingOrganisations"
 })
 public class OrganisationTypeSupp {
 
     @XmlElement(required = true)
     protected String hpioNumber;
-    @XmlElement(required = true)
-    protected List<String> name;
-    @XmlElement(required = true)
-    protected List<OrganisationServiceType> organisationService;
-    protected List<OrganisationTypeSupp.ParticipatingOrganisation> participatingOrganisation;
+    @XmlElement(name = "name", required = true)
+    protected List<String> names;
+    @XmlElement(name = "organisationService", required = true)
+    protected List<OrganisationServiceType> organisationServices;
+    @XmlElement(name = "participatingOrganisation")
+    protected List<OrganisationTypeSupp.ParticipatingOrganisation> participatingOrganisations;
 
     /**
      * Gets the value of the hpioNumber property.
@@ -85,99 +86,90 @@ public class OrganisationTypeSupp {
     }
 
     /**
-     * Gets the value of the name property.
+     * Gets the value of the names property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the name property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the names property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getName().add(newItem);
+     *    getNames().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the name property.
      */
-    public List<String> getName() {
-        if (name == null) {
-            name = new ArrayList<>();
+    public List<String> getNames() {
+        if (names == null) {
+            names = new ArrayList<String>();
         }
-        return this.name;
+        return this.names;
     }
 
     /**
-     * Gets the value of the organisationService property.
+     * Gets the value of the organisationServices property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the organisationService property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the organisationServices property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getOrganisationService().add(newItem);
+     *    getOrganisationServices().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link OrganisationServiceType }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the organisationService property.
      */
-    public List<OrganisationServiceType> getOrganisationService() {
-        if (organisationService == null) {
-            organisationService = new ArrayList<>();
+    public List<OrganisationServiceType> getOrganisationServices() {
+        if (organisationServices == null) {
+            organisationServices = new ArrayList<OrganisationServiceType>();
         }
-        return this.organisationService;
+        return this.organisationServices;
     }
 
     /**
-     * Gets the value of the participatingOrganisation property.
+     * Gets the value of the participatingOrganisations property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the participatingOrganisation property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the participatingOrganisations property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getParticipatingOrganisation().add(newItem);
+     *    getParticipatingOrganisations().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link OrganisationTypeSupp.ParticipatingOrganisation }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the participatingOrganisation property.
      */
-    public List<OrganisationTypeSupp.ParticipatingOrganisation> getParticipatingOrganisation() {
-        if (participatingOrganisation == null) {
-            participatingOrganisation = new ArrayList<>();
+    public List<OrganisationTypeSupp.ParticipatingOrganisation> getParticipatingOrganisations() {
+        if (participatingOrganisations == null) {
+            participatingOrganisations = new ArrayList<OrganisationTypeSupp.ParticipatingOrganisation>();
         }
-        return this.participatingOrganisation;
+        return this.participatingOrganisations;
     }
 
 
@@ -205,17 +197,17 @@ public class OrganisationTypeSupp {
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
         "hpioNumber",
-        "name",
-        "organisationService"
+        "names",
+        "organisationServices"
     })
     public static class ParticipatingOrganisation {
 
         @XmlElement(required = true)
         protected String hpioNumber;
-        @XmlElement(required = true)
-        protected List<String> name;
-        @XmlElement(required = true)
-        protected List<OrganisationServiceType> organisationService;
+        @XmlElement(name = "name", required = true)
+        protected List<String> names;
+        @XmlElement(name = "organisationService", required = true)
+        protected List<OrganisationServiceType> organisationServices;
 
         /**
          * Gets the value of the hpioNumber property.
@@ -242,67 +234,61 @@ public class OrganisationTypeSupp {
         }
 
         /**
-         * Gets the value of the name property.
+         * Gets the value of the names property.
          * 
-         * <p>This accessor method returns a reference to the live list,
+         * <p>
+         * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the Jakarta XML Binding object.
-         * This is why there is not a {@code set} method for the name property.</p>
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the names property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
-         * </p>
          * <pre>
-         * getName().add(newItem);
+         *    getNames().add(newItem);
          * </pre>
          * 
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link String }
-         * </p>
          * 
          * 
-         * @return
-         *     The value of the name property.
          */
-        public List<String> getName() {
-            if (name == null) {
-                name = new ArrayList<>();
+        public List<String> getNames() {
+            if (names == null) {
+                names = new ArrayList<String>();
             }
-            return this.name;
+            return this.names;
         }
 
         /**
-         * Gets the value of the organisationService property.
+         * Gets the value of the organisationServices property.
          * 
-         * <p>This accessor method returns a reference to the live list,
+         * <p>
+         * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the Jakarta XML Binding object.
-         * This is why there is not a {@code set} method for the organisationService property.</p>
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the organisationServices property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
-         * </p>
          * <pre>
-         * getOrganisationService().add(newItem);
+         *    getOrganisationServices().add(newItem);
          * </pre>
          * 
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link OrganisationServiceType }
-         * </p>
          * 
          * 
-         * @return
-         *     The value of the organisationService property.
          */
-        public List<OrganisationServiceType> getOrganisationService() {
-            if (organisationService == null) {
-                organisationService = new ArrayList<>();
+        public List<OrganisationServiceType> getOrganisationServices() {
+            if (organisationServices == null) {
+                organisationServices = new ArrayList<OrganisationServiceType>();
             }
-            return this.organisationService;
+            return this.organisationServices;
         }
 
     }

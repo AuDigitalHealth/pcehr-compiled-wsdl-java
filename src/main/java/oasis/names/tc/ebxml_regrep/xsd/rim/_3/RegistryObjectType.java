@@ -43,29 +43,29 @@ import jakarta.xml.bind.annotation.XmlType;
     "name",
     "description",
     "versionInfo",
-    "classification",
-    "externalIdentifier"
+    "classifications",
+    "externalIdentifiers"
 })
 @XmlSeeAlso({
-    AdhocQueryType.class,
-    AssociationType1 .class,
-    AuditableEventType.class,
-    ClassificationType.class,
-    ClassificationNodeType.class,
     ClassificationSchemeType.class,
-    ExternalIdentifierType.class,
-    ExternalLinkType.class,
+    ServiceType.class,
+    ClassificationNodeType.class,
+    AssociationType1 .class,
     ExtrinsicObjectType.class,
     OrganizationType.class,
-    RegistryPackageType.class,
-    ServiceType.class,
-    ServiceBindingType.class,
-    SpecificationLinkType.class,
-    PersonType.class,
+    AdhocQueryType.class,
     RegistryType.class,
+    ClassificationType.class,
+    RegistryPackageType.class,
     FederationType.class,
-    NotificationType.class,
-    SubscriptionType.class
+    ServiceBindingType.class,
+    ExternalIdentifierType.class,
+    SpecificationLinkType.class,
+    ExternalLinkType.class,
+    AuditableEventType.class,
+    SubscriptionType.class,
+    PersonType.class,
+    Notification.class
 })
 public class RegistryObjectType
     extends IdentifiableType
@@ -78,9 +78,9 @@ public class RegistryObjectType
     @XmlElement(name = "VersionInfo")
     protected VersionInfoType versionInfo;
     @XmlElement(name = "Classification")
-    protected List<ClassificationType> classification;
+    protected List<ClassificationType> classifications;
     @XmlElement(name = "ExternalIdentifier")
-    protected List<ExternalIdentifierType> externalIdentifier;
+    protected List<ExternalIdentifierType> externalIdentifiers;
     @XmlAttribute(name = "lid")
     @XmlSchemaType(name = "anyURI")
     protected String lid;
@@ -162,67 +162,61 @@ public class RegistryObjectType
     }
 
     /**
-     * Gets the value of the classification property.
+     * Gets the value of the classifications property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the classification property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the classifications property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getClassification().add(newItem);
+     *    getClassifications().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ClassificationType }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the classification property.
      */
-    public List<ClassificationType> getClassification() {
-        if (classification == null) {
-            classification = new ArrayList<>();
+    public List<ClassificationType> getClassifications() {
+        if (classifications == null) {
+            classifications = new ArrayList<ClassificationType>();
         }
-        return this.classification;
+        return this.classifications;
     }
 
     /**
-     * Gets the value of the externalIdentifier property.
+     * Gets the value of the externalIdentifiers property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the externalIdentifier property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the externalIdentifiers property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getExternalIdentifier().add(newItem);
+     *    getExternalIdentifiers().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ExternalIdentifierType }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the externalIdentifier property.
      */
-    public List<ExternalIdentifierType> getExternalIdentifier() {
-        if (externalIdentifier == null) {
-            externalIdentifier = new ArrayList<>();
+    public List<ExternalIdentifierType> getExternalIdentifiers() {
+        if (externalIdentifiers == null) {
+            externalIdentifiers = new ArrayList<ExternalIdentifierType>();
         }
-        return this.externalIdentifier;
+        return this.externalIdentifiers;
     }
 
     /**

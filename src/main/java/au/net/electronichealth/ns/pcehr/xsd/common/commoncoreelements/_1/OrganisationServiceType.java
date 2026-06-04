@@ -2,13 +2,17 @@
 package au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
-import javax.xml.datatype.XMLGregorianCalendar;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import au.gov.nehta.schema.DateAdapter;
 
 
 /**
@@ -83,7 +87,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "organisationServiceType",
     "organisationServiceUnit",
     "serviceComments",
-    "complexDate"
+    "complexDates"
 })
 public class OrganisationServiceType {
 
@@ -93,8 +97,8 @@ public class OrganisationServiceType {
     protected String organisationServiceType;
     protected String organisationServiceUnit;
     protected String serviceComments;
-    @XmlElement(required = true)
-    protected List<OrganisationServiceType.ComplexDate> complexDate;
+    @XmlElement(name = "complexDate", required = true)
+    protected List<OrganisationServiceType.ComplexDate> complexDates;
 
     /**
      * Gets the value of the organisationType property.
@@ -193,35 +197,32 @@ public class OrganisationServiceType {
     }
 
     /**
-     * Gets the value of the complexDate property.
+     * Gets the value of the complexDates property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the complexDate property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the complexDates property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getComplexDate().add(newItem);
+     *    getComplexDates().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link OrganisationServiceType.ComplexDate }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the complexDate property.
      */
-    public List<OrganisationServiceType.ComplexDate> getComplexDate() {
-        if (complexDate == null) {
-            complexDate = new ArrayList<>();
+    public List<OrganisationServiceType.ComplexDate> getComplexDates() {
+        if (complexDates == null) {
+            complexDates = new ArrayList<OrganisationServiceType.ComplexDate>();
         }
-        return this.complexDate;
+        return this.complexDates;
     }
 
 
@@ -262,10 +263,11 @@ public class OrganisationServiceType {
     public static class ComplexDate {
 
         @XmlElement(required = true)
-        protected String type;
-        @XmlElement(required = true)
+        protected OrganisationServiceType.ComplexDate.Type type;
+        @XmlElement(required = true, type = String.class)
+        @XmlJavaTypeAdapter(DateAdapter.class)
         @XmlSchemaType(name = "date")
-        protected XMLGregorianCalendar date;
+        protected Calendar date;
         @XmlElement(required = true)
         protected String accuracyIndicator;
 
@@ -274,10 +276,10 @@ public class OrganisationServiceType {
          * 
          * @return
          *     possible object is
-         *     {@link String }
+         *     {@link OrganisationServiceType.ComplexDate.Type }
          *     
          */
-        public String getType() {
+        public OrganisationServiceType.ComplexDate.Type getType() {
             return type;
         }
 
@@ -286,10 +288,10 @@ public class OrganisationServiceType {
          * 
          * @param value
          *     allowed object is
-         *     {@link String }
+         *     {@link OrganisationServiceType.ComplexDate.Type }
          *     
          */
-        public void setType(String value) {
+        public void setType(OrganisationServiceType.ComplexDate.Type value) {
             this.type = value;
         }
 
@@ -298,10 +300,10 @@ public class OrganisationServiceType {
          * 
          * @return
          *     possible object is
-         *     {@link XMLGregorianCalendar }
+         *     {@link String }
          *     
          */
-        public XMLGregorianCalendar getDate() {
+        public Calendar getDate() {
             return date;
         }
 
@@ -310,10 +312,10 @@ public class OrganisationServiceType {
          * 
          * @param value
          *     allowed object is
-         *     {@link XMLGregorianCalendar }
+         *     {@link String }
          *     
          */
-        public void setDate(XMLGregorianCalendar value) {
+        public void setDate(Calendar value) {
             this.date = value;
         }
 
@@ -339,6 +341,50 @@ public class OrganisationServiceType {
          */
         public void setAccuracyIndicator(String value) {
             this.accuracyIndicator = value;
+        }
+
+
+        /**
+         * &lt;p&gt;Java class for null&lt;/p&gt;.
+         * 
+         * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+         * &lt;pre&gt;{&#064;code
+         * &lt;simpleType&gt;
+         *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+         *     &lt;enumeration value="StartDate"/&gt;
+         *     &lt;enumeration value="EndDate"/&gt;
+         *   &lt;/restriction&gt;
+         * &lt;/simpleType&gt;
+         * }&lt;/pre&gt;
+         * 
+         */
+        @XmlType(name = "")
+        @XmlEnum
+        public enum Type {
+
+            @XmlEnumValue("StartDate")
+            START_DATE("StartDate"),
+            @XmlEnumValue("EndDate")
+            END_DATE("EndDate");
+            private final String value;
+
+            Type(String v) {
+                value = v;
+            }
+
+            public String value() {
+                return value;
+            }
+
+            public static OrganisationServiceType.ComplexDate.Type fromValue(String v) {
+                for (OrganisationServiceType.ComplexDate.Type c: OrganisationServiceType.ComplexDate.Type.values()) {
+                    if (c.value.equals(v)) {
+                        return c;
+                    }
+                }
+                throw new IllegalArgumentException(v);
+            }
+
         }
 
     }

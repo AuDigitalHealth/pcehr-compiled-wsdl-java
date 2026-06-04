@@ -34,57 +34,54 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "PersonQueryType", propOrder = {
-    "addressFilter",
+    "addressFilters",
     "personNameFilter",
-    "telephoneNumberFilter",
-    "emailAddressFilter"
+    "telephoneNumberFilters",
+    "emailAddressFilters"
 })
 @XmlSeeAlso({
-    UserQueryType.class
+    UserQuery.class
 })
 public class PersonQueryType
     extends RegistryObjectQueryType
 {
 
     @XmlElement(name = "AddressFilter")
-    protected List<FilterType> addressFilter;
+    protected List<FilterType> addressFilters;
     @XmlElement(name = "PersonNameFilter")
     protected FilterType personNameFilter;
     @XmlElement(name = "TelephoneNumberFilter")
-    protected List<FilterType> telephoneNumberFilter;
+    protected List<FilterType> telephoneNumberFilters;
     @XmlElement(name = "EmailAddressFilter")
-    protected List<FilterType> emailAddressFilter;
+    protected List<FilterType> emailAddressFilters;
 
     /**
-     * Gets the value of the addressFilter property.
+     * Gets the value of the addressFilters property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the addressFilter property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the addressFilters property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getAddressFilter().add(newItem);
+     *    getAddressFilters().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link FilterType }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the addressFilter property.
      */
-    public List<FilterType> getAddressFilter() {
-        if (addressFilter == null) {
-            addressFilter = new ArrayList<>();
+    public List<FilterType> getAddressFilters() {
+        if (addressFilters == null) {
+            addressFilters = new ArrayList<FilterType>();
         }
-        return this.addressFilter;
+        return this.addressFilters;
     }
 
     /**
@@ -112,67 +109,61 @@ public class PersonQueryType
     }
 
     /**
-     * Gets the value of the telephoneNumberFilter property.
+     * Gets the value of the telephoneNumberFilters property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the telephoneNumberFilter property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the telephoneNumberFilters property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getTelephoneNumberFilter().add(newItem);
+     *    getTelephoneNumberFilters().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link FilterType }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the telephoneNumberFilter property.
      */
-    public List<FilterType> getTelephoneNumberFilter() {
-        if (telephoneNumberFilter == null) {
-            telephoneNumberFilter = new ArrayList<>();
+    public List<FilterType> getTelephoneNumberFilters() {
+        if (telephoneNumberFilters == null) {
+            telephoneNumberFilters = new ArrayList<FilterType>();
         }
-        return this.telephoneNumberFilter;
+        return this.telephoneNumberFilters;
     }
 
     /**
-     * Gets the value of the emailAddressFilter property.
+     * Gets the value of the emailAddressFilters property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the emailAddressFilter property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the emailAddressFilters property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getEmailAddressFilter().add(newItem);
+     *    getEmailAddressFilters().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link FilterType }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the emailAddressFilter property.
      */
-    public List<FilterType> getEmailAddressFilter() {
-        if (emailAddressFilter == null) {
-            emailAddressFilter = new ArrayList<>();
+    public List<FilterType> getEmailAddressFilters() {
+        if (emailAddressFilters == null) {
+            emailAddressFilters = new ArrayList<FilterType>();
         }
-        return this.emailAddressFilter;
+        return this.emailAddressFilters;
     }
 
 }

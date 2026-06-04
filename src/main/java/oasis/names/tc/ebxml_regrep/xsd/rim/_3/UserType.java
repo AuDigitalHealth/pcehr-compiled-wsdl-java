@@ -8,6 +8,7 @@ import jakarta.xml.bind.annotation.XmlType;
 
 /**
  * Mapping of the same named interface in ebRIM.
+ *       
  * 
  * &lt;p&gt;Java class for UserType complex type&lt;/p&gt;.
  * 

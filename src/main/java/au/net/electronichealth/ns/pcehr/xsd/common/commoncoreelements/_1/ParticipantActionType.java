@@ -1,11 +1,13 @@
 
 package au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1;
 
-import javax.xml.datatype.XMLGregorianCalendar;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
+import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -70,9 +72,9 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class ParticipantActionType {
 
-    protected String actionType;
+    protected ParticipantActionType.ActionType actionType;
     protected String operationPerformed;
-    protected String reason;
+    protected ParticipantActionType.Reason reason;
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar approvalDateTime;
     protected String approvalRole;
@@ -84,10 +86,10 @@ public class ParticipantActionType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link ParticipantActionType.ActionType }
      *     
      */
-    public String getActionType() {
+    public ParticipantActionType.ActionType getActionType() {
         return actionType;
     }
 
@@ -96,10 +98,10 @@ public class ParticipantActionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link ParticipantActionType.ActionType }
      *     
      */
-    public void setActionType(String value) {
+    public void setActionType(ParticipantActionType.ActionType value) {
         this.actionType = value;
     }
 
@@ -132,10 +134,10 @@ public class ParticipantActionType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link ParticipantActionType.Reason }
      *     
      */
-    public String getReason() {
+    public ParticipantActionType.Reason getReason() {
         return reason;
     }
 
@@ -144,10 +146,10 @@ public class ParticipantActionType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link ParticipantActionType.Reason }
      *     
      */
-    public void setReason(String value) {
+    public void setReason(ParticipantActionType.Reason value) {
         this.reason = value;
     }
 
@@ -245,6 +247,127 @@ public class ParticipantActionType {
      */
     public void setStatusPriorDeactivation(String value) {
         this.statusPriorDeactivation = value;
+    }
+
+
+    /**
+     * &lt;p&gt;Java class for null&lt;/p&gt;.
+     * 
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+     * &lt;pre&gt;{&#064;code
+     * &lt;simpleType&gt;
+     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *     &lt;enumeration value="Create"/&gt;
+     *     &lt;enumeration value="Read"/&gt;
+     *     &lt;enumeration value="Update"/&gt;
+     *     &lt;enumeration value="Delete"/&gt;
+     *   &lt;/restriction&gt;
+     * &lt;/simpleType&gt;
+     * }&lt;/pre&gt;
+     * 
+     */
+    @XmlType(name = "")
+    @XmlEnum
+    public enum ActionType {
+
+        @XmlEnumValue("Create")
+        CREATE("Create"),
+        @XmlEnumValue("Read")
+        READ("Read"),
+        @XmlEnumValue("Update")
+        UPDATE("Update"),
+        @XmlEnumValue("Delete")
+        DELETE("Delete");
+        private final String value;
+
+        ActionType(String v) {
+            value = v;
+        }
+
+        public String value() {
+            return value;
+        }
+
+        public static ParticipantActionType.ActionType fromValue(String v) {
+            for (ParticipantActionType.ActionType c: ParticipantActionType.ActionType.values()) {
+                if (c.value.equals(v)) {
+                    return c;
+                }
+            }
+            throw new IllegalArgumentException(v);
+        }
+
+    }
+
+
+    /**
+     * &lt;p&gt;Java class for null&lt;/p&gt;.
+     * 
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+     * &lt;pre&gt;{&#064;code
+     * &lt;simpleType&gt;
+     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *     &lt;enumeration value="IncorrectIdentity"/&gt;
+     *     &lt;enumeration value="MedicalInaccuracy"/&gt;
+     *     &lt;enumeration value="ElectToRemove"/&gt;
+     *     &lt;enumeration value="IHIStatusIsDeceased"/&gt;
+     *     &lt;enumeration value="NoLegallyAppointmentAuthorised"/&gt;
+     *     &lt;enumeration value="NoOwnershipOfPCEHR"/&gt;
+     *     &lt;enumeration value="IHINotActive"/&gt;
+     *     &lt;enumeration value="IHINotVerified"/&gt;
+     *     &lt;enumeration value="TermsAndConditionsWereNotAccepted"/&gt;
+     *     &lt;enumeration value="Death"/&gt;
+     *     &lt;enumeration value="WithdrawalFromParticipation"/&gt;
+     *   &lt;/restriction&gt;
+     * &lt;/simpleType&gt;
+     * }&lt;/pre&gt;
+     * 
+     */
+    @XmlType(name = "")
+    @XmlEnum
+    public enum Reason {
+
+        @XmlEnumValue("IncorrectIdentity")
+        INCORRECT_IDENTITY("IncorrectIdentity"),
+        @XmlEnumValue("MedicalInaccuracy")
+        MEDICAL_INACCURACY("MedicalInaccuracy"),
+        @XmlEnumValue("ElectToRemove")
+        ELECT_TO_REMOVE("ElectToRemove"),
+        @XmlEnumValue("IHIStatusIsDeceased")
+        IHI_STATUS_IS_DECEASED("IHIStatusIsDeceased"),
+        @XmlEnumValue("NoLegallyAppointmentAuthorised")
+        NO_LEGALLY_APPOINTMENT_AUTHORISED("NoLegallyAppointmentAuthorised"),
+        @XmlEnumValue("NoOwnershipOfPCEHR")
+        NO_OWNERSHIP_OF_PCEHR("NoOwnershipOfPCEHR"),
+        @XmlEnumValue("IHINotActive")
+        IHI_NOT_ACTIVE("IHINotActive"),
+        @XmlEnumValue("IHINotVerified")
+        IHI_NOT_VERIFIED("IHINotVerified"),
+        @XmlEnumValue("TermsAndConditionsWereNotAccepted")
+        TERMS_AND_CONDITIONS_WERE_NOT_ACCEPTED("TermsAndConditionsWereNotAccepted"),
+        @XmlEnumValue("Death")
+        DEATH("Death"),
+        @XmlEnumValue("WithdrawalFromParticipation")
+        WITHDRAWAL_FROM_PARTICIPATION("WithdrawalFromParticipation");
+        private final String value;
+
+        Reason(String v) {
+            value = v;
+        }
+
+        public String value() {
+            return value;
+        }
+
+        public static ParticipantActionType.Reason fromValue(String v) {
+            for (ParticipantActionType.Reason c: ParticipantActionType.Reason.values()) {
+                if (c.value.equals(v)) {
+                    return c;
+                }
+            }
+            throw new IllegalArgumentException(v);
+        }
+
     }
 
 }

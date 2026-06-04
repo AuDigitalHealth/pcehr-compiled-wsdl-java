@@ -8,7 +8,7 @@ import jakarta.xml.bind.annotation.XmlRegistry;
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1 package. 
- * <p>An ObjectFactory allows you to programmatically 
+ * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -32,58 +32,62 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link CodedType }
      * 
-     * @return
-     *     the new instance of {@link CodedType }
      */
     public CodedType createCodedType() {
         return new CodedType();
     }
 
     /**
-     * Create an instance of {@link InformationAvailableDT }
-     * 
-     * @return
-     *     the new instance of {@link InformationAvailableDT }
-     */
-    public InformationAvailableDT createInformationAvailableDT() {
-        return new InformationAvailableDT();
-    }
-
-    /**
-     * Create an instance of {@link AddressTypeDT }
-     * 
-     * @return
-     *     the new instance of {@link AddressTypeDT }
-     */
-    public AddressTypeDT createAddressTypeDT() {
-        return new AddressTypeDT();
-    }
-
-    /**
-     * Create an instance of {@link ContactDetailsDT }
-     * 
-     * @return
-     *     the new instance of {@link ContactDetailsDT }
-     */
-    public ContactDetailsDT createContactDetailsDT() {
-        return new ContactDetailsDT();
-    }
-
-    /**
      * Create an instance of {@link TimeStampDT }
      * 
-     * @return
-     *     the new instance of {@link TimeStampDT }
      */
     public TimeStampDT createTimeStampDT() {
         return new TimeStampDT();
     }
 
     /**
+     * Create an instance of {@link ContactDetailsDT }
+     * 
+     */
+    public ContactDetailsDT createContactDetailsDT() {
+        return new ContactDetailsDT();
+    }
+
+    /**
+     * Create an instance of {@link ProviderInformationDT }
+     * 
+     */
+    public ProviderInformationDT createProviderInformationDT() {
+        return new ProviderInformationDT();
+    }
+
+    /**
+     * Create an instance of {@link PathologyReportInformationDT }
+     * 
+     */
+    public PathologyReportInformationDT createPathologyReportInformationDT() {
+        return new PathologyReportInformationDT();
+    }
+
+    /**
+     * Create an instance of {@link AddressTypeDT }
+     * 
+     */
+    public AddressTypeDT createAddressTypeDT() {
+        return new AddressTypeDT();
+    }
+
+    /**
+     * Create an instance of {@link DiagnosticReportInformationDT }
+     * 
+     */
+    public DiagnosticReportInformationDT createDiagnosticReportInformationDT() {
+        return new DiagnosticReportInformationDT();
+    }
+
+    /**
      * Create an instance of {@link DocumentDT }
      * 
-     * @return
-     *     the new instance of {@link DocumentDT }
      */
     public DocumentDT createDocumentDT() {
         return new DocumentDT();
@@ -92,61 +96,33 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link NameTypeDT }
      * 
-     * @return
-     *     the new instance of {@link NameTypeDT }
      */
     public NameTypeDT createNameTypeDT() {
         return new NameTypeDT();
     }
 
     /**
-     * Create an instance of {@link ACICodedType }
+     * Create an instance of {@link InformationAvailableDT }
      * 
-     * @return
-     *     the new instance of {@link ACICodedType }
      */
-    public ACICodedType createACICodedType() {
-        return new ACICodedType();
-    }
-
-    /**
-     * Create an instance of {@link PathologyReportInformationDT }
-     * 
-     * @return
-     *     the new instance of {@link PathologyReportInformationDT }
-     */
-    public PathologyReportInformationDT createPathologyReportInformationDT() {
-        return new PathologyReportInformationDT();
-    }
-
-    /**
-     * Create an instance of {@link DiagnosticReportInformationDT }
-     * 
-     * @return
-     *     the new instance of {@link DiagnosticReportInformationDT }
-     */
-    public DiagnosticReportInformationDT createDiagnosticReportInformationDT() {
-        return new DiagnosticReportInformationDT();
+    public InformationAvailableDT createInformationAvailableDT() {
+        return new InformationAvailableDT();
     }
 
     /**
      * Create an instance of {@link RequesterInformationDT }
      * 
-     * @return
-     *     the new instance of {@link RequesterInformationDT }
      */
     public RequesterInformationDT createRequesterInformationDT() {
         return new RequesterInformationDT();
     }
 
     /**
-     * Create an instance of {@link ProviderInformationDT }
+     * Create an instance of {@link ACICodedType }
      * 
-     * @return
-     *     the new instance of {@link ProviderInformationDT }
      */
-    public ProviderInformationDT createProviderInformationDT() {
-        return new ProviderInformationDT();
+    public ACICodedType createACICodedType() {
+        return new ACICodedType();
     }
 
 }

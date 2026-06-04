@@ -38,17 +38,17 @@ public class AdhocQueryType
 {
 
     @XmlElement(name = "QueryExpression")
-    protected QueryExpressionType queryExpression;
+    protected QueryExpression queryExpression;
 
     /**
      * Gets the value of the queryExpression property.
      * 
      * @return
      *     possible object is
-     *     {@link QueryExpressionType }
+     *     {@link QueryExpression }
      *     
      */
-    public QueryExpressionType getQueryExpression() {
+    public QueryExpression getQueryExpression() {
         return queryExpression;
     }
 
@@ -57,10 +57,10 @@ public class AdhocQueryType
      * 
      * @param value
      *     allowed object is
-     *     {@link QueryExpressionType }
+     *     {@link QueryExpression }
      *     
      */
-    public void setQueryExpression(QueryExpressionType value) {
+    public void setQueryExpression(QueryExpression value) {
         this.queryExpression = value;
     }
 

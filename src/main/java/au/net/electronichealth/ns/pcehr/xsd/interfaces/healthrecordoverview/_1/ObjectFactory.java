@@ -1,9 +1,6 @@
 
 package au.net.electronichealth.ns.pcehr.xsd.interfaces.healthrecordoverview._1;
 
-import javax.xml.namespace.QName;
-import jakarta.xml.bind.JAXBElement;
-import jakarta.xml.bind.annotation.XmlElementDecl;
 import jakarta.xml.bind.annotation.XmlRegistry;
 
 
@@ -11,7 +8,7 @@ import jakarta.xml.bind.annotation.XmlRegistry;
  * This object contains factory methods for each 
  * Java content interface and Java element interface 
  * generated in the au.net.electronichealth.ns.pcehr.xsd.interfaces.healthrecordoverview._1 package. 
- * <p>An ObjectFactory allows you to programmatically 
+ * <p>An ObjectFactory allows you to programatically 
  * construct new instances of the Java representation 
  * for XML content. The Java representation of XML 
  * content can consist of schema derived interfaces 
@@ -24,8 +21,6 @@ import jakarta.xml.bind.annotation.XmlRegistry;
 @XmlRegistry
 public class ObjectFactory {
 
-    private static final QName _HealthRecordOverviewResponse_QNAME = new QName("http://ns.electronichealth.net.au/pcehr/xsd/interfaces/HealthRecordOverview/1.0", "healthRecordOverviewResponse");
-    private static final QName _HealthRecordOverView_QNAME = new QName("http://ns.electronichealth.net.au/pcehr/xsd/interfaces/HealthRecordOverview/1.0", "healthRecordOverView");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: au.net.electronichealth.ns.pcehr.xsd.interfaces.healthrecordoverview._1
@@ -37,8 +32,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse }
      */
     public HealthRecordOverviewResponse createHealthRecordOverviewResponse() {
         return new HealthRecordOverviewResponse();
@@ -47,8 +40,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.OtherLinks }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.OtherLinks }
      */
     public HealthRecordOverviewResponse.OtherLinks createHealthRecordOverviewResponseOtherLinks() {
         return new HealthRecordOverviewResponse.OtherLinks();
@@ -57,8 +48,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.SharedHealthSummary }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.SharedHealthSummary }
      */
     public HealthRecordOverviewResponse.SharedHealthSummary createHealthRecordOverviewResponseSharedHealthSummary() {
         return new HealthRecordOverviewResponse.SharedHealthSummary();
@@ -67,8 +56,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData }
      */
     public HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData createHealthRecordOverviewResponseSharedHealthSummarySharedHealthSummaryAtomicData() {
         return new HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData();
@@ -77,8 +64,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList }
      */
     public HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList createHealthRecordOverviewResponseSharedHealthSummarySharedHealthSummaryAtomicDataMedHistoryList() {
         return new HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList();
@@ -87,8 +72,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ImmunisationList }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ImmunisationList }
      */
     public HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ImmunisationList createHealthRecordOverviewResponseSharedHealthSummarySharedHealthSummaryAtomicDataImmunisationList() {
         return new HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ImmunisationList();
@@ -97,8 +80,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.AdvReactionsList }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.AdvReactionsList }
      */
     public HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.AdvReactionsList createHealthRecordOverviewResponseSharedHealthSummarySharedHealthSummaryAtomicDataAdvReactionsList() {
         return new HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.AdvReactionsList();
@@ -107,8 +88,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList }
      */
     public HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList createHealthRecordOverviewResponseSharedHealthSummarySharedHealthSummaryAtomicDataMedicinesList() {
         return new HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList();
@@ -117,8 +96,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine }
      */
     public HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine createHealthRecordOverviewResponseSharedHealthSummarySharedHealthSummaryAtomicDataMedicinesListMedicine() {
         return new HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine();
@@ -127,8 +104,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ShsEntitlements }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ShsEntitlements }
      */
     public HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ShsEntitlements createHealthRecordOverviewResponseSharedHealthSummarySharedHealthSummaryAtomicDataShsEntitlements() {
         return new HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ShsEntitlements();
@@ -137,28 +112,14 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.ViewMetadata }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.ViewMetadata }
      */
     public HealthRecordOverviewResponse.ViewMetadata createHealthRecordOverviewResponseViewMetadata() {
         return new HealthRecordOverviewResponse.ViewMetadata();
     }
 
     /**
-     * Create an instance of {@link HealthRecordOverView }
-     * 
-     * @return
-     *     the new instance of {@link HealthRecordOverView }
-     */
-    public HealthRecordOverView createHealthRecordOverView() {
-        return new HealthRecordOverView();
-    }
-
-    /**
      * Create an instance of {@link HealthRecordOverviewResponse.NewDocuments }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.NewDocuments }
      */
     public HealthRecordOverviewResponse.NewDocuments createHealthRecordOverviewResponseNewDocuments() {
         return new HealthRecordOverviewResponse.NewDocuments();
@@ -167,18 +128,22 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.RecentDocuments }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.RecentDocuments }
      */
     public HealthRecordOverviewResponse.RecentDocuments createHealthRecordOverviewResponseRecentDocuments() {
         return new HealthRecordOverviewResponse.RecentDocuments();
     }
 
     /**
+     * Create an instance of {@link HealthRecordOverView }
+     * 
+     */
+    public HealthRecordOverView createHealthRecordOverView() {
+        return new HealthRecordOverView();
+    }
+
+    /**
      * Create an instance of {@link HealthRecordOverviewResponse.OtherLinks.Link }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.OtherLinks.Link }
      */
     public HealthRecordOverviewResponse.OtherLinks.Link createHealthRecordOverviewResponseOtherLinksLink() {
         return new HealthRecordOverviewResponse.OtherLinks.Link();
@@ -187,8 +152,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.ProblemAndDiagnosis }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.ProblemAndDiagnosis }
      */
     public HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.ProblemAndDiagnosis createHealthRecordOverviewResponseSharedHealthSummarySharedHealthSummaryAtomicDataMedHistoryListProblemAndDiagnosis() {
         return new HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.ProblemAndDiagnosis();
@@ -197,8 +160,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.Procedure }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.Procedure }
      */
     public HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.Procedure createHealthRecordOverviewResponseSharedHealthSummarySharedHealthSummaryAtomicDataMedHistoryListProcedure() {
         return new HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.Procedure();
@@ -207,8 +168,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.OtherMedicalHistory }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.OtherMedicalHistory }
      */
     public HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.OtherMedicalHistory createHealthRecordOverviewResponseSharedHealthSummarySharedHealthSummaryAtomicDataMedHistoryListOtherMedicalHistory() {
         return new HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.OtherMedicalHistory();
@@ -217,8 +176,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ImmunisationList.Immunisation }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ImmunisationList.Immunisation }
      */
     public HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ImmunisationList.Immunisation createHealthRecordOverviewResponseSharedHealthSummarySharedHealthSummaryAtomicDataImmunisationListImmunisation() {
         return new HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ImmunisationList.Immunisation();
@@ -227,8 +184,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.AdvReactionsList.AdvReaction }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.AdvReactionsList.AdvReaction }
      */
     public HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.AdvReactionsList.AdvReaction createHealthRecordOverviewResponseSharedHealthSummarySharedHealthSummaryAtomicDataAdvReactionsListAdvReaction() {
         return new HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.AdvReactionsList.AdvReaction();
@@ -237,8 +192,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine.MedicineDesc }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine.MedicineDesc }
      */
     public HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine.MedicineDesc createHealthRecordOverviewResponseSharedHealthSummarySharedHealthSummaryAtomicDataMedicinesListMedicineMedicineDesc() {
         return new HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine.MedicineDesc();
@@ -247,8 +200,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ShsEntitlements.Entitlement }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ShsEntitlements.Entitlement }
      */
     public HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ShsEntitlements.Entitlement createHealthRecordOverviewResponseSharedHealthSummarySharedHealthSummaryAtomicDataShsEntitlementsEntitlement() {
         return new HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ShsEntitlements.Entitlement();
@@ -257,8 +208,6 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.ViewMetadata.IndividualProfile }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.ViewMetadata.IndividualProfile }
      */
     public HealthRecordOverviewResponse.ViewMetadata.IndividualProfile createHealthRecordOverviewResponseViewMetadataIndividualProfile() {
         return new HealthRecordOverviewResponse.ViewMetadata.IndividualProfile();
@@ -267,37 +216,9 @@ public class ObjectFactory {
     /**
      * Create an instance of {@link HealthRecordOverviewResponse.ViewMetadata.ViewParameters }
      * 
-     * @return
-     *     the new instance of {@link HealthRecordOverviewResponse.ViewMetadata.ViewParameters }
      */
     public HealthRecordOverviewResponse.ViewMetadata.ViewParameters createHealthRecordOverviewResponseViewMetadataViewParameters() {
         return new HealthRecordOverviewResponse.ViewMetadata.ViewParameters();
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link HealthRecordOverviewResponse }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link HealthRecordOverviewResponse }{@code >}
-     */
-    @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/pcehr/xsd/interfaces/HealthRecordOverview/1.0", name = "healthRecordOverviewResponse")
-    public JAXBElement<HealthRecordOverviewResponse> createHealthRecordOverviewResponse(HealthRecordOverviewResponse value) {
-        return new JAXBElement<>(_HealthRecordOverviewResponse_QNAME, HealthRecordOverviewResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link HealthRecordOverView }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link HealthRecordOverView }{@code >}
-     */
-    @XmlElementDecl(namespace = "http://ns.electronichealth.net.au/pcehr/xsd/interfaces/HealthRecordOverview/1.0", name = "healthRecordOverView")
-    public JAXBElement<HealthRecordOverView> createHealthRecordOverView(HealthRecordOverView value) {
-        return new JAXBElement<>(_HealthRecordOverView_QNAME, HealthRecordOverView.class, null, value);
     }
 
 }

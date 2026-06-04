@@ -30,45 +30,42 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ServiceType", propOrder = {
-    "serviceBinding"
+    "serviceBindings"
 })
 public class ServiceType
     extends RegistryObjectType
 {
 
     @XmlElement(name = "ServiceBinding")
-    protected List<ServiceBindingType> serviceBinding;
+    protected List<ServiceBindingType> serviceBindings;
 
     /**
-     * Gets the value of the serviceBinding property.
+     * Gets the value of the serviceBindings property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the serviceBinding property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the serviceBindings property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getServiceBinding().add(newItem);
+     *    getServiceBindings().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link ServiceBindingType }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the serviceBinding property.
      */
-    public List<ServiceBindingType> getServiceBinding() {
-        if (serviceBinding == null) {
-            serviceBinding = new ArrayList<>();
+    public List<ServiceBindingType> getServiceBindings() {
+        if (serviceBindings == null) {
+            serviceBindings = new ArrayList<ServiceBindingType>();
         }
-        return this.serviceBinding;
+        return this.serviceBindings;
     }
 
 }

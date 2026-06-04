@@ -48,7 +48,7 @@ public class AdhocQueryRequest
 {
 
     @XmlElement(name = "ResponseOption", required = true)
-    protected ResponseOptionType responseOption;
+    protected ResponseOption responseOption;
     @XmlElement(name = "AdhocQuery", namespace = "urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0", required = true)
     protected AdhocQueryType adhocQuery;
     @XmlAttribute(name = "federated")
@@ -66,10 +66,10 @@ public class AdhocQueryRequest
      * 
      * @return
      *     possible object is
-     *     {@link ResponseOptionType }
+     *     {@link ResponseOption }
      *     
      */
-    public ResponseOptionType getResponseOption() {
+    public ResponseOption getResponseOption() {
         return responseOption;
     }
 
@@ -78,10 +78,10 @@ public class AdhocQueryRequest
      * 
      * @param value
      *     allowed object is
-     *     {@link ResponseOptionType }
+     *     {@link ResponseOption }
      *     
      */
-    public void setResponseOption(ResponseOptionType value) {
+    public void setResponseOption(ResponseOption value) {
         this.responseOption = value;
     }
 

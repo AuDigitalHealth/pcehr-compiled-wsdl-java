@@ -6,13 +6,11 @@ import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * 
- * 
- * &lt;p&gt;Java class for dateAccuracyIndicatorType&lt;/p&gt;.
+ * &lt;p&gt;Java class for null&lt;/p&gt;.
  * 
  * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * &lt;pre&gt;{&#064;code
- * &lt;simpleType name="dateAccuracyIndicatorType"&gt;
+ * &lt;simpleType&gt;
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
  *     &lt;length value="3"/&gt;
  *     &lt;enumeration value="AAA"/&gt;
@@ -47,7 +45,7 @@ import jakarta.xml.bind.annotation.XmlType;
  * }&lt;/pre&gt;
  * 
  */
-@XmlType(name = "dateAccuracyIndicatorType")
+@XmlType(name = "")
 @XmlEnum
 public enum DateAccuracyIndicatorType {
 

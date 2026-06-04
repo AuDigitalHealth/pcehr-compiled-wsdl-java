@@ -39,17 +39,17 @@ public class RegistryPackageType
 {
 
     @XmlElement(name = "RegistryObjectList")
-    protected RegistryObjectListType registryObjectList;
+    protected RegistryObjectList registryObjectList;
 
     /**
      * Gets the value of the registryObjectList property.
      * 
      * @return
      *     possible object is
-     *     {@link RegistryObjectListType }
+     *     {@link RegistryObjectList }
      *     
      */
-    public RegistryObjectListType getRegistryObjectList() {
+    public RegistryObjectList getRegistryObjectList() {
         return registryObjectList;
     }
 
@@ -58,10 +58,10 @@ public class RegistryPackageType
      * 
      * @param value
      *     allowed object is
-     *     {@link RegistryObjectListType }
+     *     {@link RegistryObjectList }
      *     
      */
-    public void setRegistryObjectList(RegistryObjectListType value) {
+    public void setRegistryObjectList(RegistryObjectList value) {
         this.registryObjectList = value;
     }
 

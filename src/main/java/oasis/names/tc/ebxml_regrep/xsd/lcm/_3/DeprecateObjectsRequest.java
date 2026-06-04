@@ -7,7 +7,7 @@ import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 import oasis.names.tc.ebxml_regrep.xsd.rim._3.AdhocQueryType;
-import oasis.names.tc.ebxml_regrep.xsd.rim._3.ObjectRefListType;
+import oasis.names.tc.ebxml_regrep.xsd.rim._3.ObjectRefList;
 import oasis.names.tc.ebxml_regrep.xsd.rs._3.RegistryRequestType;
 
 
@@ -44,7 +44,7 @@ public class DeprecateObjectsRequest
     @XmlElement(name = "AdhocQuery", namespace = "urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0")
     protected AdhocQueryType adhocQuery;
     @XmlElement(name = "ObjectRefList", namespace = "urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0")
-    protected ObjectRefListType objectRefList;
+    protected ObjectRefList objectRefList;
 
     /**
      * Gets the value of the adhocQuery property.
@@ -75,10 +75,10 @@ public class DeprecateObjectsRequest
      * 
      * @return
      *     possible object is
-     *     {@link ObjectRefListType }
+     *     {@link ObjectRefList }
      *     
      */
-    public ObjectRefListType getObjectRefList() {
+    public ObjectRefList getObjectRefList() {
         return objectRefList;
     }
 
@@ -87,10 +87,10 @@ public class DeprecateObjectsRequest
      * 
      * @param value
      *     allowed object is
-     *     {@link ObjectRefListType }
+     *     {@link ObjectRefList }
      *     
      */
-    public void setObjectRefList(ObjectRefListType value) {
+    public void setObjectRefList(ObjectRefList value) {
         this.objectRefList = value;
     }
 

@@ -4,6 +4,8 @@ package au.net.electronichealth.ns.pcehr.xsd.interfaces.removedocument._1;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -47,7 +49,7 @@ public class RemoveDocument {
     @XmlElement(required = true)
     protected String documentID;
     @XmlElement(required = true)
-    protected String reasonForRemoval;
+    protected RemoveDocument.DocumentRemovalReason reasonForRemoval;
 
     /**
      * Gets the value of the documentID property.
@@ -78,10 +80,10 @@ public class RemoveDocument {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link RemoveDocument.DocumentRemovalReason }
      *     
      */
-    public String getReasonForRemoval() {
+    public RemoveDocument.DocumentRemovalReason getReasonForRemoval() {
         return reasonForRemoval;
     }
 
@@ -90,11 +92,58 @@ public class RemoveDocument {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link RemoveDocument.DocumentRemovalReason }
      *     
      */
-    public void setReasonForRemoval(String value) {
+    public void setReasonForRemoval(RemoveDocument.DocumentRemovalReason value) {
         this.reasonForRemoval = value;
+    }
+
+
+    /**
+     * &lt;p&gt;Java class for null&lt;/p&gt;.
+     * 
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+     * &lt;pre&gt;{&#064;code
+     * &lt;simpleType&gt;
+     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *     &lt;enumeration value="Withdrawn"/&gt;
+     *     &lt;enumeration value="ElectToRemove"/&gt;
+     *     &lt;enumeration value="IncorrectIdentity"/&gt;
+     *   &lt;/restriction&gt;
+     * &lt;/simpleType&gt;
+     * }&lt;/pre&gt;
+     * 
+     */
+    @XmlType(name = "")
+    @XmlEnum
+    public enum DocumentRemovalReason {
+
+        @XmlEnumValue("Withdrawn")
+        WITHDRAWN("Withdrawn"),
+        @XmlEnumValue("ElectToRemove")
+        ELECT_TO_REMOVE("ElectToRemove"),
+        @XmlEnumValue("IncorrectIdentity")
+        INCORRECT_IDENTITY("IncorrectIdentity");
+        private final String value;
+
+        DocumentRemovalReason(String v) {
+            value = v;
+        }
+
+        public String value() {
+            return value;
+        }
+
+        public static RemoveDocument.DocumentRemovalReason fromValue(String v) {
+            for (RemoveDocument.DocumentRemovalReason c: RemoveDocument.DocumentRemovalReason.values()) {
+                if (c.value.equals(v)) {
+                    return c;
+                }
+            }
+            throw new IllegalArgumentException(v);
+        }
+
     }
 
 }

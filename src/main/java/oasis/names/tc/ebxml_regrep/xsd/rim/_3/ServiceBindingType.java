@@ -35,14 +35,14 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "ServiceBindingType", propOrder = {
-    "specificationLink"
+    "specificationLinks"
 })
 public class ServiceBindingType
     extends RegistryObjectType
 {
 
     @XmlElement(name = "SpecificationLink")
-    protected List<SpecificationLinkType> specificationLink;
+    protected List<SpecificationLinkType> specificationLinks;
     @XmlAttribute(name = "service", required = true)
     protected String service;
     @XmlAttribute(name = "accessURI")
@@ -52,35 +52,32 @@ public class ServiceBindingType
     protected String targetBinding;
 
     /**
-     * Gets the value of the specificationLink property.
+     * Gets the value of the specificationLinks property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the specificationLink property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the specificationLinks property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getSpecificationLink().add(newItem);
+     *    getSpecificationLinks().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link SpecificationLinkType }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the specificationLink property.
      */
-    public List<SpecificationLinkType> getSpecificationLink() {
-        if (specificationLink == null) {
-            specificationLink = new ArrayList<>();
+    public List<SpecificationLinkType> getSpecificationLinks() {
+        if (specificationLinks == null) {
+            specificationLinks = new ArrayList<SpecificationLinkType>();
         }
-        return this.specificationLink;
+        return this.specificationLinks;
     }
 
     /**

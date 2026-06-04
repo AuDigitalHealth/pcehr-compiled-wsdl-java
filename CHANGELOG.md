@@ -1,15 +1,12 @@
 # Change Log/Revision History
 
-= 1.7.0-SNAPSHOT =
-=========
-- **Java 11 / Jakarta:** migrate from Java 8 / `javax.xml.ws` to **`jakarta.*`** and **`jaxws-rt` 4.0.4**.
-- Regenerated all **12** primary MHR B2B WSDL stubs with **`jaxb-xjc` 4.0.7**; committed sources under **`src/main/java/`**.
-- Added **`-Pregenerate-sources`** profile, offline **`GeneratedWsdlBindingsTest`**, build scripts, and contributor docs.
-- **Version:** Maven **`au.gov.nehta:pcehr-compiled-wsdl`** **1.7.0-SNAPSHOT** (aligns with **mhr-b2b-client-java** 1.7 line; types aligned with **mhr-wsdl-java** sibling).
-
-= 1.1.2-SNAPSHOT =
-=========
-- Legacy Java 8 / `javax` line (pre-Jakarta).
+= 1.6.5-SNAPSHOT =
+==================
+- Java 11 / Jakarta rewrite of **`master`**: `jakarta.xml.bind`, `jakarta.xml.ws`, `jakarta.jws` (same class names and packages as the Java 8 line).
+- **`maven.compiler.release`** 11; Jakarta **`jakarta.xml.bind-api`** (**4.0.5**) and **`jakarta.xml.ws-api`** (**4.0.3**) compile dependencies (`jakarta.jws` types come from **`jakarta.xml.ws-api`**).
+- **`pom.xml`** matches **`master`** except Java 11 / Jakarta compile dependencies (no **`wsimport`**, no unit tests). **`gpg.skip`** defaults to **`true`**; **`maven-javadoc-plugin`** **3.12.0**; **`jaxb.xjc.version`** **4.0.7** documented for external regeneration.
+- Removed feature-branch-only paths (not on **`master`**): **`schema/readme.txt`**, **`src/main/resources/schema/`**, **`src/main/resources/binding/`**, **`scripts/`**, **`src/test/`**.
+- Contributor and maintainer documentation (**CONTRIBUTING.md**, **MAINTAINERS.md**, **SECURITY.md**, **README.md**).
 
 = 1.1.1 =
 =========

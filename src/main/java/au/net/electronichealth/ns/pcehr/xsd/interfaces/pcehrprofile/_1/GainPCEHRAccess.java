@@ -1,16 +1,20 @@
 
 package au.net.electronichealth.ns.pcehr.xsd.interfaces.pcehrprofile._1;
 
-import javax.xml.datatype.XMLGregorianCalendar;
-import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.NameType;
+import java.util.Calendar;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlSchemaType;
 import jakarta.xml.bind.annotation.XmlType;
 import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import au.gov.nehta.schema.DateAdapter;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.NameType;
+import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.Sex;
 
 
 /**
@@ -260,7 +264,7 @@ public class GainPCEHRAccess {
         public static class AuthorisationDetails {
 
             @XmlElement(required = true)
-            protected String accessType;
+            protected GainPCEHRAccess.PCEHRRecord.AuthorisationDetails.AccessType accessType;
             protected String accessCode;
 
             /**
@@ -268,10 +272,10 @@ public class GainPCEHRAccess {
              * 
              * @return
              *     possible object is
-             *     {@link String }
+             *     {@link GainPCEHRAccess.PCEHRRecord.AuthorisationDetails.AccessType }
              *     
              */
-            public String getAccessType() {
+            public GainPCEHRAccess.PCEHRRecord.AuthorisationDetails.AccessType getAccessType() {
                 return accessType;
             }
 
@@ -280,10 +284,10 @@ public class GainPCEHRAccess {
              * 
              * @param value
              *     allowed object is
-             *     {@link String }
+             *     {@link GainPCEHRAccess.PCEHRRecord.AuthorisationDetails.AccessType }
              *     
              */
-            public void setAccessType(String value) {
+            public void setAccessType(GainPCEHRAccess.PCEHRRecord.AuthorisationDetails.AccessType value) {
                 this.accessType = value;
             }
 
@@ -309,6 +313,50 @@ public class GainPCEHRAccess {
              */
             public void setAccessCode(String value) {
                 this.accessCode = value;
+            }
+
+
+            /**
+             * &lt;p&gt;Java class for null&lt;/p&gt;.
+             * 
+             * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+             * &lt;pre&gt;{&#064;code
+             * &lt;simpleType&gt;
+             *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+             *     &lt;enumeration value="AccessCode"/&gt;
+             *     &lt;enumeration value="EmergencyAccess"/&gt;
+             *   &lt;/restriction&gt;
+             * &lt;/simpleType&gt;
+             * }&lt;/pre&gt;
+             * 
+             */
+            @XmlType(name = "")
+            @XmlEnum
+            public enum AccessType {
+
+                @XmlEnumValue("AccessCode")
+                ACCESS_CODE("AccessCode"),
+                @XmlEnumValue("EmergencyAccess")
+                EMERGENCY_ACCESS("EmergencyAccess");
+                private final String value;
+
+                AccessType(String v) {
+                    value = v;
+                }
+
+                public String value() {
+                    return value;
+                }
+
+                public static GainPCEHRAccess.PCEHRRecord.AuthorisationDetails.AccessType fromValue(String v) {
+                    for (GainPCEHRAccess.PCEHRRecord.AuthorisationDetails.AccessType c: GainPCEHRAccess.PCEHRRecord.AuthorisationDetails.AccessType.values()) {
+                        if (c.value.equals(v)) {
+                            return c;
+                        }
+                    }
+                    throw new IllegalArgumentException(v);
+                }
+
             }
 
         }
@@ -361,11 +409,12 @@ public class GainPCEHRAccess {
             protected String dvaFileNumber;
             @XmlElement(namespace = "http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0")
             protected String militaryHealthNumber;
-            @XmlElement(required = true)
+            @XmlElement(required = true, type = String.class)
+            @XmlJavaTypeAdapter(DateAdapter.class)
             @XmlSchemaType(name = "date")
-            protected XMLGregorianCalendar dateOfBirth;
+            protected Calendar dateOfBirth;
             @XmlElement(namespace = "http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0", required = true)
-            protected String sex;
+            protected Sex sex;
             @XmlElement(required = true)
             protected NameType name;
 
@@ -470,10 +519,10 @@ public class GainPCEHRAccess {
              * 
              * @return
              *     possible object is
-             *     {@link XMLGregorianCalendar }
+             *     {@link String }
              *     
              */
-            public XMLGregorianCalendar getDateOfBirth() {
+            public Calendar getDateOfBirth() {
                 return dateOfBirth;
             }
 
@@ -482,10 +531,10 @@ public class GainPCEHRAccess {
              * 
              * @param value
              *     allowed object is
-             *     {@link XMLGregorianCalendar }
+             *     {@link String }
              *     
              */
-            public void setDateOfBirth(XMLGregorianCalendar value) {
+            public void setDateOfBirth(Calendar value) {
                 this.dateOfBirth = value;
             }
 
@@ -494,10 +543,10 @@ public class GainPCEHRAccess {
              * 
              * @return
              *     possible object is
-             *     {@link String }
+             *     {@link Sex }
              *     
              */
-            public String getSex() {
+            public Sex getSex() {
                 return sex;
             }
 
@@ -506,10 +555,10 @@ public class GainPCEHRAccess {
              * 
              * @param value
              *     allowed object is
-             *     {@link String }
+             *     {@link Sex }
              *     
              */
-            public void setSex(String value) {
+            public void setSex(Sex value) {
                 this.sex = value;
             }
 

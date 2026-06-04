@@ -3,6 +3,8 @@ package au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -66,19 +68,19 @@ import jakarta.xml.bind.annotation.XmlType;
 })
 public class AccessConditionsType {
 
-    protected String accessLevel;
-    protected String accessPermission;
-    protected String accessConditions;
+    protected AccessConditionsType.AccessLevel accessLevel;
+    protected AccessConditionsType.AccessPermission accessPermission;
+    protected AccessConditionsType.AccessConditions accessConditions;
 
     /**
      * Gets the value of the accessLevel property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link AccessConditionsType.AccessLevel }
      *     
      */
-    public String getAccessLevel() {
+    public AccessConditionsType.AccessLevel getAccessLevel() {
         return accessLevel;
     }
 
@@ -87,10 +89,10 @@ public class AccessConditionsType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link AccessConditionsType.AccessLevel }
      *     
      */
-    public void setAccessLevel(String value) {
+    public void setAccessLevel(AccessConditionsType.AccessLevel value) {
         this.accessLevel = value;
     }
 
@@ -99,10 +101,10 @@ public class AccessConditionsType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link AccessConditionsType.AccessPermission }
      *     
      */
-    public String getAccessPermission() {
+    public AccessConditionsType.AccessPermission getAccessPermission() {
         return accessPermission;
     }
 
@@ -111,10 +113,10 @@ public class AccessConditionsType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link AccessConditionsType.AccessPermission }
      *     
      */
-    public void setAccessPermission(String value) {
+    public void setAccessPermission(AccessConditionsType.AccessPermission value) {
         this.accessPermission = value;
     }
 
@@ -123,10 +125,10 @@ public class AccessConditionsType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link AccessConditionsType.AccessConditions }
      *     
      */
-    public String getAccessConditions() {
+    public AccessConditionsType.AccessConditions getAccessConditions() {
         return accessConditions;
     }
 
@@ -135,11 +137,171 @@ public class AccessConditionsType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link AccessConditionsType.AccessConditions }
      *     
      */
-    public void setAccessConditions(String value) {
+    public void setAccessConditions(AccessConditionsType.AccessConditions value) {
         this.accessConditions = value;
+    }
+
+
+    /**
+     * &lt;p&gt;Java class for null&lt;/p&gt;.
+     * 
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+     * &lt;pre&gt;{&#064;code
+     * &lt;simpleType&gt;
+     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *     &lt;enumeration value="OpenAccess"/&gt;
+     *     &lt;enumeration value="AccessRevoked"/&gt;
+     *     &lt;enumeration value="PACAccess"/&gt;
+     *     &lt;enumeration value="PACXAccess"/&gt;
+     *     &lt;enumeration value="EmergencyAccess"/&gt;
+     *     &lt;enumeration value="LocalConsentAccess"/&gt;
+     *     &lt;enumeration value="AuthorisedRepresentativeAccess"/&gt;
+     *     &lt;enumeration value="NominatedRepresentativeAccess"/&gt;
+     *     &lt;enumeration value="IncorrectCode"/&gt;
+     *     &lt;enumeration value="LocalConsentAccessDenied"/&gt;
+     *     &lt;enumeration value="AccessRevoked"/&gt;
+     *   &lt;/restriction&gt;
+     * &lt;/simpleType&gt;
+     * }&lt;/pre&gt;
+     * 
+     */
+    @XmlType(name = "")
+    @XmlEnum
+    public enum AccessConditions {
+
+        @XmlEnumValue("OpenAccess")
+        OPEN_ACCESS("OpenAccess"),
+        @XmlEnumValue("AccessRevoked")
+        ACCESS_REVOKED("AccessRevoked"),
+        @XmlEnumValue("PACAccess")
+        PAC_ACCESS("PACAccess"),
+        @XmlEnumValue("PACXAccess")
+        PACX_ACCESS("PACXAccess"),
+        @XmlEnumValue("EmergencyAccess")
+        EMERGENCY_ACCESS("EmergencyAccess"),
+        @XmlEnumValue("LocalConsentAccess")
+        LOCAL_CONSENT_ACCESS("LocalConsentAccess"),
+        @XmlEnumValue("AuthorisedRepresentativeAccess")
+        AUTHORISED_REPRESENTATIVE_ACCESS("AuthorisedRepresentativeAccess"),
+        @XmlEnumValue("NominatedRepresentativeAccess")
+        NOMINATED_REPRESENTATIVE_ACCESS("NominatedRepresentativeAccess"),
+        @XmlEnumValue("IncorrectCode")
+        INCORRECT_CODE("IncorrectCode"),
+        @XmlEnumValue("LocalConsentAccessDenied")
+        LOCAL_CONSENT_ACCESS_DENIED("LocalConsentAccessDenied");
+        private final String value;
+
+        AccessConditions(String v) {
+            value = v;
+        }
+
+        public String value() {
+            return value;
+        }
+
+        public static AccessConditionsType.AccessConditions fromValue(String v) {
+            for (AccessConditionsType.AccessConditions c: AccessConditionsType.AccessConditions.values()) {
+                if (c.value.equals(v)) {
+                    return c;
+                }
+            }
+            throw new IllegalArgumentException(v);
+        }
+
+    }
+
+
+    /**
+     * &lt;p&gt;Java class for null&lt;/p&gt;.
+     * 
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+     * &lt;pre&gt;{&#064;code
+     * &lt;simpleType&gt;
+     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *     &lt;enumeration value="Self"/&gt;
+     *     &lt;enumeration value="General"/&gt;
+     *     &lt;enumeration value="Limited"/&gt;
+     *   &lt;/restriction&gt;
+     * &lt;/simpleType&gt;
+     * }&lt;/pre&gt;
+     * 
+     */
+    @XmlType(name = "")
+    @XmlEnum
+    public enum AccessLevel {
+
+        @XmlEnumValue("Self")
+        SELF("Self"),
+        @XmlEnumValue("General")
+        GENERAL("General"),
+        @XmlEnumValue("Limited")
+        LIMITED("Limited");
+        private final String value;
+
+        AccessLevel(String v) {
+            value = v;
+        }
+
+        public String value() {
+            return value;
+        }
+
+        public static AccessConditionsType.AccessLevel fromValue(String v) {
+            for (AccessConditionsType.AccessLevel c: AccessConditionsType.AccessLevel.values()) {
+                if (c.value.equals(v)) {
+                    return c;
+                }
+            }
+            throw new IllegalArgumentException(v);
+        }
+
+    }
+
+
+    /**
+     * &lt;p&gt;Java class for null&lt;/p&gt;.
+     * 
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+     * &lt;pre&gt;{&#064;code
+     * &lt;simpleType&gt;
+     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *     &lt;enumeration value="Permit"/&gt;
+     *     &lt;enumeration value="Deny"/&gt;
+     *   &lt;/restriction&gt;
+     * &lt;/simpleType&gt;
+     * }&lt;/pre&gt;
+     * 
+     */
+    @XmlType(name = "")
+    @XmlEnum
+    public enum AccessPermission {
+
+        @XmlEnumValue("Permit")
+        PERMIT("Permit"),
+        @XmlEnumValue("Deny")
+        DENY("Deny");
+        private final String value;
+
+        AccessPermission(String v) {
+            value = v;
+        }
+
+        public String value() {
+            return value;
+        }
+
+        public static AccessConditionsType.AccessPermission fromValue(String v) {
+            for (AccessConditionsType.AccessPermission c: AccessConditionsType.AccessPermission.values()) {
+                if (c.value.equals(v)) {
+                    return c;
+                }
+            }
+            throw new IllegalArgumentException(v);
+        }
+
     }
 
 }

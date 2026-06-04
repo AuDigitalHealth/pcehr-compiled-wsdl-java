@@ -4,6 +4,8 @@ package au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
 import jakarta.xml.bind.annotation.XmlType;
 
 
@@ -171,7 +173,7 @@ import jakarta.xml.bind.annotation.XmlType;
 public class AddressType {
 
     @XmlElement(required = true)
-    protected String type;
+    protected AddressType.Type type;
     @XmlElement(required = true)
     protected String state;
     protected String postCode;
@@ -193,10 +195,10 @@ public class AddressType {
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link AddressType.Type }
      *     
      */
-    public String getType() {
+    public AddressType.Type getType() {
         return type;
     }
 
@@ -205,10 +207,10 @@ public class AddressType {
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link AddressType.Type }
      *     
      */
-    public void setType(String value) {
+    public void setType(AddressType.Type value) {
         this.type = value;
     }
 
@@ -720,6 +722,53 @@ public class AddressType {
          */
         public void setPostalDeliveryNumber(String value) {
             this.postalDeliveryNumber = value;
+        }
+
+    }
+
+
+    /**
+     * &lt;p&gt;Java class for null&lt;/p&gt;.
+     * 
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+     * &lt;pre&gt;{&#064;code
+     * &lt;simpleType&gt;
+     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *     &lt;enumeration value="International"/&gt;
+     *     &lt;enumeration value="AustralianStreet"/&gt;
+     *     &lt;enumeration value="AustralianPostal"/&gt;
+     *   &lt;/restriction&gt;
+     * &lt;/simpleType&gt;
+     * }&lt;/pre&gt;
+     * 
+     */
+    @XmlType(name = "")
+    @XmlEnum
+    public enum Type {
+
+        @XmlEnumValue("International")
+        INTERNATIONAL("International"),
+        @XmlEnumValue("AustralianStreet")
+        AUSTRALIAN_STREET("AustralianStreet"),
+        @XmlEnumValue("AustralianPostal")
+        AUSTRALIAN_POSTAL("AustralianPostal");
+        private final String value;
+
+        Type(String v) {
+            value = v;
+        }
+
+        public String value() {
+            return value;
+        }
+
+        public static AddressType.Type fromValue(String v) {
+            for (AddressType.Type c: AddressType.Type.values()) {
+                if (c.value.equals(v)) {
+                    return c;
+                }
+            }
+            throw new IllegalArgumentException(v);
         }
 
     }

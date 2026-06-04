@@ -1,27 +1,3 @@
 /target/
 /.idea/
 *.iml
-
-# Local secrets (never commit populated copies)
-/local.properties
-local.properties
-/settings.xml
-settings.xml
-
-# Licensed PCEHR XSD staging for wsimport regeneration only (see schema/readme.txt)
-/src/main/resources/schema/*
-!/src/main/resources/schema/.gitkeep
-
-/certs/
-*.jks
-*.keystore
-*.p12
-
-# Editor / agent / OS noise (not part of the published tree)
-.DS_Store
-Thumbs.db
-*.swp
-*.orig
-*~
-.vscode/
-pcehr-compiled-wsdl-java.code-workspace

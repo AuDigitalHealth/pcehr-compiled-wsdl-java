@@ -3,6 +3,12 @@ package au.net.electronichealth.ns.pcehr.xsd.interfaces.healthrecordoverview._1;
 
 import java.util.ArrayList;
 import java.util.List;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.IndividualTypeSupp;
 import au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1.AddressTypeDT;
 import au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1.CodedType;
@@ -11,11 +17,6 @@ import au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1.DocumentDT;
 import au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1.InformationAvailableDT;
 import au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1.NameTypeDT;
 import au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1.TimeStampDT;
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlSchemaType;
-import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -335,6 +336,7 @@ import jakarta.xml.bind.annotation.XmlType;
     "otherLinks",
     "recentDocuments"
 })
+@XmlRootElement(name = "healthRecordOverviewResponse")
 public class HealthRecordOverviewResponse {
 
     @XmlElement(required = true)
@@ -492,12 +494,13 @@ public class HealthRecordOverviewResponse {
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
         "informationAvailable",
-        "document"
+        "documents"
     })
     public static class NewDocuments {
 
         protected boolean informationAvailable;
-        protected List<DocumentDT> document;
+        @XmlElement(name = "document")
+        protected List<DocumentDT> documents;
 
         /**
          * Gets the value of the informationAvailable property.
@@ -516,35 +519,32 @@ public class HealthRecordOverviewResponse {
         }
 
         /**
-         * Gets the value of the document property.
+         * Gets the value of the documents property.
          * 
-         * <p>This accessor method returns a reference to the live list,
+         * <p>
+         * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the Jakarta XML Binding object.
-         * This is why there is not a {@code set} method for the document property.</p>
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the documents property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
-         * </p>
          * <pre>
-         * getDocument().add(newItem);
+         *    getDocuments().add(newItem);
          * </pre>
          * 
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link DocumentDT }
-         * </p>
          * 
          * 
-         * @return
-         *     The value of the document property.
          */
-        public List<DocumentDT> getDocument() {
-            if (document == null) {
-                document = new ArrayList<>();
+        public List<DocumentDT> getDocuments() {
+            if (documents == null) {
+                documents = new ArrayList<DocumentDT>();
             }
-            return this.document;
+            return this.documents;
         }
 
     }
@@ -592,43 +592,40 @@ public class HealthRecordOverviewResponse {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "link"
+        "links"
     })
     public static class OtherLinks {
 
-        @XmlElement(required = true)
-        protected List<HealthRecordOverviewResponse.OtherLinks.Link> link;
+        @XmlElement(name = "link", required = true)
+        protected List<HealthRecordOverviewResponse.OtherLinks.Link> links;
 
         /**
-         * Gets the value of the link property.
+         * Gets the value of the links property.
          * 
-         * <p>This accessor method returns a reference to the live list,
+         * <p>
+         * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the Jakarta XML Binding object.
-         * This is why there is not a {@code set} method for the link property.</p>
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the links property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
-         * </p>
          * <pre>
-         * getLink().add(newItem);
+         *    getLinks().add(newItem);
          * </pre>
          * 
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link HealthRecordOverviewResponse.OtherLinks.Link }
-         * </p>
          * 
          * 
-         * @return
-         *     The value of the link property.
          */
-        public List<HealthRecordOverviewResponse.OtherLinks.Link> getLink() {
-            if (link == null) {
-                link = new ArrayList<>();
+        public List<HealthRecordOverviewResponse.OtherLinks.Link> getLinks() {
+            if (links == null) {
+                links = new ArrayList<HealthRecordOverviewResponse.OtherLinks.Link>();
             }
-            return this.link;
+            return this.links;
         }
 
 
@@ -822,12 +819,13 @@ public class HealthRecordOverviewResponse {
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
         "informationAvailable",
-        "document"
+        "documents"
     })
     public static class RecentDocuments {
 
         protected boolean informationAvailable;
-        protected List<DocumentDT> document;
+        @XmlElement(name = "document")
+        protected List<DocumentDT> documents;
 
         /**
          * Gets the value of the informationAvailable property.
@@ -846,35 +844,32 @@ public class HealthRecordOverviewResponse {
         }
 
         /**
-         * Gets the value of the document property.
+         * Gets the value of the documents property.
          * 
-         * <p>This accessor method returns a reference to the live list,
+         * <p>
+         * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the Jakarta XML Binding object.
-         * This is why there is not a {@code set} method for the document property.</p>
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the documents property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
-         * </p>
          * <pre>
-         * getDocument().add(newItem);
+         *    getDocuments().add(newItem);
          * </pre>
          * 
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link DocumentDT }
-         * </p>
          * 
          * 
-         * @return
-         *     The value of the document property.
          */
-        public List<DocumentDT> getDocument() {
-            if (document == null) {
-                document = new ArrayList<>();
+        public List<DocumentDT> getDocuments() {
+            if (documents == null) {
+                documents = new ArrayList<DocumentDT>();
             }
-            return this.document;
+            return this.documents;
         }
 
     }
@@ -1580,31 +1575,28 @@ public class HealthRecordOverviewResponse {
             /**
              * Gets the value of the shsAuthorOrgContactDetails property.
              * 
-             * <p>This accessor method returns a reference to the live list,
+             * <p>
+             * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
-             * returned list will be present inside the Jakarta XML Binding object.
-             * This is why there is not a {@code set} method for the shsAuthorOrgContactDetails property.</p>
+             * returned list will be present inside the JAXB object.
+             * This is why there is not a <CODE>set</CODE> method for the shsAuthorOrgContactDetails property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
-             * </p>
              * <pre>
-             * getShsAuthorOrgContactDetails().add(newItem);
+             *    getShsAuthorOrgContactDetails().add(newItem);
              * </pre>
              * 
              * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link ContactDetailsDT }
-             * </p>
              * 
              * 
-             * @return
-             *     The value of the shsAuthorOrgContactDetails property.
              */
             public List<ContactDetailsDT> getShsAuthorOrgContactDetails() {
                 if (shsAuthorOrgContactDetails == null) {
-                    shsAuthorOrgContactDetails = new ArrayList<>();
+                    shsAuthorOrgContactDetails = new ArrayList<ContactDetailsDT>();
                 }
                 return this.shsAuthorOrgContactDetails;
             }
@@ -1636,31 +1628,28 @@ public class HealthRecordOverviewResponse {
             /**
              * Gets the value of the shsAuthorContactDetails property.
              * 
-             * <p>This accessor method returns a reference to the live list,
+             * <p>
+             * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
-             * returned list will be present inside the Jakarta XML Binding object.
-             * This is why there is not a {@code set} method for the shsAuthorContactDetails property.</p>
+             * returned list will be present inside the JAXB object.
+             * This is why there is not a <CODE>set</CODE> method for the shsAuthorContactDetails property.
              * 
              * <p>
              * For example, to add a new item, do as follows:
-             * </p>
              * <pre>
-             * getShsAuthorContactDetails().add(newItem);
+             *    getShsAuthorContactDetails().add(newItem);
              * </pre>
              * 
              * 
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link ContactDetailsDT }
-             * </p>
              * 
              * 
-             * @return
-             *     The value of the shsAuthorContactDetails property.
              */
             public List<ContactDetailsDT> getShsAuthorContactDetails() {
                 if (shsAuthorContactDetails == null) {
-                    shsAuthorContactDetails = new ArrayList<>();
+                    shsAuthorContactDetails = new ArrayList<ContactDetailsDT>();
                 }
                 return this.shsAuthorContactDetails;
             }
@@ -1845,13 +1834,14 @@ public class HealthRecordOverviewResponse {
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
                 "informationAvailable",
-                "advReaction"
+                "advReactions"
             })
             public static class AdvReactionsList {
 
                 @XmlElement(required = true)
                 protected InformationAvailableDT informationAvailable;
-                protected List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.AdvReactionsList.AdvReaction> advReaction;
+                @XmlElement(name = "advReaction")
+                protected List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.AdvReactionsList.AdvReaction> advReactions;
 
                 /**
                  * Gets the value of the informationAvailable property.
@@ -1878,35 +1868,32 @@ public class HealthRecordOverviewResponse {
                 }
 
                 /**
-                 * Gets the value of the advReaction property.
+                 * Gets the value of the advReactions property.
                  * 
-                 * <p>This accessor method returns a reference to the live list,
+                 * <p>
+                 * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
-                 * returned list will be present inside the Jakarta XML Binding object.
-                 * This is why there is not a {@code set} method for the advReaction property.</p>
+                 * returned list will be present inside the JAXB object.
+                 * This is why there is not a <CODE>set</CODE> method for the advReactions property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
-                 * </p>
                  * <pre>
-                 * getAdvReaction().add(newItem);
+                 *    getAdvReactions().add(newItem);
                  * </pre>
                  * 
                  * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.AdvReactionsList.AdvReaction }
-                 * </p>
                  * 
                  * 
-                 * @return
-                 *     The value of the advReaction property.
                  */
-                public List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.AdvReactionsList.AdvReaction> getAdvReaction() {
-                    if (advReaction == null) {
-                        advReaction = new ArrayList<>();
+                public List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.AdvReactionsList.AdvReaction> getAdvReactions() {
+                    if (advReactions == null) {
+                        advReactions = new ArrayList<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.AdvReactionsList.AdvReaction>();
                     }
-                    return this.advReaction;
+                    return this.advReactions;
                 }
 
 
@@ -1934,14 +1921,15 @@ public class HealthRecordOverviewResponse {
                 @XmlAccessorType(XmlAccessType.FIELD)
                 @XmlType(name = "", propOrder = {
                     "advReactionCause",
-                    "advReactionManifestation",
+                    "advReactionManifestations",
                     "advReactionType"
                 })
                 public static class AdvReaction {
 
                     @XmlElement(required = true)
                     protected CodedType advReactionCause;
-                    protected List<CodedType> advReactionManifestation;
+                    @XmlElement(name = "advReactionManifestation")
+                    protected List<CodedType> advReactionManifestations;
                     protected CodedType advReactionType;
 
                     /**
@@ -1969,35 +1957,32 @@ public class HealthRecordOverviewResponse {
                     }
 
                     /**
-                     * Gets the value of the advReactionManifestation property.
+                     * Gets the value of the advReactionManifestations property.
                      * 
-                     * <p>This accessor method returns a reference to the live list,
+                     * <p>
+                     * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
-                     * returned list will be present inside the Jakarta XML Binding object.
-                     * This is why there is not a {@code set} method for the advReactionManifestation property.</p>
+                     * returned list will be present inside the JAXB object.
+                     * This is why there is not a <CODE>set</CODE> method for the advReactionManifestations property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
-                     * </p>
                      * <pre>
-                     * getAdvReactionManifestation().add(newItem);
+                     *    getAdvReactionManifestations().add(newItem);
                      * </pre>
                      * 
                      * 
                      * <p>
                      * Objects of the following type(s) are allowed in the list
                      * {@link CodedType }
-                     * </p>
                      * 
                      * 
-                     * @return
-                     *     The value of the advReactionManifestation property.
                      */
-                    public List<CodedType> getAdvReactionManifestation() {
-                        if (advReactionManifestation == null) {
-                            advReactionManifestation = new ArrayList<>();
+                    public List<CodedType> getAdvReactionManifestations() {
+                        if (advReactionManifestations == null) {
+                            advReactionManifestations = new ArrayList<CodedType>();
                         }
-                        return this.advReactionManifestation;
+                        return this.advReactionManifestations;
                     }
 
                     /**
@@ -2064,13 +2049,14 @@ public class HealthRecordOverviewResponse {
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
                 "informationAvailable",
-                "immunisation"
+                "immunisations"
             })
             public static class ImmunisationList {
 
                 @XmlElement(required = true)
                 protected InformationAvailableDT informationAvailable;
-                protected List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ImmunisationList.Immunisation> immunisation;
+                @XmlElement(name = "immunisation")
+                protected List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ImmunisationList.Immunisation> immunisations;
 
                 /**
                  * Gets the value of the informationAvailable property.
@@ -2097,35 +2083,32 @@ public class HealthRecordOverviewResponse {
                 }
 
                 /**
-                 * Gets the value of the immunisation property.
+                 * Gets the value of the immunisations property.
                  * 
-                 * <p>This accessor method returns a reference to the live list,
+                 * <p>
+                 * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
-                 * returned list will be present inside the Jakarta XML Binding object.
-                 * This is why there is not a {@code set} method for the immunisation property.</p>
+                 * returned list will be present inside the JAXB object.
+                 * This is why there is not a <CODE>set</CODE> method for the immunisations property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
-                 * </p>
                  * <pre>
-                 * getImmunisation().add(newItem);
+                 *    getImmunisations().add(newItem);
                  * </pre>
                  * 
                  * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ImmunisationList.Immunisation }
-                 * </p>
                  * 
                  * 
-                 * @return
-                 *     The value of the immunisation property.
                  */
-                public List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ImmunisationList.Immunisation> getImmunisation() {
-                    if (immunisation == null) {
-                        immunisation = new ArrayList<>();
+                public List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ImmunisationList.Immunisation> getImmunisations() {
+                    if (immunisations == null) {
+                        immunisations = new ArrayList<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ImmunisationList.Immunisation>();
                     }
-                    return this.immunisation;
+                    return this.immunisations;
                 }
 
 
@@ -2304,145 +2287,136 @@ public class HealthRecordOverviewResponse {
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
-                "informationAvailable",
-                "problemAndDiagnosis",
-                "procedure",
-                "otherMedicalHistory"
+                "informationAvailables",
+                "problemAndDiagnosises",
+                "procedures",
+                "otherMedicalHistories"
             })
             public static class MedHistoryList {
 
-                @XmlElement(required = true)
-                protected List<InformationAvailableDT> informationAvailable;
-                protected List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.ProblemAndDiagnosis> problemAndDiagnosis;
-                protected List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.Procedure> procedure;
-                protected List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.OtherMedicalHistory> otherMedicalHistory;
+                @XmlElement(name = "informationAvailable", required = true)
+                protected List<InformationAvailableDT> informationAvailables;
+                @XmlElement(name = "problemAndDiagnosis")
+                protected List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.ProblemAndDiagnosis> problemAndDiagnosises;
+                @XmlElement(name = "procedure")
+                protected List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.Procedure> procedures;
+                @XmlElement(name = "otherMedicalHistory")
+                protected List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.OtherMedicalHistory> otherMedicalHistories;
 
                 /**
-                 * Gets the value of the informationAvailable property.
+                 * Gets the value of the informationAvailables property.
                  * 
-                 * <p>This accessor method returns a reference to the live list,
+                 * <p>
+                 * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
-                 * returned list will be present inside the Jakarta XML Binding object.
-                 * This is why there is not a {@code set} method for the informationAvailable property.</p>
+                 * returned list will be present inside the JAXB object.
+                 * This is why there is not a <CODE>set</CODE> method for the informationAvailables property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
-                 * </p>
                  * <pre>
-                 * getInformationAvailable().add(newItem);
+                 *    getInformationAvailables().add(newItem);
                  * </pre>
                  * 
                  * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link InformationAvailableDT }
-                 * </p>
                  * 
                  * 
-                 * @return
-                 *     The value of the informationAvailable property.
                  */
-                public List<InformationAvailableDT> getInformationAvailable() {
-                    if (informationAvailable == null) {
-                        informationAvailable = new ArrayList<>();
+                public List<InformationAvailableDT> getInformationAvailables() {
+                    if (informationAvailables == null) {
+                        informationAvailables = new ArrayList<InformationAvailableDT>();
                     }
-                    return this.informationAvailable;
+                    return this.informationAvailables;
                 }
 
                 /**
-                 * Gets the value of the problemAndDiagnosis property.
+                 * Gets the value of the problemAndDiagnosises property.
                  * 
-                 * <p>This accessor method returns a reference to the live list,
+                 * <p>
+                 * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
-                 * returned list will be present inside the Jakarta XML Binding object.
-                 * This is why there is not a {@code set} method for the problemAndDiagnosis property.</p>
+                 * returned list will be present inside the JAXB object.
+                 * This is why there is not a <CODE>set</CODE> method for the problemAndDiagnosises property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
-                 * </p>
                  * <pre>
-                 * getProblemAndDiagnosis().add(newItem);
+                 *    getProblemAndDiagnosises().add(newItem);
                  * </pre>
                  * 
                  * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.ProblemAndDiagnosis }
-                 * </p>
                  * 
                  * 
-                 * @return
-                 *     The value of the problemAndDiagnosis property.
                  */
-                public List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.ProblemAndDiagnosis> getProblemAndDiagnosis() {
-                    if (problemAndDiagnosis == null) {
-                        problemAndDiagnosis = new ArrayList<>();
+                public List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.ProblemAndDiagnosis> getProblemAndDiagnosises() {
+                    if (problemAndDiagnosises == null) {
+                        problemAndDiagnosises = new ArrayList<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.ProblemAndDiagnosis>();
                     }
-                    return this.problemAndDiagnosis;
+                    return this.problemAndDiagnosises;
                 }
 
                 /**
-                 * Gets the value of the procedure property.
+                 * Gets the value of the procedures property.
                  * 
-                 * <p>This accessor method returns a reference to the live list,
+                 * <p>
+                 * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
-                 * returned list will be present inside the Jakarta XML Binding object.
-                 * This is why there is not a {@code set} method for the procedure property.</p>
+                 * returned list will be present inside the JAXB object.
+                 * This is why there is not a <CODE>set</CODE> method for the procedures property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
-                 * </p>
                  * <pre>
-                 * getProcedure().add(newItem);
+                 *    getProcedures().add(newItem);
                  * </pre>
                  * 
                  * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.Procedure }
-                 * </p>
                  * 
                  * 
-                 * @return
-                 *     The value of the procedure property.
                  */
-                public List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.Procedure> getProcedure() {
-                    if (procedure == null) {
-                        procedure = new ArrayList<>();
+                public List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.Procedure> getProcedures() {
+                    if (procedures == null) {
+                        procedures = new ArrayList<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.Procedure>();
                     }
-                    return this.procedure;
+                    return this.procedures;
                 }
 
                 /**
-                 * Gets the value of the otherMedicalHistory property.
+                 * Gets the value of the otherMedicalHistories property.
                  * 
-                 * <p>This accessor method returns a reference to the live list,
+                 * <p>
+                 * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
-                 * returned list will be present inside the Jakarta XML Binding object.
-                 * This is why there is not a {@code set} method for the otherMedicalHistory property.</p>
+                 * returned list will be present inside the JAXB object.
+                 * This is why there is not a <CODE>set</CODE> method for the otherMedicalHistories property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
-                 * </p>
                  * <pre>
-                 * getOtherMedicalHistory().add(newItem);
+                 *    getOtherMedicalHistories().add(newItem);
                  * </pre>
                  * 
                  * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.OtherMedicalHistory }
-                 * </p>
                  * 
                  * 
-                 * @return
-                 *     The value of the otherMedicalHistory property.
                  */
-                public List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.OtherMedicalHistory> getOtherMedicalHistory() {
-                    if (otherMedicalHistory == null) {
-                        otherMedicalHistory = new ArrayList<>();
+                public List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.OtherMedicalHistory> getOtherMedicalHistories() {
+                    if (otherMedicalHistories == null) {
+                        otherMedicalHistories = new ArrayList<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedHistoryList.OtherMedicalHistory>();
                     }
-                    return this.otherMedicalHistory;
+                    return this.otherMedicalHistories;
                 }
 
 
@@ -2902,13 +2876,14 @@ public class HealthRecordOverviewResponse {
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
                 "informationAvailable",
-                "medicine"
+                "medicines"
             })
             public static class MedicinesList {
 
                 @XmlElement(required = true)
                 protected InformationAvailableDT informationAvailable;
-                protected List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine> medicine;
+                @XmlElement(name = "medicine")
+                protected List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine> medicines;
 
                 /**
                  * Gets the value of the informationAvailable property.
@@ -2935,35 +2910,32 @@ public class HealthRecordOverviewResponse {
                 }
 
                 /**
-                 * Gets the value of the medicine property.
+                 * Gets the value of the medicines property.
                  * 
-                 * <p>This accessor method returns a reference to the live list,
+                 * <p>
+                 * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
-                 * returned list will be present inside the Jakarta XML Binding object.
-                 * This is why there is not a {@code set} method for the medicine property.</p>
+                 * returned list will be present inside the JAXB object.
+                 * This is why there is not a <CODE>set</CODE> method for the medicines property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
-                 * </p>
                  * <pre>
-                 * getMedicine().add(newItem);
+                 *    getMedicines().add(newItem);
                  * </pre>
                  * 
                  * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine }
-                 * </p>
                  * 
                  * 
-                 * @return
-                 *     The value of the medicine property.
                  */
-                public List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine> getMedicine() {
-                    if (medicine == null) {
-                        medicine = new ArrayList<>();
+                public List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine> getMedicines() {
+                    if (medicines == null) {
+                        medicines = new ArrayList<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine>();
                     }
-                    return this.medicine;
+                    return this.medicines;
                 }
 
 
@@ -3003,7 +2975,7 @@ public class HealthRecordOverviewResponse {
                 @XmlType(name = "", propOrder = {
                     "medicineTitle",
                     "medicineDose",
-                    "medicineDesc"
+                    "medicineDescs"
                 })
                 public static class Medicine {
 
@@ -3011,7 +2983,8 @@ public class HealthRecordOverviewResponse {
                     protected CodedType medicineTitle;
                     @XmlElement(required = true)
                     protected String medicineDose;
-                    protected List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine.MedicineDesc> medicineDesc;
+                    @XmlElement(name = "medicineDesc")
+                    protected List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine.MedicineDesc> medicineDescs;
 
                     /**
                      * Gets the value of the medicineTitle property.
@@ -3062,35 +3035,32 @@ public class HealthRecordOverviewResponse {
                     }
 
                     /**
-                     * Gets the value of the medicineDesc property.
+                     * Gets the value of the medicineDescs property.
                      * 
-                     * <p>This accessor method returns a reference to the live list,
+                     * <p>
+                     * This accessor method returns a reference to the live list,
                      * not a snapshot. Therefore any modification you make to the
-                     * returned list will be present inside the Jakarta XML Binding object.
-                     * This is why there is not a {@code set} method for the medicineDesc property.</p>
+                     * returned list will be present inside the JAXB object.
+                     * This is why there is not a <CODE>set</CODE> method for the medicineDescs property.
                      * 
                      * <p>
                      * For example, to add a new item, do as follows:
-                     * </p>
                      * <pre>
-                     * getMedicineDesc().add(newItem);
+                     *    getMedicineDescs().add(newItem);
                      * </pre>
                      * 
                      * 
                      * <p>
                      * Objects of the following type(s) are allowed in the list
                      * {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine.MedicineDesc }
-                     * </p>
                      * 
                      * 
-                     * @return
-                     *     The value of the medicineDesc property.
                      */
-                    public List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine.MedicineDesc> getMedicineDesc() {
-                        if (medicineDesc == null) {
-                            medicineDesc = new ArrayList<>();
+                    public List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine.MedicineDesc> getMedicineDescs() {
+                        if (medicineDescs == null) {
+                            medicineDescs = new ArrayList<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.MedicinesList.Medicine.MedicineDesc>();
                         }
-                        return this.medicineDesc;
+                        return this.medicineDescs;
                     }
 
 
@@ -3212,42 +3182,40 @@ public class HealthRecordOverviewResponse {
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
-                "entitlement"
+                "entitlements"
             })
             public static class ShsEntitlements {
 
-                protected List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ShsEntitlements.Entitlement> entitlement;
+                @XmlElement(name = "entitlement")
+                protected List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ShsEntitlements.Entitlement> entitlements;
 
                 /**
-                 * Gets the value of the entitlement property.
+                 * Gets the value of the entitlements property.
                  * 
-                 * <p>This accessor method returns a reference to the live list,
+                 * <p>
+                 * This accessor method returns a reference to the live list,
                  * not a snapshot. Therefore any modification you make to the
-                 * returned list will be present inside the Jakarta XML Binding object.
-                 * This is why there is not a {@code set} method for the entitlement property.</p>
+                 * returned list will be present inside the JAXB object.
+                 * This is why there is not a <CODE>set</CODE> method for the entitlements property.
                  * 
                  * <p>
                  * For example, to add a new item, do as follows:
-                 * </p>
                  * <pre>
-                 * getEntitlement().add(newItem);
+                 *    getEntitlements().add(newItem);
                  * </pre>
                  * 
                  * 
                  * <p>
                  * Objects of the following type(s) are allowed in the list
                  * {@link HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ShsEntitlements.Entitlement }
-                 * </p>
                  * 
                  * 
-                 * @return
-                 *     The value of the entitlement property.
                  */
-                public List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ShsEntitlements.Entitlement> getEntitlement() {
-                    if (entitlement == null) {
-                        entitlement = new ArrayList<>();
+                public List<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ShsEntitlements.Entitlement> getEntitlements() {
+                    if (entitlements == null) {
+                        entitlements = new ArrayList<HealthRecordOverviewResponse.SharedHealthSummary.SharedHealthSummaryAtomicData.ShsEntitlements.Entitlement>();
                     }
-                    return this.entitlement;
+                    return this.entitlements;
                 }
 
 

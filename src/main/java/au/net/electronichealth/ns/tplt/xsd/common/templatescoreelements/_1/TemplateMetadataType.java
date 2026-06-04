@@ -55,43 +55,40 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "templateMetadataType", propOrder = {
-    "metadata"
+    "metadatas"
 })
 public class TemplateMetadataType {
 
-    @XmlElement(required = true)
-    protected List<TemplateMetadataType.Metadata> metadata;
+    @XmlElement(name = "metadata", required = true)
+    protected List<TemplateMetadataType.Metadata> metadatas;
 
     /**
-     * Gets the value of the metadata property.
+     * Gets the value of the metadatas property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the metadata property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the metadatas property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getMetadata().add(newItem);
+     *    getMetadatas().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link TemplateMetadataType.Metadata }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the metadata property.
      */
-    public List<TemplateMetadataType.Metadata> getMetadata() {
-        if (metadata == null) {
-            metadata = new ArrayList<>();
+    public List<TemplateMetadataType.Metadata> getMetadatas() {
+        if (metadatas == null) {
+            metadatas = new ArrayList<TemplateMetadataType.Metadata>();
         }
-        return this.metadata;
+        return this.metadatas;
     }
 
 

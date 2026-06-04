@@ -3,18 +3,19 @@ package au.net.electronichealth.ns.pcehr.xsd.interfaces.getauditview._1;
 
 import java.util.ArrayList;
 import java.util.List;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.AccessConditionsType;
 import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.AccessedEntityType;
 import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ParticipantActionType;
 import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ParticipantDetailsType;
 import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ResponseStatusType;
-import jakarta.xml.bind.annotation.XmlAccessType;
-import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
-import jakarta.xml.bind.annotation.XmlSchemaType;
-import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -229,43 +230,40 @@ public class GetAuditViewResponse {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
-        "eventTrail"
+        "eventTrails"
     })
     public static class AuditView {
 
-        @XmlElement(required = true)
-        protected List<GetAuditViewResponse.AuditView.EventTrail> eventTrail;
+        @XmlElement(name = "eventTrail", required = true)
+        protected List<GetAuditViewResponse.AuditView.EventTrail> eventTrails;
 
         /**
-         * Gets the value of the eventTrail property.
+         * Gets the value of the eventTrails property.
          * 
-         * <p>This accessor method returns a reference to the live list,
+         * <p>
+         * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the Jakarta XML Binding object.
-         * This is why there is not a {@code set} method for the eventTrail property.</p>
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the eventTrails property.
          * 
          * <p>
          * For example, to add a new item, do as follows:
-         * </p>
          * <pre>
-         * getEventTrail().add(newItem);
+         *    getEventTrails().add(newItem);
          * </pre>
          * 
          * 
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link GetAuditViewResponse.AuditView.EventTrail }
-         * </p>
          * 
          * 
-         * @return
-         *     The value of the eventTrail property.
          */
-        public List<GetAuditViewResponse.AuditView.EventTrail> getEventTrail() {
-            if (eventTrail == null) {
-                eventTrail = new ArrayList<>();
+        public List<GetAuditViewResponse.AuditView.EventTrail> getEventTrails() {
+            if (eventTrails == null) {
+                eventTrails = new ArrayList<GetAuditViewResponse.AuditView.EventTrail>();
             }
-            return this.eventTrail;
+            return this.eventTrails;
         }
 
 
@@ -645,7 +643,7 @@ public class GetAuditViewResponse {
             public static class LogEvent {
 
                 @XmlElement(required = true)
-                protected String messageLogLevel;
+                protected GetAuditViewResponse.AuditView.EventTrail.LogEvent.MessageLogLevel messageLogLevel;
                 @XmlElement(required = true)
                 protected ResponseStatusType statusDetails;
                 protected ResponseStatusType errorDetails;
@@ -655,10 +653,10 @@ public class GetAuditViewResponse {
                  * 
                  * @return
                  *     possible object is
-                 *     {@link String }
+                 *     {@link GetAuditViewResponse.AuditView.EventTrail.LogEvent.MessageLogLevel }
                  *     
                  */
-                public String getMessageLogLevel() {
+                public GetAuditViewResponse.AuditView.EventTrail.LogEvent.MessageLogLevel getMessageLogLevel() {
                     return messageLogLevel;
                 }
 
@@ -667,10 +665,10 @@ public class GetAuditViewResponse {
                  * 
                  * @param value
                  *     allowed object is
-                 *     {@link String }
+                 *     {@link GetAuditViewResponse.AuditView.EventTrail.LogEvent.MessageLogLevel }
                  *     
                  */
-                public void setMessageLogLevel(String value) {
+                public void setMessageLogLevel(GetAuditViewResponse.AuditView.EventTrail.LogEvent.MessageLogLevel value) {
                     this.messageLogLevel = value;
                 }
 
@@ -720,6 +718,46 @@ public class GetAuditViewResponse {
                  */
                 public void setErrorDetails(ResponseStatusType value) {
                     this.errorDetails = value;
+                }
+
+
+                /**
+                 * &lt;p&gt;Java class for null&lt;/p&gt;.
+                 * 
+                 * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+                 * &lt;pre&gt;{&#064;code
+                 * &lt;simpleType&gt;
+                 *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+                 *     &lt;enumeration value="WARN"/&gt;
+                 *     &lt;enumeration value="ERROR"/&gt;
+                 *     &lt;enumeration value="DEBUG"/&gt;
+                 *     &lt;enumeration value="AUDIT"/&gt;
+                 *     &lt;enumeration value="FATAL"/&gt;
+                 *     &lt;enumeration value="INFO"/&gt;
+                 *   &lt;/restriction&gt;
+                 * &lt;/simpleType&gt;
+                 * }&lt;/pre&gt;
+                 * 
+                 */
+                @XmlType(name = "")
+                @XmlEnum
+                public enum MessageLogLevel {
+
+                    WARN,
+                    ERROR,
+                    DEBUG,
+                    AUDIT,
+                    FATAL,
+                    INFO;
+
+                    public String value() {
+                        return name();
+                    }
+
+                    public static GetAuditViewResponse.AuditView.EventTrail.LogEvent.MessageLogLevel fromValue(String v) {
+                        return valueOf(v);
+                    }
+
                 }
 
             }

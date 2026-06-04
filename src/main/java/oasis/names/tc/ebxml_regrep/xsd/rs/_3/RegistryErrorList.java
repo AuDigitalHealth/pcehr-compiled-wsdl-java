@@ -23,7 +23,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *       &lt;sequence&gt;
  *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0}RegistryError" maxOccurs="unbounded"/&gt;
  *       &lt;/sequence&gt;
- *       &lt;attribute name="highestSeverity" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}referenceURI" /&gt;
+ *       &lt;attribute name="highestSeverity" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
@@ -33,46 +33,43 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "registryError"
+    "registryErrors"
 })
 @XmlRootElement(name = "RegistryErrorList")
 public class RegistryErrorList {
 
     @XmlElement(name = "RegistryError", required = true)
-    protected List<RegistryError> registryError;
+    protected List<RegistryError> registryErrors;
     @XmlAttribute(name = "highestSeverity")
     protected String highestSeverity;
 
     /**
-     * Gets the value of the registryError property.
+     * Gets the value of the registryErrors property.
      * 
-     * <p>This accessor method returns a reference to the live list,
+     * <p>
+     * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the Jakarta XML Binding object.
-     * This is why there is not a {@code set} method for the registryError property.</p>
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the registryErrors property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
-     * </p>
      * <pre>
-     * getRegistryError().add(newItem);
+     *    getRegistryErrors().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link RegistryError }
-     * </p>
      * 
      * 
-     * @return
-     *     The value of the registryError property.
      */
-    public List<RegistryError> getRegistryError() {
-        if (registryError == null) {
-            registryError = new ArrayList<>();
+    public List<RegistryError> getRegistryErrors() {
+        if (registryErrors == null) {
+            registryErrors = new ArrayList<RegistryError>();
         }
-        return this.registryError;
+        return this.registryErrors;
     }
 
     /**
