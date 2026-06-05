@@ -1,74 +1,79 @@
-# PCEHR Compiled WSDL Library
+# PCEHR compiled WSDL library
 
-Introduction
-============
+Maven artifact **`au.gov.nehta:pcehr-compiled-wsdl`** — My Health Record **B2B WSDL resources** and **pre-generated JAX-WS / JAXB types** for PCEHR client development.
 
-This library provides the required artefacts required to support B2B clients.
+For hand-written facade clients, TLS, and signing, use **[mhr-b2b-client-java](https://github.com/AuDigitalHealth/mhr-b2b-client-java)**. This repository supplies the **generated type layer** and classpath WSDL only.
 
-Setup
-=====
+## Release line
 
--   To build and test the distributable package, an appropriate Java IDE or
-    build environment must be installed.
+| Version | Java | XML stack | MHR service scope |
+| ------- | ---- | --------- | ----------------- |
+| **1.6.3** | **8** | **`javax.*`** / EE4J **`jaxws-rt` 2.3.x** at runtime in consumers | **12** `Service` stubs |
 
--   WSDL/XSD source files should be used in conjunction with JAX-WS and wsimport
-    to build the generated Java classes/source files. These WSDL/XSD files can be
-    found at:
-    /src/main/java/wsdls/*
+**This checkout** builds **`1.6.3-SNAPSHOT`** (Java **8** / **`javax`**) — **committed, frozen** generated types (no **`wsimport`** in the build).
 
-    Generated Java source files can be found in:
-    /pcehr-compiled-wsdl-<version>-sources.jar
+For Java **11** / **Jakarta** MHR B2B clients and in-repo **`wsimport`**, use **[mhr-b2b-client-java](https://github.com/AuDigitalHealth/mhr-b2b-client-java)** (**`mhr-b2b-client`**) — a separate artifact that does not depend on **`pcehr-compiled-wsdl`**.
 
--   For detailed API documentation, refer to the included Javadoc package.
+## Dependency
 
-Solution
-========
+Published releases are consumed from **[Maven Central](https://central.sonatype.com/)** like any other dependency — no local build is required.
 
-The package consists of these components:
+```xml
+<dependency>
+  <groupId>au.gov.nehta</groupId>
+  <artifactId>pcehr-compiled-wsdl</artifactId>
+  <version>VERSION</version>
+</dependency>
+```
 
-    -   /pcehr-compiled-wsdl-<version>.jar
-        Contains the required classes for B2B client
-        development, deployment and invocation.
+Add Eclipse EE4J **`com.sun.xml.ws:jaxws-rt`** **2.3.7** at runtime in your application when you invoke SOAP endpoints (**`javax.xml.ws`** / **`javax.xml.bind`**). This JAR does not bundle **`jaxws-rt`**. Do **not** use legacy Metro **`webservices-*`** bundles (**`webservices-rt`**, **`webservices-api`**, etc.).
 
-    -   /pcehr-compiled-wsdl-<version>-docs.jar
-        Contains Javadoc for generated code.
+## What is in the JAR
 
-    -   /pcehr-compiled-wsdl-<version>-sources.jar
-        Contains artefact Java and WSDL/XSD source files.
+| Content | Location in repo |
+| ------- | ---------------- |
+| MHR B2B WSDL (classpath) | `src/main/resources/wsdl/B2B_*.wsdl` |
+| WSDL/XSD reference tree (legacy layout) | `src/main/java/wsdls/` (WSDL under `wsdls/wsdl/External/`; XSD under `wsdls/schema/`) |
+| Generated stubs (`javax`) | `src/main/java/` (excluding `wsdls/`) |
+| Date adapter | `src/main/java/au/gov/nehta/schema/DateAdapter.java` |
+| xmldsig override types | `src/main/java/pcehr_override/org/w3/` |
 
-Pre-Requisites
-==============
+The published JAR includes **22** WSDL files under **`/wsdl/`** (12 service WSDLs plus 10 interface-only **`B2B_*Interface.wsdl`** files). Integrators load them from the classpath (for example **`ClassLoader.getResource("wsdl/B2B_PCEHRProfile.wsdl")`**) or pass an explicit **`URL`** to generated **`Service`** constructors.
 
-Java Development Kit (JDK)
-------------------------------------
-1.  Download and install JDK 8 Update 271 or later:
-    URL: http://www.oracle.com/technetwork/java/javase/downloads/index.html
+Generated **`Service`** stubs cover **12** primary MHR B2B operations: document registry/repository; get audit, change-history, individual-details, representative-list, and view; get/search template; PCEHR profile; register PCEHR; remove document.
 
-2.  Unpack the JDK distribution into a directory of your choice.
+## Building from source
 
-    This directory will be your <JDK_HOME>and will be used in this document
-    to refer to the root directory of the JDK installation.
+**Audience:** contributors changing this repository — not integrators adding a Maven dependency.
 
-    <JRE_HOME> will be used in this document to refer to <JDK_HOME>/jre.
+Prerequisites: **JDK 8**, **Maven 3.6+**. All JAX-WS/JAXB types are **committed** in **`src/main/java`**; the build compiles them only (no codegen).
 
-3.  Create a JAVA_HOME environment variable pointing to the <JDK_HOME>
-    directory in Step 2.
+```text
+mvn -B clean verify
+```
 
-4.  Add <JDK_HOME>/bin to the system path.
+GPG signing is skipped by default (**`gpg.skip=true`** in **`pom.xml`**). See **`CONTRIBUTING.md`** for optional **`mvn install`** when testing unpublished snapshots locally.
 
+## Related repositories
 
-Licensing
-=========
-Copyright 2012 NEHTA
+| Repository | Role |
+| ---------- | ---- |
+| [mhr-b2b-client-java](https://github.com/AuDigitalHealth/mhr-b2b-client-java) | MHR facade clients (**`mhr-b2b-client`** — separate artifact; does not depend on **`pcehr-compiled-wsdl`**) |
+| [hi-wsdl-java](https://github.com/AuDigitalHealth/hi-wsdl-java) | HI WSDL/types (separate domain) |
 
-Copyright 2021 ADHA
+Confirm your organisation's redistribution terms for MHR B2B WSDL before mirroring this repository.
 
-Licensed under the NEHTA/ADHA Open Source (Apache) License; you may not use this
-file except in compliance with the License. A copy of the License is in the
-'LICENSE.txt' file, which should be provided with this work.
+## Documentation
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
-License for the specific language governing permissions and limitations
-under the License.
+| Document | Audience |
+| -------- | -------- |
+| **README.md** (this file) | Integrators |
+| **CONTRIBUTING.md** | Contributors |
+| **MAINTAINERS.md** | Releases and tooling |
+| **SECURITY.md** | Security reporting and secrets hygiene |
+| **CHANGELOG.md** | Release history |
+| **LICENSE.txt** | Apache License 2.0 + ADHA terms |
+
+## License
+
+Apache License 2.0. See **LICENSE.txt**.

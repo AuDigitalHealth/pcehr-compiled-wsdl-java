@@ -62,7 +62,7 @@ public class SPKIData {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link JAXBElement }{@code <}{@link byte[]}{@code >}
+     * {@link JAXBElement }{@code <}{@code byte[]}{@code >}
      * {@link Element }
      * 
      * 
