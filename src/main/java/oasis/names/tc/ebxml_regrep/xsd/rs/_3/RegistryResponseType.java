@@ -1,35 +1,35 @@
 
 package oasis.names.tc.ebxml_regrep.xsd.rs._3;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlSeeAlso;
+import jakarta.xml.bind.annotation.XmlType;
 import oasis.names.tc.ebxml_regrep.xsd.rim._3.SlotList;
 
 
 /**
- * <p>Java class for RegistryResponseType complex type.
+ * &lt;p&gt;Java class for RegistryResponseType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="RegistryResponseType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="ResponseSlotList" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}SlotListType" minOccurs="0"/>
- *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0}RegistryErrorList" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="status" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
- *       &lt;attribute name="requestId" type="{http://www.w3.org/2001/XMLSchema}anyURI" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="RegistryResponseType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="ResponseSlotList" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}SlotListType" minOccurs="0"/&gt;
+ *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0}RegistryErrorList" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="status" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *       &lt;attribute name="requestId" type="{http://www.w3.org/2001/XMLSchema}anyURI" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */

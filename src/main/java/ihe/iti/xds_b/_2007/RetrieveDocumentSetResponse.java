@@ -3,46 +3,46 @@ package ihe.iti.xds_b._2007;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 import oasis.names.tc.ebxml_regrep.xsd.rs._3.RegistryResponseType;
 
 
 /**
- * <p>Java class for RetrieveDocumentSetResponseType complex type.
+ * &lt;p&gt;Java class for RetrieveDocumentSetResponseType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="RetrieveDocumentSetResponseType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0}RegistryResponse"/>
- *         &lt;sequence minOccurs="0">
- *           &lt;element name="DocumentResponse" maxOccurs="unbounded">
- *             &lt;complexType>
- *               &lt;complexContent>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                   &lt;sequence>
- *                     &lt;element name="RepositoryUniqueId" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}LongName"/>
- *                     &lt;element name="DocumentUniqueId" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}LongName"/>
- *                     &lt;element name="mimeType" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}LongName"/>
- *                     &lt;element name="Document" type="{http://www.w3.org/2001/XMLSchema}base64Binary" minOccurs="0"/>
- *                   &lt;/sequence>
- *                 &lt;/restriction>
- *               &lt;/complexContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *         &lt;/sequence>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="RetrieveDocumentSetResponseType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0}RegistryResponse"/&gt;
+ *         &lt;sequence minOccurs="0"&gt;
+ *           &lt;element name="DocumentResponse" maxOccurs="unbounded"&gt;
+ *             &lt;complexType&gt;
+ *               &lt;complexContent&gt;
+ *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                   &lt;sequence&gt;
+ *                     &lt;element name="RepositoryUniqueId" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}LongName"/&gt;
+ *                     &lt;element name="DocumentUniqueId" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}LongName"/&gt;
+ *                     &lt;element name="mimeType" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}LongName"/&gt;
+ *                     &lt;element name="Document" type="{http://www.w3.org/2001/XMLSchema}base64Binary" minOccurs="0"/&gt;
+ *                   &lt;/sequence&gt;
+ *                 &lt;/restriction&gt;
+ *               &lt;/complexContent&gt;
+ *             &lt;/complexType&gt;
+ *           &lt;/element&gt;
+ *         &lt;/sequence&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -114,24 +114,24 @@ public class RetrieveDocumentSetResponse {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
      * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="RepositoryUniqueId" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}LongName"/>
-     *         &lt;element name="DocumentUniqueId" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}LongName"/>
-     *         &lt;element name="mimeType" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}LongName"/>
-     *         &lt;element name="Document" type="{http://www.w3.org/2001/XMLSchema}base64Binary" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="RepositoryUniqueId" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}LongName"/&gt;
+     *         &lt;element name="DocumentUniqueId" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}LongName"/&gt;
+     *         &lt;element name="mimeType" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}LongName"/&gt;
+     *         &lt;element name="Document" type="{http://www.w3.org/2001/XMLSchema}base64Binary" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
+     * }&lt;/pre&gt;
      * 
      * 
      */

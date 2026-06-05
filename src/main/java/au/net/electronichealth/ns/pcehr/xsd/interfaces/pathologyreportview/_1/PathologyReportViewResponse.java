@@ -4,13 +4,13 @@ package au.net.electronichealth.ns.pcehr.xsd.interfaces.pathologyreportview._1;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import au.gov.nehta.schema.DateAdapter;
 import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.IndividualTypeSupp;
 import au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1.CodedType;
@@ -20,85 +20,85 @@ import au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1.RequesterInfo
 
 
 /**
- * <p>Java class for pathologyReportViewResponse complex type.
+ * &lt;p&gt;Java class for pathologyReportViewResponse complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="pathologyReportViewResponse">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="viewMetadata">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="individualProfile">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/>
- *                             &lt;element name="individual" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}individualTypeSupp"/>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="viewParameters">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="dateFromFilter" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *                             &lt;element name="dateToFilter" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *                             &lt;element name="viewVersionNumber" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="pathologyReport" maxOccurs="unbounded" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="dateAvailableToConsumer" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                   &lt;element name="reportInformation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}pathologyReportInformationDT"/>
- *                   &lt;element name="clinicalDocumentAuthor" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}providerInformationDT"/>
- *                   &lt;element name="reportingPathologistInformation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}providerInformationDT"/>
- *                   &lt;element name="testRequesterInformation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}requesterInformationDT"/>
- *                   &lt;element name="pathologyTestResult" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="specimenCollectionDate" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                             &lt;element name="pathologyDiscipline" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
- *                             &lt;element name="testResultName" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
- *                             &lt;element name="overallTestResultStatus" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="pathologyReportViewResponse"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="viewMetadata"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="individualProfile"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/&gt;
+ *                             &lt;element name="individual" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}individualTypeSupp"/&gt;
+ *                           &lt;/sequence&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="viewParameters"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="dateFromFilter" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
+ *                             &lt;element name="dateToFilter" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
+ *                             &lt;element name="viewVersionNumber" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                           &lt;/sequence&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="pathologyReport" maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="dateAvailableToConsumer" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                   &lt;element name="reportInformation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}pathologyReportInformationDT"/&gt;
+ *                   &lt;element name="clinicalDocumentAuthor" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}providerInformationDT"/&gt;
+ *                   &lt;element name="reportingPathologistInformation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}providerInformationDT"/&gt;
+ *                   &lt;element name="testRequesterInformation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}requesterInformationDT"/&gt;
+ *                   &lt;element name="pathologyTestResult" maxOccurs="unbounded"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="specimenCollectionDate" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                             &lt;element name="pathologyDiscipline" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+ *                             &lt;element name="testResultName" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+ *                             &lt;element name="overallTestResultStatus" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+ *                           &lt;/sequence&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -170,39 +170,39 @@ public class PathologyReportViewResponse {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
      * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="dateAvailableToConsumer" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *         &lt;element name="reportInformation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}pathologyReportInformationDT"/>
-     *         &lt;element name="clinicalDocumentAuthor" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}providerInformationDT"/>
-     *         &lt;element name="reportingPathologistInformation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}providerInformationDT"/>
-     *         &lt;element name="testRequesterInformation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}requesterInformationDT"/>
-     *         &lt;element name="pathologyTestResult" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="specimenCollectionDate" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *                   &lt;element name="pathologyDiscipline" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-     *                   &lt;element name="testResultName" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-     *                   &lt;element name="overallTestResultStatus" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="dateAvailableToConsumer" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *         &lt;element name="reportInformation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}pathologyReportInformationDT"/&gt;
+     *         &lt;element name="clinicalDocumentAuthor" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}providerInformationDT"/&gt;
+     *         &lt;element name="reportingPathologistInformation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}providerInformationDT"/&gt;
+     *         &lt;element name="testRequesterInformation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}requesterInformationDT"/&gt;
+     *         &lt;element name="pathologyTestResult" maxOccurs="unbounded"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="specimenCollectionDate" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *                   &lt;element name="pathologyDiscipline" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+     *                   &lt;element name="testResultName" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+     *                   &lt;element name="overallTestResultStatus" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+     *                 &lt;/sequence&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
+     * }&lt;/pre&gt;
      * 
      * 
      */
@@ -381,24 +381,24 @@ public class PathologyReportViewResponse {
 
 
         /**
-         * <p>Java class for anonymous complex type.
+         * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
          * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
+         * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
          * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="specimenCollectionDate" type="{http://www.w3.org/2001/XMLSchema}string"/>
-         *         &lt;element name="pathologyDiscipline" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-         *         &lt;element name="testResultName" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-         *         &lt;element name="overallTestResultStatus" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
-         * </pre>
+         * &lt;pre&gt;{&#064;code
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="specimenCollectionDate" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+         *         &lt;element name="pathologyDiscipline" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+         *         &lt;element name="testResultName" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+         *         &lt;element name="overallTestResultStatus" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
+         * }&lt;/pre&gt;
          * 
          * 
          */
@@ -522,46 +522,46 @@ public class PathologyReportViewResponse {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
      * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="individualProfile">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/>
-     *                   &lt;element name="individual" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}individualTypeSupp"/>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="viewParameters">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="dateFromFilter" type="{http://www.w3.org/2001/XMLSchema}date"/>
-     *                   &lt;element name="dateToFilter" type="{http://www.w3.org/2001/XMLSchema}date"/>
-     *                   &lt;element name="viewVersionNumber" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="individualProfile"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/&gt;
+     *                   &lt;element name="individual" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}individualTypeSupp"/&gt;
+     *                 &lt;/sequence&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="viewParameters"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="dateFromFilter" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
+     *                   &lt;element name="dateToFilter" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
+     *                   &lt;element name="viewVersionNumber" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *                 &lt;/sequence&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
+     * }&lt;/pre&gt;
      * 
      * 
      */
@@ -645,22 +645,22 @@ public class PathologyReportViewResponse {
 
 
         /**
-         * <p>Java class for anonymous complex type.
+         * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
          * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
+         * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
          * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/>
-         *         &lt;element name="individual" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}individualTypeSupp"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
-         * </pre>
+         * &lt;pre&gt;{&#064;code
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/&gt;
+         *         &lt;element name="individual" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}individualTypeSupp"/&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
+         * }&lt;/pre&gt;
          * 
          * 
          */
@@ -728,23 +728,23 @@ public class PathologyReportViewResponse {
 
 
         /**
-         * <p>Java class for anonymous complex type.
+         * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
          * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
+         * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
          * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="dateFromFilter" type="{http://www.w3.org/2001/XMLSchema}date"/>
-         *         &lt;element name="dateToFilter" type="{http://www.w3.org/2001/XMLSchema}date"/>
-         *         &lt;element name="viewVersionNumber" type="{http://www.w3.org/2001/XMLSchema}string"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
-         * </pre>
+         * &lt;pre&gt;{&#064;code
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="dateFromFilter" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
+         *         &lt;element name="dateToFilter" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
+         *         &lt;element name="viewVersionNumber" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
+         * }&lt;/pre&gt;
          * 
          * 
          */

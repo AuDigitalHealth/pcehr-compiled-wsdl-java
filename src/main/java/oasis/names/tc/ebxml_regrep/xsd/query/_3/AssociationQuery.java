@@ -1,31 +1,31 @@
 
 package oasis.names.tc.ebxml_regrep.xsd.query._3;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for AssociationQueryType complex type.
+ * &lt;p&gt;Java class for AssociationQueryType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="AssociationQueryType">
- *   &lt;complexContent>
- *     &lt;extension base="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}RegistryObjectQueryType">
- *       &lt;sequence>
- *         &lt;element name="AssociationTypeQuery" type="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}ClassificationNodeQueryType" minOccurs="0"/>
- *         &lt;element name="SourceObjectQuery" type="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}RegistryObjectQueryType" minOccurs="0"/>
- *         &lt;element name="TargetObjectQuery" type="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}RegistryObjectQueryType" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="AssociationQueryType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}RegistryObjectQueryType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="AssociationTypeQuery" type="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}ClassificationNodeQueryType" minOccurs="0"/&gt;
+ *         &lt;element name="SourceObjectQuery" type="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}RegistryObjectQueryType" minOccurs="0"/&gt;
+ *         &lt;element name="TargetObjectQuery" type="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}RegistryObjectQueryType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */

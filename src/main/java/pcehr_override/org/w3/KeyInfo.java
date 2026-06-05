@@ -3,47 +3,47 @@ package pcehr_override.org.w3;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.JAXBElement;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAnyElement;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElementRef;
-import javax.xml.bind.annotation.XmlElementRefs;
-import javax.xml.bind.annotation.XmlID;
-import javax.xml.bind.annotation.XmlMixed;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.JAXBElement;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAnyElement;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElementRef;
+import jakarta.xml.bind.annotation.XmlElementRefs;
+import jakarta.xml.bind.annotation.XmlID;
+import jakarta.xml.bind.annotation.XmlMixed;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import org.w3c.dom.Element;
 
 
 /**
- * <p>Java class for KeyInfoType complex type.
+ * &lt;p&gt;Java class for KeyInfoType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="KeyInfoType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;choice maxOccurs="unbounded">
- *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}KeyName"/>
- *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}KeyValue"/>
- *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}RetrievalMethod"/>
- *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}X509Data"/>
- *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}PGPData"/>
- *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}SPKIData"/>
- *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}MgmtData"/>
- *         &lt;any processContents='lax' namespace='##other'/>
- *       &lt;/choice>
- *       &lt;attribute name="Id" type="{http://www.w3.org/2001/XMLSchema}ID" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="KeyInfoType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;choice maxOccurs="unbounded"&gt;
+ *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}KeyName"/&gt;
+ *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}KeyValue"/&gt;
+ *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}RetrievalMethod"/&gt;
+ *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}X509Data"/&gt;
+ *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}PGPData"/&gt;
+ *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}SPKIData"/&gt;
+ *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}MgmtData"/&gt;
+ *         &lt;any processContents='lax' namespace='##other'/&gt;
+ *       &lt;/choice&gt;
+ *       &lt;attribute name="Id" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */

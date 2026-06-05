@@ -1,7 +1,7 @@
 
 package ihe.iti.xds_b._2007;
 
-import javax.xml.bind.annotation.XmlRegistry;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**

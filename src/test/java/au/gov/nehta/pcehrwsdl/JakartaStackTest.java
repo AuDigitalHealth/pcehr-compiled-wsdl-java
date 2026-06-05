@@ -13,23 +13,23 @@ import java.nio.file.SimpleFileVisitor;
 import java.nio.file.attribute.BasicFileAttributes;
 import org.junit.Test;
 
-public class JavaxStackTest {
+public class JakartaStackTest {
 
     @Test
-    public void compileDependenciesAreJavaxApis() throws Exception {
-        assertNotNull(Class.forName("javax.xml.bind.JAXBContext"));
-        assertNotNull(Class.forName("javax.xml.ws.Service"));
-        assertNotNull(Class.forName("javax.jws.WebMethod"));
+    public void compileDependenciesAreJakartaApis() throws Exception {
+        assertNotNull(Class.forName("jakarta.xml.bind.JAXBContext"));
+        assertNotNull(Class.forName("jakarta.xml.ws.Service"));
+        assertNotNull(Class.forName("jakarta.jws.WebMethod"));
         try {
-            Class.forName("jakarta.xml.bind.JAXBContext");
-            fail("jakarta.xml.bind must not be on the compile/test classpath");
+            Class.forName("javax.xml.bind.JAXBContext");
+            fail("javax.xml.bind must not be on the compile/test classpath");
         } catch (ClassNotFoundException expected) {
-            // javax line only
+            // Jakarta line only
         }
     }
 
     @Test
-    public void generatedSourcesDoNotImportJakarta() throws Exception {
+    public void generatedSourcesDoNotImportLegacyJavaxXmlApis() throws Exception {
         Path root = Paths.get("src/main/java");
         final boolean[] found = {false};
         final StringBuilder offenders = new StringBuilder();
@@ -41,7 +41,10 @@ public class JavaxStackTest {
                     return FileVisitResult.CONTINUE;
                 }
                 String content = new String(Files.readAllBytes(file), StandardCharsets.UTF_8);
-                if (content.contains("import jakarta.")) {
+                if (content.contains("import javax.xml.bind.")
+                    || content.contains("import javax.xml.ws.")
+                    || content.contains("import javax.jws.")
+                    || content.contains("@javax.xml.bind.")) {
                     found[0] = true;
                     offenders.append(System.lineSeparator()).append(root.relativize(file));
                 }
@@ -49,6 +52,6 @@ public class JavaxStackTest {
             }
         });
 
-        assertFalse("Generated sources must use javax imports only:" + offenders, found[0]);
+        assertFalse("Generated sources must not use legacy javax XML API imports:" + offenders, found[0]);
     }
 }

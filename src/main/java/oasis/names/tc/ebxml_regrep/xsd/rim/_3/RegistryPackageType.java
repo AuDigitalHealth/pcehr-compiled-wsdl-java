@@ -1,10 +1,10 @@
 
 package oasis.names.tc.ebxml_regrep.xsd.rim._3;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
@@ -12,21 +12,21 @@ import javax.xml.bind.annotation.XmlType;
  *         interface in ebRIM. It extends RegistryObject. A RegistryPackage is a named collection of
  *         objects.
  * 
- * <p>Java class for RegistryPackageType complex type.
+ * &lt;p&gt;Java class for RegistryPackageType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="RegistryPackageType">
- *   &lt;complexContent>
- *     &lt;extension base="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}RegistryObjectType">
- *       &lt;sequence>
- *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}RegistryObjectList" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="RegistryPackageType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}RegistryObjectType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}RegistryObjectList" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */

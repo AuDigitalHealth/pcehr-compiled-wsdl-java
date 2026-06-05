@@ -1,31 +1,31 @@
 
 package oasis.names.tc.ebxml_regrep.xsd.rim._3;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
  * Mapping of the same named interface in ebRIM.
  *       
  * 
- * <p>Java class for EmailAddressType complex type.
+ * &lt;p&gt;Java class for EmailAddressType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="EmailAddressType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;attribute name="address" use="required" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}ShortName" />
- *       &lt;attribute name="type" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}String32" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="EmailAddressType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;attribute name="address" use="required" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}ShortName" /&gt;
+ *       &lt;attribute name="type" type="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}String32" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */

@@ -1,25 +1,24 @@
 
 package au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for null.
+ * &lt;p&gt;Java class for null&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;simpleType>
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="M"/>
- *     &lt;enumeration value="F"/>
- *     &lt;enumeration value="I"/>
- *     &lt;enumeration value="N"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
- * </pre>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+ * &lt;pre&gt;{&#064;code
+ * &lt;simpleType&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="M"/&gt;
+ *     &lt;enumeration value="F"/&gt;
+ *     &lt;enumeration value="I"/&gt;
+ *     &lt;enumeration value="N"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
+ * }&lt;/pre&gt;
  * 
  */
 @XmlType(name = "")

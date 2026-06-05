@@ -1,43 +1,43 @@
 
 package au.net.electronichealth.ns.pcehr.xsd.interfaces.healthcheckscheduleview._1;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for healthCheckScheduleView complex type.
+ * &lt;p&gt;Java class for healthCheckScheduleView complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="healthCheckScheduleView">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="versionNumber" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="jurisdiction">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *               &lt;enumeration value="NSW"/>
- *               &lt;enumeration value="QLD"/>
- *               &lt;enumeration value="ACT"/>
- *               &lt;enumeration value="NT"/>
- *               &lt;enumeration value="VIC"/>
- *               &lt;enumeration value="WA"/>
- *               &lt;enumeration value="TAS"/>
- *               &lt;enumeration value="SA"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="healthCheckScheduleView"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="versionNumber" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="jurisdiction"&gt;
+ *           &lt;simpleType&gt;
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *               &lt;enumeration value="NSW"/&gt;
+ *               &lt;enumeration value="QLD"/&gt;
+ *               &lt;enumeration value="ACT"/&gt;
+ *               &lt;enumeration value="NT"/&gt;
+ *               &lt;enumeration value="VIC"/&gt;
+ *               &lt;enumeration value="WA"/&gt;
+ *               &lt;enumeration value="TAS"/&gt;
+ *               &lt;enumeration value="SA"/&gt;
+ *             &lt;/restriction&gt;
+ *           &lt;/simpleType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */

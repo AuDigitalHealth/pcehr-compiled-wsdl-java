@@ -3,35 +3,35 @@ package pcehr_override.org.w3;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAnyElement;
-import javax.xml.bind.annotation.XmlElementRef;
-import javax.xml.bind.annotation.XmlElementRefs;
-import javax.xml.bind.annotation.XmlMixed;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAnyElement;
+import jakarta.xml.bind.annotation.XmlElementRef;
+import jakarta.xml.bind.annotation.XmlElementRefs;
+import jakarta.xml.bind.annotation.XmlMixed;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 import org.w3c.dom.Element;
 
 
 /**
- * <p>Java class for KeyValueType complex type.
+ * &lt;p&gt;Java class for KeyValueType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="KeyValueType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;choice>
- *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}DSAKeyValue"/>
- *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}RSAKeyValue"/>
- *         &lt;any processContents='lax' namespace='##other'/>
- *       &lt;/choice>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="KeyValueType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;choice&gt;
+ *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}DSAKeyValue"/&gt;
+ *         &lt;element ref="{http://www.w3.org/2000/09/xmldsig#}RSAKeyValue"/&gt;
+ *         &lt;any processContents='lax' namespace='##other'/&gt;
+ *       &lt;/choice&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */

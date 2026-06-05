@@ -1,42 +1,42 @@
 
 package au.net.electronichealth.ns.pcehr.xsd.interfaces.getview._1;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ResponseStatusType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="responseStatus" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}responseStatusType"/>
- *         &lt;element name="view" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="templateID" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                   &lt;element name="data" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="responseStatus" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}responseStatusType"/&gt;
+ *         &lt;element name="view" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="templateID" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                   &lt;element name="data" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -102,22 +102,22 @@ public class GetViewResponse {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
      * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="templateID" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *         &lt;element name="data" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="templateID" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *         &lt;element name="data" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
+     * }&lt;/pre&gt;
      * 
      * 
      */

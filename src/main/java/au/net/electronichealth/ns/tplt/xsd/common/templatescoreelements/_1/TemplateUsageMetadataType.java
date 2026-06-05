@@ -1,49 +1,49 @@
 
 package au.net.electronichealth.ns.tplt.xsd.common.templatescoreelements._1;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Java class for templateUsageMetadataType complex type.
+ * &lt;p&gt;Java class for templateUsageMetadataType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="templateUsageMetadataType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="PCEHRAcceptedStartDate">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}dateTime">
- *               &lt;whiteSpace value="collapse"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
- *         &lt;element name="PCEHRAcceptedEndDate" minOccurs="0">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}dateTime">
- *               &lt;whiteSpace value="collapse"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
- *         &lt;element name="containsPCEHRAtomicData" minOccurs="0">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}boolean">
- *               &lt;whiteSpace value="collapse"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="templateUsageMetadataType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="PCEHRAcceptedStartDate"&gt;
+ *           &lt;simpleType&gt;
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}dateTime"&gt;
+ *               &lt;whiteSpace value="collapse"/&gt;
+ *             &lt;/restriction&gt;
+ *           &lt;/simpleType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="PCEHRAcceptedEndDate" minOccurs="0"&gt;
+ *           &lt;simpleType&gt;
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}dateTime"&gt;
+ *               &lt;whiteSpace value="collapse"/&gt;
+ *             &lt;/restriction&gt;
+ *           &lt;/simpleType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="containsPCEHRAtomicData" minOccurs="0"&gt;
+ *           &lt;simpleType&gt;
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}boolean"&gt;
+ *               &lt;whiteSpace value="collapse"/&gt;
+ *             &lt;/restriction&gt;
+ *           &lt;/simpleType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */

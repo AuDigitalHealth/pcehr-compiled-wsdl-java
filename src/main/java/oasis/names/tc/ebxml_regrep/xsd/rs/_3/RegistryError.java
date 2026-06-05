@@ -1,31 +1,31 @@
 
 package oasis.names.tc.ebxml_regrep.xsd.rs._3;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlValue;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType>
- *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
- *       &lt;attribute name="codeContext" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
- *       &lt;attribute name="errorCode" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
- *       &lt;attribute name="severity" type="{http://www.w3.org/2001/XMLSchema}string" />
- *       &lt;attribute name="location" type="{http://www.w3.org/2001/XMLSchema}string" />
- *     &lt;/extension>
- *   &lt;/simpleContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+ *       &lt;attribute name="codeContext" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *       &lt;attribute name="errorCode" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *       &lt;attribute name="severity" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *       &lt;attribute name="location" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */

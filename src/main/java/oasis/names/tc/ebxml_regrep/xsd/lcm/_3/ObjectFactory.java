@@ -1,7 +1,7 @@
 
 package oasis.names.tc.ebxml_regrep.xsd.lcm._3;
 
-import javax.xml.bind.annotation.XmlRegistry;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**

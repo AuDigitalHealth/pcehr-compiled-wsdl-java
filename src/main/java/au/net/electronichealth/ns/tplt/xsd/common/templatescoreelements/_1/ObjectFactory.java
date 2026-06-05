@@ -1,7 +1,7 @@
 
 package au.net.electronichealth.ns.tplt.xsd.common.templatescoreelements._1;
 
-import javax.xml.bind.annotation.XmlRegistry;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**

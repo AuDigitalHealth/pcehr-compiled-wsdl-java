@@ -3,12 +3,12 @@ package au.net.electronichealth.ns.pcehr.xsd.interfaces.healthrecordoverview._1;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.IndividualTypeSupp;
 import au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1.AddressTypeDT;
 import au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1.CodedType;
@@ -20,311 +20,311 @@ import au.net.electronichealth.ns.pcehr.xsd.view.viewcommontype._1.TimeStampDT;
 
 
 /**
- * <p>Java class for healthRecordOverviewResponse complex type.
+ * &lt;p&gt;Java class for healthRecordOverviewResponse complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="healthRecordOverviewResponse">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="viewMetadata">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="individualProfile">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/>
- *                             &lt;element name="individual" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}individualTypeSupp"/>
- *                             &lt;element name="indigenousStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                             &lt;element name="veteranAndADFStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="viewParameters">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="clinicalSynopsisLength" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *                             &lt;element name="viewVersionNumber" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="newDocuments">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *                   &lt;element name="document" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}documentDT" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="sharedHealthSummary">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *                   &lt;element name="sharedHealthSummaryAtomicData" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="documentDate" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                             &lt;element name="cdaDocumentTitle" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                             &lt;element name="shsAuthorName" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}nameTypeDT"/>
- *                             &lt;element name="shsAuthorId" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                             &lt;element name="shsAuthorDesignation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
- *                             &lt;element name="shsAuthorOrgName" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                             &lt;element name="shsAuthorOrgId">
- *                               &lt;simpleType>
- *                                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                                   &lt;minLength value="16"/>
- *                                   &lt;maxLength value="16"/>
- *                                 &lt;/restriction>
- *                               &lt;/simpleType>
- *                             &lt;/element>
- *                             &lt;element name="shsAuthorOrgAddress" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}addressTypeDT" minOccurs="0"/>
- *                             &lt;element name="shsAuthorOrgContactDetails" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}contactDetailsDT" maxOccurs="unbounded" minOccurs="0"/>
- *                             &lt;element name="shsAuthorAddress" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}addressTypeDT" minOccurs="0"/>
- *                             &lt;element name="shsAuthorContactDetails" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}contactDetailsDT" maxOccurs="unbounded" minOccurs="0"/>
- *                             &lt;element name="shsEntitlements" minOccurs="0">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;sequence>
- *                                       &lt;element name="entitlement" maxOccurs="unbounded" minOccurs="0">
- *                                         &lt;complexType>
- *                                           &lt;complexContent>
- *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                               &lt;sequence>
- *                                                 &lt;element name="entitlementNumberId" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                                                 &lt;element name="entitlementType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
- *                                                 &lt;element name="entitlementEffectiveTime" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
- *                                               &lt;/sequence>
- *                                             &lt;/restriction>
- *                                           &lt;/complexContent>
- *                                         &lt;/complexType>
- *                                       &lt;/element>
- *                                     &lt;/sequence>
- *                                   &lt;/restriction>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                             &lt;element name="shsAuthorQualifications" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" minOccurs="0"/>
- *                             &lt;element name="medicinesList">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;sequence>
- *                                       &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/>
- *                                       &lt;element name="medicine" maxOccurs="unbounded" minOccurs="0">
- *                                         &lt;complexType>
- *                                           &lt;complexContent>
- *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                               &lt;sequence>
- *                                                 &lt;element name="medicineTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
- *                                                 &lt;element name="medicineDose" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                                                 &lt;element name="medicineDesc" maxOccurs="unbounded" minOccurs="0">
- *                                                   &lt;complexType>
- *                                                     &lt;complexContent>
- *                                                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                                         &lt;sequence>
- *                                                           &lt;element name="indication" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                                                           &lt;element name="comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                                                         &lt;/sequence>
- *                                                       &lt;/restriction>
- *                                                     &lt;/complexContent>
- *                                                   &lt;/complexType>
- *                                                 &lt;/element>
- *                                               &lt;/sequence>
- *                                             &lt;/restriction>
- *                                           &lt;/complexContent>
- *                                         &lt;/complexType>
- *                                       &lt;/element>
- *                                     &lt;/sequence>
- *                                   &lt;/restriction>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                             &lt;element name="advReactionsList">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;sequence>
- *                                       &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/>
- *                                       &lt;element name="advReaction" maxOccurs="unbounded" minOccurs="0">
- *                                         &lt;complexType>
- *                                           &lt;complexContent>
- *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                               &lt;sequence>
- *                                                 &lt;element name="advReactionCause" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
- *                                                 &lt;element name="advReactionManifestation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" maxOccurs="unbounded" minOccurs="0"/>
- *                                                 &lt;element name="advReactionType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" minOccurs="0"/>
- *                                               &lt;/sequence>
- *                                             &lt;/restriction>
- *                                           &lt;/complexContent>
- *                                         &lt;/complexType>
- *                                       &lt;/element>
- *                                     &lt;/sequence>
- *                                   &lt;/restriction>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                             &lt;element name="immunisationList">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;sequence>
- *                                       &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/>
- *                                       &lt;element name="immunisation" maxOccurs="unbounded" minOccurs="0">
- *                                         &lt;complexType>
- *                                           &lt;complexContent>
- *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                               &lt;sequence>
- *                                                 &lt;element name="immunisationDate" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT"/>
- *                                                 &lt;element name="immunisationTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
- *                                                 &lt;element name="immunisationSequenceNumber" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
- *                                               &lt;/sequence>
- *                                             &lt;/restriction>
- *                                           &lt;/complexContent>
- *                                         &lt;/complexType>
- *                                       &lt;/element>
- *                                     &lt;/sequence>
- *                                   &lt;/restriction>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                             &lt;element name="medHistoryList">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;sequence>
- *                                       &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT" maxOccurs="3" minOccurs="3"/>
- *                                       &lt;element name="problemAndDiagnosis" maxOccurs="unbounded" minOccurs="0">
- *                                         &lt;complexType>
- *                                           &lt;complexContent>
- *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                               &lt;sequence>
- *                                                 &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
- *                                                 &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
- *                                                 &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
- *                                                 &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                                               &lt;/sequence>
- *                                             &lt;/restriction>
- *                                           &lt;/complexContent>
- *                                         &lt;/complexType>
- *                                       &lt;/element>
- *                                       &lt;element name="procedure" maxOccurs="unbounded" minOccurs="0">
- *                                         &lt;complexType>
- *                                           &lt;complexContent>
- *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                               &lt;sequence>
- *                                                 &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
- *                                                 &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
- *                                                 &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
- *                                                 &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                                               &lt;/sequence>
- *                                             &lt;/restriction>
- *                                           &lt;/complexContent>
- *                                         &lt;/complexType>
- *                                       &lt;/element>
- *                                       &lt;element name="otherMedicalHistory" maxOccurs="unbounded" minOccurs="0">
- *                                         &lt;complexType>
- *                                           &lt;complexContent>
- *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                               &lt;sequence>
- *                                                 &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
- *                                                 &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
- *                                                 &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
- *                                                 &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                                               &lt;/sequence>
- *                                             &lt;/restriction>
- *                                           &lt;/complexContent>
- *                                         &lt;/complexType>
- *                                       &lt;/element>
- *                                     &lt;/sequence>
- *                                   &lt;/restriction>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="otherLinks">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="link" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="linkName" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                             &lt;element name="linkTitle" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                             &lt;element name="linkTarget" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
- *                             &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *                             &lt;element name="linkType">
- *                               &lt;simpleType>
- *                                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                                   &lt;enumeration value="Document"/>
- *                                   &lt;enumeration value="View"/>
- *                                 &lt;/restriction>
- *                               &lt;/simpleType>
- *                             &lt;/element>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="recentDocuments">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
- *                   &lt;element name="document" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}documentDT" maxOccurs="unbounded" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="healthRecordOverviewResponse"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="viewMetadata"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="individualProfile"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/&gt;
+ *                             &lt;element name="individual" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}individualTypeSupp"/&gt;
+ *                             &lt;element name="indigenousStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *                             &lt;element name="veteranAndADFStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *                           &lt;/sequence&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="viewParameters"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="clinicalSynopsisLength" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *                             &lt;element name="viewVersionNumber" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                           &lt;/sequence&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="newDocuments"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *                   &lt;element name="document" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}documentDT" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="sharedHealthSummary"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *                   &lt;element name="sharedHealthSummaryAtomicData" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="documentDate" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                             &lt;element name="cdaDocumentTitle" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                             &lt;element name="shsAuthorName" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}nameTypeDT"/&gt;
+ *                             &lt;element name="shsAuthorId" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                             &lt;element name="shsAuthorDesignation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+ *                             &lt;element name="shsAuthorOrgName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                             &lt;element name="shsAuthorOrgId"&gt;
+ *                               &lt;simpleType&gt;
+ *                                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                                   &lt;minLength value="16"/&gt;
+ *                                   &lt;maxLength value="16"/&gt;
+ *                                 &lt;/restriction&gt;
+ *                               &lt;/simpleType&gt;
+ *                             &lt;/element&gt;
+ *                             &lt;element name="shsAuthorOrgAddress" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}addressTypeDT" minOccurs="0"/&gt;
+ *                             &lt;element name="shsAuthorOrgContactDetails" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}contactDetailsDT" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                             &lt;element name="shsAuthorAddress" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}addressTypeDT" minOccurs="0"/&gt;
+ *                             &lt;element name="shsAuthorContactDetails" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}contactDetailsDT" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                             &lt;element name="shsEntitlements" minOccurs="0"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;complexContent&gt;
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                     &lt;sequence&gt;
+ *                                       &lt;element name="entitlement" maxOccurs="unbounded" minOccurs="0"&gt;
+ *                                         &lt;complexType&gt;
+ *                                           &lt;complexContent&gt;
+ *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                               &lt;sequence&gt;
+ *                                                 &lt;element name="entitlementNumberId" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                                                 &lt;element name="entitlementType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+ *                                                 &lt;element name="entitlementEffectiveTime" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+ *                                               &lt;/sequence&gt;
+ *                                             &lt;/restriction&gt;
+ *                                           &lt;/complexContent&gt;
+ *                                         &lt;/complexType&gt;
+ *                                       &lt;/element&gt;
+ *                                     &lt;/sequence&gt;
+ *                                   &lt;/restriction&gt;
+ *                                 &lt;/complexContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                             &lt;element name="shsAuthorQualifications" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" minOccurs="0"/&gt;
+ *                             &lt;element name="medicinesList"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;complexContent&gt;
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                     &lt;sequence&gt;
+ *                                       &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/&gt;
+ *                                       &lt;element name="medicine" maxOccurs="unbounded" minOccurs="0"&gt;
+ *                                         &lt;complexType&gt;
+ *                                           &lt;complexContent&gt;
+ *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                               &lt;sequence&gt;
+ *                                                 &lt;element name="medicineTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+ *                                                 &lt;element name="medicineDose" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                                                 &lt;element name="medicineDesc" maxOccurs="unbounded" minOccurs="0"&gt;
+ *                                                   &lt;complexType&gt;
+ *                                                     &lt;complexContent&gt;
+ *                                                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                                         &lt;sequence&gt;
+ *                                                           &lt;element name="indication" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *                                                           &lt;element name="comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *                                                         &lt;/sequence&gt;
+ *                                                       &lt;/restriction&gt;
+ *                                                     &lt;/complexContent&gt;
+ *                                                   &lt;/complexType&gt;
+ *                                                 &lt;/element&gt;
+ *                                               &lt;/sequence&gt;
+ *                                             &lt;/restriction&gt;
+ *                                           &lt;/complexContent&gt;
+ *                                         &lt;/complexType&gt;
+ *                                       &lt;/element&gt;
+ *                                     &lt;/sequence&gt;
+ *                                   &lt;/restriction&gt;
+ *                                 &lt;/complexContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                             &lt;element name="advReactionsList"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;complexContent&gt;
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                     &lt;sequence&gt;
+ *                                       &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/&gt;
+ *                                       &lt;element name="advReaction" maxOccurs="unbounded" minOccurs="0"&gt;
+ *                                         &lt;complexType&gt;
+ *                                           &lt;complexContent&gt;
+ *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                               &lt;sequence&gt;
+ *                                                 &lt;element name="advReactionCause" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+ *                                                 &lt;element name="advReactionManifestation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                                                 &lt;element name="advReactionType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" minOccurs="0"/&gt;
+ *                                               &lt;/sequence&gt;
+ *                                             &lt;/restriction&gt;
+ *                                           &lt;/complexContent&gt;
+ *                                         &lt;/complexType&gt;
+ *                                       &lt;/element&gt;
+ *                                     &lt;/sequence&gt;
+ *                                   &lt;/restriction&gt;
+ *                                 &lt;/complexContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                             &lt;element name="immunisationList"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;complexContent&gt;
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                     &lt;sequence&gt;
+ *                                       &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/&gt;
+ *                                       &lt;element name="immunisation" maxOccurs="unbounded" minOccurs="0"&gt;
+ *                                         &lt;complexType&gt;
+ *                                           &lt;complexContent&gt;
+ *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                               &lt;sequence&gt;
+ *                                                 &lt;element name="immunisationDate" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT"/&gt;
+ *                                                 &lt;element name="immunisationTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+ *                                                 &lt;element name="immunisationSequenceNumber" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
+ *                                               &lt;/sequence&gt;
+ *                                             &lt;/restriction&gt;
+ *                                           &lt;/complexContent&gt;
+ *                                         &lt;/complexType&gt;
+ *                                       &lt;/element&gt;
+ *                                     &lt;/sequence&gt;
+ *                                   &lt;/restriction&gt;
+ *                                 &lt;/complexContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                             &lt;element name="medHistoryList"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;complexContent&gt;
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                     &lt;sequence&gt;
+ *                                       &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT" maxOccurs="3" minOccurs="3"/&gt;
+ *                                       &lt;element name="problemAndDiagnosis" maxOccurs="unbounded" minOccurs="0"&gt;
+ *                                         &lt;complexType&gt;
+ *                                           &lt;complexContent&gt;
+ *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                               &lt;sequence&gt;
+ *                                                 &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+ *                                                 &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+ *                                                 &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+ *                                                 &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *                                               &lt;/sequence&gt;
+ *                                             &lt;/restriction&gt;
+ *                                           &lt;/complexContent&gt;
+ *                                         &lt;/complexType&gt;
+ *                                       &lt;/element&gt;
+ *                                       &lt;element name="procedure" maxOccurs="unbounded" minOccurs="0"&gt;
+ *                                         &lt;complexType&gt;
+ *                                           &lt;complexContent&gt;
+ *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                               &lt;sequence&gt;
+ *                                                 &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+ *                                                 &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+ *                                                 &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+ *                                                 &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *                                               &lt;/sequence&gt;
+ *                                             &lt;/restriction&gt;
+ *                                           &lt;/complexContent&gt;
+ *                                         &lt;/complexType&gt;
+ *                                       &lt;/element&gt;
+ *                                       &lt;element name="otherMedicalHistory" maxOccurs="unbounded" minOccurs="0"&gt;
+ *                                         &lt;complexType&gt;
+ *                                           &lt;complexContent&gt;
+ *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                               &lt;sequence&gt;
+ *                                                 &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+ *                                                 &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+ *                                                 &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+ *                                                 &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *                                               &lt;/sequence&gt;
+ *                                             &lt;/restriction&gt;
+ *                                           &lt;/complexContent&gt;
+ *                                         &lt;/complexType&gt;
+ *                                       &lt;/element&gt;
+ *                                     &lt;/sequence&gt;
+ *                                   &lt;/restriction&gt;
+ *                                 &lt;/complexContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                           &lt;/sequence&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="otherLinks"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="link" maxOccurs="unbounded"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="linkName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                             &lt;element name="linkTitle" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                             &lt;element name="linkTarget" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/&gt;
+ *                             &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *                             &lt;element name="linkType"&gt;
+ *                               &lt;simpleType&gt;
+ *                                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                                   &lt;enumeration value="Document"/&gt;
+ *                                   &lt;enumeration value="View"/&gt;
+ *                                 &lt;/restriction&gt;
+ *                               &lt;/simpleType&gt;
+ *                             &lt;/element&gt;
+ *                           &lt;/sequence&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="recentDocuments"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *                   &lt;element name="document" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}documentDT" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -472,22 +472,22 @@ public class HealthRecordOverviewResponse {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
      * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
-     *         &lt;element name="document" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}documentDT" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+     *         &lt;element name="document" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}documentDT" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
+     * }&lt;/pre&gt;
      * 
      * 
      */
@@ -551,42 +551,42 @@ public class HealthRecordOverviewResponse {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
      * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="link" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="linkName" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *                   &lt;element name="linkTitle" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *                   &lt;element name="linkTarget" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
-     *                   &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
-     *                   &lt;element name="linkType">
-     *                     &lt;simpleType>
-     *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *                         &lt;enumeration value="Document"/>
-     *                         &lt;enumeration value="View"/>
-     *                       &lt;/restriction>
-     *                     &lt;/simpleType>
-     *                   &lt;/element>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="link" maxOccurs="unbounded"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="linkName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *                   &lt;element name="linkTitle" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *                   &lt;element name="linkTarget" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/&gt;
+     *                   &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+     *                   &lt;element name="linkType"&gt;
+     *                     &lt;simpleType&gt;
+     *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *                         &lt;enumeration value="Document"/&gt;
+     *                         &lt;enumeration value="View"/&gt;
+     *                       &lt;/restriction&gt;
+     *                     &lt;/simpleType&gt;
+     *                   &lt;/element&gt;
+     *                 &lt;/sequence&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
+     * }&lt;/pre&gt;
      * 
      * 
      */
@@ -630,32 +630,32 @@ public class HealthRecordOverviewResponse {
 
 
         /**
-         * <p>Java class for anonymous complex type.
+         * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
          * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
+         * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
          * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="linkName" type="{http://www.w3.org/2001/XMLSchema}string"/>
-         *         &lt;element name="linkTitle" type="{http://www.w3.org/2001/XMLSchema}string"/>
-         *         &lt;element name="linkTarget" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
-         *         &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
-         *         &lt;element name="linkType">
-         *           &lt;simpleType>
-         *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-         *               &lt;enumeration value="Document"/>
-         *               &lt;enumeration value="View"/>
-         *             &lt;/restriction>
-         *           &lt;/simpleType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
-         * </pre>
+         * &lt;pre&gt;{&#064;code
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="linkName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+         *         &lt;element name="linkTitle" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+         *         &lt;element name="linkTarget" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/&gt;
+         *         &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+         *         &lt;element name="linkType"&gt;
+         *           &lt;simpleType&gt;
+         *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+         *               &lt;enumeration value="Document"/&gt;
+         *               &lt;enumeration value="View"/&gt;
+         *             &lt;/restriction&gt;
+         *           &lt;/simpleType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
+         * }&lt;/pre&gt;
          * 
          * 
          */
@@ -797,22 +797,22 @@ public class HealthRecordOverviewResponse {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
      * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
-     *         &lt;element name="document" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}documentDT" maxOccurs="unbounded" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+     *         &lt;element name="document" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}documentDT" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
+     * }&lt;/pre&gt;
      * 
      * 
      */
@@ -876,209 +876,209 @@ public class HealthRecordOverviewResponse {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
      * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
-     *         &lt;element name="sharedHealthSummaryAtomicData" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="documentDate" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *                   &lt;element name="cdaDocumentTitle" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *                   &lt;element name="shsAuthorName" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}nameTypeDT"/>
-     *                   &lt;element name="shsAuthorId" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *                   &lt;element name="shsAuthorDesignation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-     *                   &lt;element name="shsAuthorOrgName" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *                   &lt;element name="shsAuthorOrgId">
-     *                     &lt;simpleType>
-     *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *                         &lt;minLength value="16"/>
-     *                         &lt;maxLength value="16"/>
-     *                       &lt;/restriction>
-     *                     &lt;/simpleType>
-     *                   &lt;/element>
-     *                   &lt;element name="shsAuthorOrgAddress" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}addressTypeDT" minOccurs="0"/>
-     *                   &lt;element name="shsAuthorOrgContactDetails" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}contactDetailsDT" maxOccurs="unbounded" minOccurs="0"/>
-     *                   &lt;element name="shsAuthorAddress" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}addressTypeDT" minOccurs="0"/>
-     *                   &lt;element name="shsAuthorContactDetails" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}contactDetailsDT" maxOccurs="unbounded" minOccurs="0"/>
-     *                   &lt;element name="shsEntitlements" minOccurs="0">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;sequence>
-     *                             &lt;element name="entitlement" maxOccurs="unbounded" minOccurs="0">
-     *                               &lt;complexType>
-     *                                 &lt;complexContent>
-     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                                     &lt;sequence>
-     *                                       &lt;element name="entitlementNumberId" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *                                       &lt;element name="entitlementType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-     *                                       &lt;element name="entitlementEffectiveTime" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-     *                                     &lt;/sequence>
-     *                                   &lt;/restriction>
-     *                                 &lt;/complexContent>
-     *                               &lt;/complexType>
-     *                             &lt;/element>
-     *                           &lt;/sequence>
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                   &lt;element name="shsAuthorQualifications" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" minOccurs="0"/>
-     *                   &lt;element name="medicinesList">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;sequence>
-     *                             &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/>
-     *                             &lt;element name="medicine" maxOccurs="unbounded" minOccurs="0">
-     *                               &lt;complexType>
-     *                                 &lt;complexContent>
-     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                                     &lt;sequence>
-     *                                       &lt;element name="medicineTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-     *                                       &lt;element name="medicineDose" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *                                       &lt;element name="medicineDesc" maxOccurs="unbounded" minOccurs="0">
-     *                                         &lt;complexType>
-     *                                           &lt;complexContent>
-     *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                                               &lt;sequence>
-     *                                                 &lt;element name="indication" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *                                                 &lt;element name="comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *                                               &lt;/sequence>
-     *                                             &lt;/restriction>
-     *                                           &lt;/complexContent>
-     *                                         &lt;/complexType>
-     *                                       &lt;/element>
-     *                                     &lt;/sequence>
-     *                                   &lt;/restriction>
-     *                                 &lt;/complexContent>
-     *                               &lt;/complexType>
-     *                             &lt;/element>
-     *                           &lt;/sequence>
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                   &lt;element name="advReactionsList">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;sequence>
-     *                             &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/>
-     *                             &lt;element name="advReaction" maxOccurs="unbounded" minOccurs="0">
-     *                               &lt;complexType>
-     *                                 &lt;complexContent>
-     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                                     &lt;sequence>
-     *                                       &lt;element name="advReactionCause" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-     *                                       &lt;element name="advReactionManifestation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" maxOccurs="unbounded" minOccurs="0"/>
-     *                                       &lt;element name="advReactionType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" minOccurs="0"/>
-     *                                     &lt;/sequence>
-     *                                   &lt;/restriction>
-     *                                 &lt;/complexContent>
-     *                               &lt;/complexType>
-     *                             &lt;/element>
-     *                           &lt;/sequence>
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                   &lt;element name="immunisationList">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;sequence>
-     *                             &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/>
-     *                             &lt;element name="immunisation" maxOccurs="unbounded" minOccurs="0">
-     *                               &lt;complexType>
-     *                                 &lt;complexContent>
-     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                                     &lt;sequence>
-     *                                       &lt;element name="immunisationDate" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT"/>
-     *                                       &lt;element name="immunisationTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-     *                                       &lt;element name="immunisationSequenceNumber" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
-     *                                     &lt;/sequence>
-     *                                   &lt;/restriction>
-     *                                 &lt;/complexContent>
-     *                               &lt;/complexType>
-     *                             &lt;/element>
-     *                           &lt;/sequence>
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                   &lt;element name="medHistoryList">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;sequence>
-     *                             &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT" maxOccurs="3" minOccurs="3"/>
-     *                             &lt;element name="problemAndDiagnosis" maxOccurs="unbounded" minOccurs="0">
-     *                               &lt;complexType>
-     *                                 &lt;complexContent>
-     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                                     &lt;sequence>
-     *                                       &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-     *                                       &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-     *                                       &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-     *                                       &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *                                     &lt;/sequence>
-     *                                   &lt;/restriction>
-     *                                 &lt;/complexContent>
-     *                               &lt;/complexType>
-     *                             &lt;/element>
-     *                             &lt;element name="procedure" maxOccurs="unbounded" minOccurs="0">
-     *                               &lt;complexType>
-     *                                 &lt;complexContent>
-     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                                     &lt;sequence>
-     *                                       &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-     *                                       &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-     *                                       &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-     *                                       &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *                                     &lt;/sequence>
-     *                                   &lt;/restriction>
-     *                                 &lt;/complexContent>
-     *                               &lt;/complexType>
-     *                             &lt;/element>
-     *                             &lt;element name="otherMedicalHistory" maxOccurs="unbounded" minOccurs="0">
-     *                               &lt;complexType>
-     *                                 &lt;complexContent>
-     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                                     &lt;sequence>
-     *                                       &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-     *                                       &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-     *                                       &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-     *                                       &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *                                     &lt;/sequence>
-     *                                   &lt;/restriction>
-     *                                 &lt;/complexContent>
-     *                               &lt;/complexType>
-     *                             &lt;/element>
-     *                           &lt;/sequence>
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="informationAvailable" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+     *         &lt;element name="sharedHealthSummaryAtomicData" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="documentDate" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *                   &lt;element name="cdaDocumentTitle" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *                   &lt;element name="shsAuthorName" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}nameTypeDT"/&gt;
+     *                   &lt;element name="shsAuthorId" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *                   &lt;element name="shsAuthorDesignation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+     *                   &lt;element name="shsAuthorOrgName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *                   &lt;element name="shsAuthorOrgId"&gt;
+     *                     &lt;simpleType&gt;
+     *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *                         &lt;minLength value="16"/&gt;
+     *                         &lt;maxLength value="16"/&gt;
+     *                       &lt;/restriction&gt;
+     *                     &lt;/simpleType&gt;
+     *                   &lt;/element&gt;
+     *                   &lt;element name="shsAuthorOrgAddress" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}addressTypeDT" minOccurs="0"/&gt;
+     *                   &lt;element name="shsAuthorOrgContactDetails" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}contactDetailsDT" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *                   &lt;element name="shsAuthorAddress" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}addressTypeDT" minOccurs="0"/&gt;
+     *                   &lt;element name="shsAuthorContactDetails" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}contactDetailsDT" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *                   &lt;element name="shsEntitlements" minOccurs="0"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;sequence&gt;
+     *                             &lt;element name="entitlement" maxOccurs="unbounded" minOccurs="0"&gt;
+     *                               &lt;complexType&gt;
+     *                                 &lt;complexContent&gt;
+     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                                     &lt;sequence&gt;
+     *                                       &lt;element name="entitlementNumberId" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *                                       &lt;element name="entitlementType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+     *                                       &lt;element name="entitlementEffectiveTime" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+     *                                     &lt;/sequence&gt;
+     *                                   &lt;/restriction&gt;
+     *                                 &lt;/complexContent&gt;
+     *                               &lt;/complexType&gt;
+     *                             &lt;/element&gt;
+     *                           &lt;/sequence&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                   &lt;element name="shsAuthorQualifications" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" minOccurs="0"/&gt;
+     *                   &lt;element name="medicinesList"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;sequence&gt;
+     *                             &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/&gt;
+     *                             &lt;element name="medicine" maxOccurs="unbounded" minOccurs="0"&gt;
+     *                               &lt;complexType&gt;
+     *                                 &lt;complexContent&gt;
+     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                                     &lt;sequence&gt;
+     *                                       &lt;element name="medicineTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+     *                                       &lt;element name="medicineDose" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *                                       &lt;element name="medicineDesc" maxOccurs="unbounded" minOccurs="0"&gt;
+     *                                         &lt;complexType&gt;
+     *                                           &lt;complexContent&gt;
+     *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                                               &lt;sequence&gt;
+     *                                                 &lt;element name="indication" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+     *                                                 &lt;element name="comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+     *                                               &lt;/sequence&gt;
+     *                                             &lt;/restriction&gt;
+     *                                           &lt;/complexContent&gt;
+     *                                         &lt;/complexType&gt;
+     *                                       &lt;/element&gt;
+     *                                     &lt;/sequence&gt;
+     *                                   &lt;/restriction&gt;
+     *                                 &lt;/complexContent&gt;
+     *                               &lt;/complexType&gt;
+     *                             &lt;/element&gt;
+     *                           &lt;/sequence&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                   &lt;element name="advReactionsList"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;sequence&gt;
+     *                             &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/&gt;
+     *                             &lt;element name="advReaction" maxOccurs="unbounded" minOccurs="0"&gt;
+     *                               &lt;complexType&gt;
+     *                                 &lt;complexContent&gt;
+     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                                     &lt;sequence&gt;
+     *                                       &lt;element name="advReactionCause" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+     *                                       &lt;element name="advReactionManifestation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *                                       &lt;element name="advReactionType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" minOccurs="0"/&gt;
+     *                                     &lt;/sequence&gt;
+     *                                   &lt;/restriction&gt;
+     *                                 &lt;/complexContent&gt;
+     *                               &lt;/complexType&gt;
+     *                             &lt;/element&gt;
+     *                           &lt;/sequence&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                   &lt;element name="immunisationList"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;sequence&gt;
+     *                             &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/&gt;
+     *                             &lt;element name="immunisation" maxOccurs="unbounded" minOccurs="0"&gt;
+     *                               &lt;complexType&gt;
+     *                                 &lt;complexContent&gt;
+     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                                     &lt;sequence&gt;
+     *                                       &lt;element name="immunisationDate" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT"/&gt;
+     *                                       &lt;element name="immunisationTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+     *                                       &lt;element name="immunisationSequenceNumber" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
+     *                                     &lt;/sequence&gt;
+     *                                   &lt;/restriction&gt;
+     *                                 &lt;/complexContent&gt;
+     *                               &lt;/complexType&gt;
+     *                             &lt;/element&gt;
+     *                           &lt;/sequence&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                   &lt;element name="medHistoryList"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;sequence&gt;
+     *                             &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT" maxOccurs="3" minOccurs="3"/&gt;
+     *                             &lt;element name="problemAndDiagnosis" maxOccurs="unbounded" minOccurs="0"&gt;
+     *                               &lt;complexType&gt;
+     *                                 &lt;complexContent&gt;
+     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                                     &lt;sequence&gt;
+     *                                       &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+     *                                       &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+     *                                       &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+     *                                       &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+     *                                     &lt;/sequence&gt;
+     *                                   &lt;/restriction&gt;
+     *                                 &lt;/complexContent&gt;
+     *                               &lt;/complexType&gt;
+     *                             &lt;/element&gt;
+     *                             &lt;element name="procedure" maxOccurs="unbounded" minOccurs="0"&gt;
+     *                               &lt;complexType&gt;
+     *                                 &lt;complexContent&gt;
+     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                                     &lt;sequence&gt;
+     *                                       &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+     *                                       &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+     *                                       &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+     *                                       &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+     *                                     &lt;/sequence&gt;
+     *                                   &lt;/restriction&gt;
+     *                                 &lt;/complexContent&gt;
+     *                               &lt;/complexType&gt;
+     *                             &lt;/element&gt;
+     *                             &lt;element name="otherMedicalHistory" maxOccurs="unbounded" minOccurs="0"&gt;
+     *                               &lt;complexType&gt;
+     *                                 &lt;complexContent&gt;
+     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                                     &lt;sequence&gt;
+     *                                       &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+     *                                       &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+     *                                       &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+     *                                       &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+     *                                     &lt;/sequence&gt;
+     *                                   &lt;/restriction&gt;
+     *                                 &lt;/complexContent&gt;
+     *                               &lt;/complexType&gt;
+     *                             &lt;/element&gt;
+     *                           &lt;/sequence&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                 &lt;/sequence&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
+     * }&lt;/pre&gt;
      * 
      * 
      */
@@ -1134,198 +1134,198 @@ public class HealthRecordOverviewResponse {
 
 
         /**
-         * <p>Java class for anonymous complex type.
+         * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
          * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
+         * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
          * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="documentDate" type="{http://www.w3.org/2001/XMLSchema}string"/>
-         *         &lt;element name="cdaDocumentTitle" type="{http://www.w3.org/2001/XMLSchema}string"/>
-         *         &lt;element name="shsAuthorName" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}nameTypeDT"/>
-         *         &lt;element name="shsAuthorId" type="{http://www.w3.org/2001/XMLSchema}string"/>
-         *         &lt;element name="shsAuthorDesignation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-         *         &lt;element name="shsAuthorOrgName" type="{http://www.w3.org/2001/XMLSchema}string"/>
-         *         &lt;element name="shsAuthorOrgId">
-         *           &lt;simpleType>
-         *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-         *               &lt;minLength value="16"/>
-         *               &lt;maxLength value="16"/>
-         *             &lt;/restriction>
-         *           &lt;/simpleType>
-         *         &lt;/element>
-         *         &lt;element name="shsAuthorOrgAddress" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}addressTypeDT" minOccurs="0"/>
-         *         &lt;element name="shsAuthorOrgContactDetails" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}contactDetailsDT" maxOccurs="unbounded" minOccurs="0"/>
-         *         &lt;element name="shsAuthorAddress" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}addressTypeDT" minOccurs="0"/>
-         *         &lt;element name="shsAuthorContactDetails" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}contactDetailsDT" maxOccurs="unbounded" minOccurs="0"/>
-         *         &lt;element name="shsEntitlements" minOccurs="0">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;sequence>
-         *                   &lt;element name="entitlement" maxOccurs="unbounded" minOccurs="0">
-         *                     &lt;complexType>
-         *                       &lt;complexContent>
-         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                           &lt;sequence>
-         *                             &lt;element name="entitlementNumberId" type="{http://www.w3.org/2001/XMLSchema}string"/>
-         *                             &lt;element name="entitlementType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-         *                             &lt;element name="entitlementEffectiveTime" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-         *                           &lt;/sequence>
-         *                         &lt;/restriction>
-         *                       &lt;/complexContent>
-         *                     &lt;/complexType>
-         *                   &lt;/element>
-         *                 &lt;/sequence>
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="shsAuthorQualifications" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" minOccurs="0"/>
-         *         &lt;element name="medicinesList">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;sequence>
-         *                   &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/>
-         *                   &lt;element name="medicine" maxOccurs="unbounded" minOccurs="0">
-         *                     &lt;complexType>
-         *                       &lt;complexContent>
-         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                           &lt;sequence>
-         *                             &lt;element name="medicineTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-         *                             &lt;element name="medicineDose" type="{http://www.w3.org/2001/XMLSchema}string"/>
-         *                             &lt;element name="medicineDesc" maxOccurs="unbounded" minOccurs="0">
-         *                               &lt;complexType>
-         *                                 &lt;complexContent>
-         *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                                     &lt;sequence>
-         *                                       &lt;element name="indication" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-         *                                       &lt;element name="comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-         *                                     &lt;/sequence>
-         *                                   &lt;/restriction>
-         *                                 &lt;/complexContent>
-         *                               &lt;/complexType>
-         *                             &lt;/element>
-         *                           &lt;/sequence>
-         *                         &lt;/restriction>
-         *                       &lt;/complexContent>
-         *                     &lt;/complexType>
-         *                   &lt;/element>
-         *                 &lt;/sequence>
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="advReactionsList">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;sequence>
-         *                   &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/>
-         *                   &lt;element name="advReaction" maxOccurs="unbounded" minOccurs="0">
-         *                     &lt;complexType>
-         *                       &lt;complexContent>
-         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                           &lt;sequence>
-         *                             &lt;element name="advReactionCause" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-         *                             &lt;element name="advReactionManifestation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" maxOccurs="unbounded" minOccurs="0"/>
-         *                             &lt;element name="advReactionType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" minOccurs="0"/>
-         *                           &lt;/sequence>
-         *                         &lt;/restriction>
-         *                       &lt;/complexContent>
-         *                     &lt;/complexType>
-         *                   &lt;/element>
-         *                 &lt;/sequence>
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="immunisationList">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;sequence>
-         *                   &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/>
-         *                   &lt;element name="immunisation" maxOccurs="unbounded" minOccurs="0">
-         *                     &lt;complexType>
-         *                       &lt;complexContent>
-         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                           &lt;sequence>
-         *                             &lt;element name="immunisationDate" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT"/>
-         *                             &lt;element name="immunisationTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-         *                             &lt;element name="immunisationSequenceNumber" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
-         *                           &lt;/sequence>
-         *                         &lt;/restriction>
-         *                       &lt;/complexContent>
-         *                     &lt;/complexType>
-         *                   &lt;/element>
-         *                 &lt;/sequence>
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="medHistoryList">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;sequence>
-         *                   &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT" maxOccurs="3" minOccurs="3"/>
-         *                   &lt;element name="problemAndDiagnosis" maxOccurs="unbounded" minOccurs="0">
-         *                     &lt;complexType>
-         *                       &lt;complexContent>
-         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                           &lt;sequence>
-         *                             &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-         *                             &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-         *                             &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-         *                             &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-         *                           &lt;/sequence>
-         *                         &lt;/restriction>
-         *                       &lt;/complexContent>
-         *                     &lt;/complexType>
-         *                   &lt;/element>
-         *                   &lt;element name="procedure" maxOccurs="unbounded" minOccurs="0">
-         *                     &lt;complexType>
-         *                       &lt;complexContent>
-         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                           &lt;sequence>
-         *                             &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-         *                             &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-         *                             &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-         *                             &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-         *                           &lt;/sequence>
-         *                         &lt;/restriction>
-         *                       &lt;/complexContent>
-         *                     &lt;/complexType>
-         *                   &lt;/element>
-         *                   &lt;element name="otherMedicalHistory" maxOccurs="unbounded" minOccurs="0">
-         *                     &lt;complexType>
-         *                       &lt;complexContent>
-         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                           &lt;sequence>
-         *                             &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-         *                             &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-         *                             &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-         *                             &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-         *                           &lt;/sequence>
-         *                         &lt;/restriction>
-         *                       &lt;/complexContent>
-         *                     &lt;/complexType>
-         *                   &lt;/element>
-         *                 &lt;/sequence>
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
-         * </pre>
+         * &lt;pre&gt;{&#064;code
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="documentDate" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+         *         &lt;element name="cdaDocumentTitle" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+         *         &lt;element name="shsAuthorName" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}nameTypeDT"/&gt;
+         *         &lt;element name="shsAuthorId" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+         *         &lt;element name="shsAuthorDesignation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+         *         &lt;element name="shsAuthorOrgName" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+         *         &lt;element name="shsAuthorOrgId"&gt;
+         *           &lt;simpleType&gt;
+         *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+         *               &lt;minLength value="16"/&gt;
+         *               &lt;maxLength value="16"/&gt;
+         *             &lt;/restriction&gt;
+         *           &lt;/simpleType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="shsAuthorOrgAddress" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}addressTypeDT" minOccurs="0"/&gt;
+         *         &lt;element name="shsAuthorOrgContactDetails" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}contactDetailsDT" maxOccurs="unbounded" minOccurs="0"/&gt;
+         *         &lt;element name="shsAuthorAddress" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}addressTypeDT" minOccurs="0"/&gt;
+         *         &lt;element name="shsAuthorContactDetails" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}contactDetailsDT" maxOccurs="unbounded" minOccurs="0"/&gt;
+         *         &lt;element name="shsEntitlements" minOccurs="0"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;sequence&gt;
+         *                   &lt;element name="entitlement" maxOccurs="unbounded" minOccurs="0"&gt;
+         *                     &lt;complexType&gt;
+         *                       &lt;complexContent&gt;
+         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                           &lt;sequence&gt;
+         *                             &lt;element name="entitlementNumberId" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+         *                             &lt;element name="entitlementType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+         *                             &lt;element name="entitlementEffectiveTime" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+         *                           &lt;/sequence&gt;
+         *                         &lt;/restriction&gt;
+         *                       &lt;/complexContent&gt;
+         *                     &lt;/complexType&gt;
+         *                   &lt;/element&gt;
+         *                 &lt;/sequence&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="shsAuthorQualifications" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" minOccurs="0"/&gt;
+         *         &lt;element name="medicinesList"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;sequence&gt;
+         *                   &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/&gt;
+         *                   &lt;element name="medicine" maxOccurs="unbounded" minOccurs="0"&gt;
+         *                     &lt;complexType&gt;
+         *                       &lt;complexContent&gt;
+         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                           &lt;sequence&gt;
+         *                             &lt;element name="medicineTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+         *                             &lt;element name="medicineDose" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+         *                             &lt;element name="medicineDesc" maxOccurs="unbounded" minOccurs="0"&gt;
+         *                               &lt;complexType&gt;
+         *                                 &lt;complexContent&gt;
+         *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                                     &lt;sequence&gt;
+         *                                       &lt;element name="indication" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+         *                                       &lt;element name="comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+         *                                     &lt;/sequence&gt;
+         *                                   &lt;/restriction&gt;
+         *                                 &lt;/complexContent&gt;
+         *                               &lt;/complexType&gt;
+         *                             &lt;/element&gt;
+         *                           &lt;/sequence&gt;
+         *                         &lt;/restriction&gt;
+         *                       &lt;/complexContent&gt;
+         *                     &lt;/complexType&gt;
+         *                   &lt;/element&gt;
+         *                 &lt;/sequence&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="advReactionsList"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;sequence&gt;
+         *                   &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/&gt;
+         *                   &lt;element name="advReaction" maxOccurs="unbounded" minOccurs="0"&gt;
+         *                     &lt;complexType&gt;
+         *                       &lt;complexContent&gt;
+         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                           &lt;sequence&gt;
+         *                             &lt;element name="advReactionCause" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+         *                             &lt;element name="advReactionManifestation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" maxOccurs="unbounded" minOccurs="0"/&gt;
+         *                             &lt;element name="advReactionType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" minOccurs="0"/&gt;
+         *                           &lt;/sequence&gt;
+         *                         &lt;/restriction&gt;
+         *                       &lt;/complexContent&gt;
+         *                     &lt;/complexType&gt;
+         *                   &lt;/element&gt;
+         *                 &lt;/sequence&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="immunisationList"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;sequence&gt;
+         *                   &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/&gt;
+         *                   &lt;element name="immunisation" maxOccurs="unbounded" minOccurs="0"&gt;
+         *                     &lt;complexType&gt;
+         *                       &lt;complexContent&gt;
+         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                           &lt;sequence&gt;
+         *                             &lt;element name="immunisationDate" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT"/&gt;
+         *                             &lt;element name="immunisationTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+         *                             &lt;element name="immunisationSequenceNumber" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
+         *                           &lt;/sequence&gt;
+         *                         &lt;/restriction&gt;
+         *                       &lt;/complexContent&gt;
+         *                     &lt;/complexType&gt;
+         *                   &lt;/element&gt;
+         *                 &lt;/sequence&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="medHistoryList"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;sequence&gt;
+         *                   &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT" maxOccurs="3" minOccurs="3"/&gt;
+         *                   &lt;element name="problemAndDiagnosis" maxOccurs="unbounded" minOccurs="0"&gt;
+         *                     &lt;complexType&gt;
+         *                       &lt;complexContent&gt;
+         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                           &lt;sequence&gt;
+         *                             &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+         *                             &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+         *                             &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+         *                             &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+         *                           &lt;/sequence&gt;
+         *                         &lt;/restriction&gt;
+         *                       &lt;/complexContent&gt;
+         *                     &lt;/complexType&gt;
+         *                   &lt;/element&gt;
+         *                   &lt;element name="procedure" maxOccurs="unbounded" minOccurs="0"&gt;
+         *                     &lt;complexType&gt;
+         *                       &lt;complexContent&gt;
+         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                           &lt;sequence&gt;
+         *                             &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+         *                             &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+         *                             &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+         *                             &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+         *                           &lt;/sequence&gt;
+         *                         &lt;/restriction&gt;
+         *                       &lt;/complexContent&gt;
+         *                     &lt;/complexType&gt;
+         *                   &lt;/element&gt;
+         *                   &lt;element name="otherMedicalHistory" maxOccurs="unbounded" minOccurs="0"&gt;
+         *                     &lt;complexType&gt;
+         *                       &lt;complexContent&gt;
+         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                           &lt;sequence&gt;
+         *                             &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+         *                             &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+         *                             &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+         *                             &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+         *                           &lt;/sequence&gt;
+         *                         &lt;/restriction&gt;
+         *                       &lt;/complexContent&gt;
+         *                     &lt;/complexType&gt;
+         *                   &lt;/element&gt;
+         *                 &lt;/sequence&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
+         * }&lt;/pre&gt;
          * 
          * 
          */
@@ -1800,34 +1800,34 @@ public class HealthRecordOverviewResponse {
 
 
             /**
-             * <p>Java class for anonymous complex type.
+             * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
              * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
+             * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
              * 
-             * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/>
-             *         &lt;element name="advReaction" maxOccurs="unbounded" minOccurs="0">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;sequence>
-             *                   &lt;element name="advReactionCause" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-             *                   &lt;element name="advReactionManifestation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" maxOccurs="unbounded" minOccurs="0"/>
-             *                   &lt;element name="advReactionType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" minOccurs="0"/>
-             *                 &lt;/sequence>
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
-             * </pre>
+             * &lt;pre&gt;{&#064;code
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/&gt;
+             *         &lt;element name="advReaction" maxOccurs="unbounded" minOccurs="0"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;sequence&gt;
+             *                   &lt;element name="advReactionCause" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+             *                   &lt;element name="advReactionManifestation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" maxOccurs="unbounded" minOccurs="0"/&gt;
+             *                   &lt;element name="advReactionType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" minOccurs="0"/&gt;
+             *                 &lt;/sequence&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
+             * }&lt;/pre&gt;
              * 
              * 
              */
@@ -1898,23 +1898,23 @@ public class HealthRecordOverviewResponse {
 
 
                 /**
-                 * <p>Java class for anonymous complex type.
+                 * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
                  * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
+                 * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
                  * 
-                 * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;sequence>
-                 *         &lt;element name="advReactionCause" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-                 *         &lt;element name="advReactionManifestation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" maxOccurs="unbounded" minOccurs="0"/>
-                 *         &lt;element name="advReactionType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" minOccurs="0"/>
-                 *       &lt;/sequence>
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
-                 * </pre>
+                 * &lt;pre&gt;{&#064;code
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;sequence&gt;
+                 *         &lt;element name="advReactionCause" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+                 *         &lt;element name="advReactionManifestation" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" maxOccurs="unbounded" minOccurs="0"/&gt;
+                 *         &lt;element name="advReactionType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType" minOccurs="0"/&gt;
+                 *       &lt;/sequence&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
+                 * }&lt;/pre&gt;
                  * 
                  * 
                  */
@@ -2015,34 +2015,34 @@ public class HealthRecordOverviewResponse {
 
 
             /**
-             * <p>Java class for anonymous complex type.
+             * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
              * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
+             * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
              * 
-             * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/>
-             *         &lt;element name="immunisation" maxOccurs="unbounded" minOccurs="0">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;sequence>
-             *                   &lt;element name="immunisationDate" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT"/>
-             *                   &lt;element name="immunisationTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-             *                   &lt;element name="immunisationSequenceNumber" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
-             *                 &lt;/sequence>
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
-             * </pre>
+             * &lt;pre&gt;{&#064;code
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/&gt;
+             *         &lt;element name="immunisation" maxOccurs="unbounded" minOccurs="0"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;sequence&gt;
+             *                   &lt;element name="immunisationDate" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT"/&gt;
+             *                   &lt;element name="immunisationTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+             *                   &lt;element name="immunisationSequenceNumber" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
+             *                 &lt;/sequence&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
+             * }&lt;/pre&gt;
              * 
              * 
              */
@@ -2113,23 +2113,23 @@ public class HealthRecordOverviewResponse {
 
 
                 /**
-                 * <p>Java class for anonymous complex type.
+                 * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
                  * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
+                 * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
                  * 
-                 * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;sequence>
-                 *         &lt;element name="immunisationDate" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT"/>
-                 *         &lt;element name="immunisationTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-                 *         &lt;element name="immunisationSequenceNumber" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>
-                 *       &lt;/sequence>
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
-                 * </pre>
+                 * &lt;pre&gt;{&#064;code
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;sequence&gt;
+                 *         &lt;element name="immunisationDate" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT"/&gt;
+                 *         &lt;element name="immunisationTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+                 *         &lt;element name="immunisationSequenceNumber" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/&gt;
+                 *       &lt;/sequence&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
+                 * }&lt;/pre&gt;
                  * 
                  * 
                  */
@@ -2225,63 +2225,63 @@ public class HealthRecordOverviewResponse {
 
 
             /**
-             * <p>Java class for anonymous complex type.
+             * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
              * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
+             * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
              * 
-             * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT" maxOccurs="3" minOccurs="3"/>
-             *         &lt;element name="problemAndDiagnosis" maxOccurs="unbounded" minOccurs="0">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;sequence>
-             *                   &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-             *                   &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-             *                   &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-             *                   &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-             *                 &lt;/sequence>
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="procedure" maxOccurs="unbounded" minOccurs="0">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;sequence>
-             *                   &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-             *                   &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-             *                   &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-             *                   &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-             *                 &lt;/sequence>
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *         &lt;element name="otherMedicalHistory" maxOccurs="unbounded" minOccurs="0">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;sequence>
-             *                   &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-             *                   &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-             *                   &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-             *                   &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-             *                 &lt;/sequence>
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
-             * </pre>
+             * &lt;pre&gt;{&#064;code
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT" maxOccurs="3" minOccurs="3"/&gt;
+             *         &lt;element name="problemAndDiagnosis" maxOccurs="unbounded" minOccurs="0"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;sequence&gt;
+             *                   &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+             *                   &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+             *                   &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+             *                   &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+             *                 &lt;/sequence&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="procedure" maxOccurs="unbounded" minOccurs="0"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;sequence&gt;
+             *                   &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+             *                   &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+             *                   &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+             *                   &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+             *                 &lt;/sequence&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *         &lt;element name="otherMedicalHistory" maxOccurs="unbounded" minOccurs="0"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;sequence&gt;
+             *                   &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+             *                   &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+             *                   &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+             *                   &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+             *                 &lt;/sequence&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
+             * }&lt;/pre&gt;
              * 
              * 
              */
@@ -2421,24 +2421,24 @@ public class HealthRecordOverviewResponse {
 
 
                 /**
-                 * <p>Java class for anonymous complex type.
+                 * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
                  * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
+                 * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
                  * 
-                 * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;sequence>
-                 *         &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-                 *         &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-                 *         &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-                 *         &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-                 *       &lt;/sequence>
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
-                 * </pre>
+                 * &lt;pre&gt;{&#064;code
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;sequence&gt;
+                 *         &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+                 *         &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+                 *         &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+                 *         &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+                 *       &lt;/sequence&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
+                 * }&lt;/pre&gt;
                  * 
                  * 
                  */
@@ -2557,24 +2557,24 @@ public class HealthRecordOverviewResponse {
 
 
                 /**
-                 * <p>Java class for anonymous complex type.
+                 * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
                  * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
+                 * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
                  * 
-                 * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;sequence>
-                 *         &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-                 *         &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-                 *         &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-                 *         &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-                 *       &lt;/sequence>
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
-                 * </pre>
+                 * &lt;pre&gt;{&#064;code
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;sequence&gt;
+                 *         &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+                 *         &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+                 *         &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+                 *         &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+                 *       &lt;/sequence&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
+                 * }&lt;/pre&gt;
                  * 
                  * 
                  */
@@ -2693,24 +2693,24 @@ public class HealthRecordOverviewResponse {
 
 
                 /**
-                 * <p>Java class for anonymous complex type.
+                 * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
                  * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
+                 * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
                  * 
-                 * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;sequence>
-                 *         &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-                 *         &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-                 *         &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-                 *         &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-                 *       &lt;/sequence>
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
-                 * </pre>
+                 * &lt;pre&gt;{&#064;code
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;sequence&gt;
+                 *         &lt;element name="medTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+                 *         &lt;element name="medDateO" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+                 *         &lt;element name="medDateR" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+                 *         &lt;element name="medComment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+                 *       &lt;/sequence&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
+                 * }&lt;/pre&gt;
                  * 
                  * 
                  */
@@ -2831,45 +2831,45 @@ public class HealthRecordOverviewResponse {
 
 
             /**
-             * <p>Java class for anonymous complex type.
+             * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
              * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
+             * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
              * 
-             * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/>
-             *         &lt;element name="medicine" maxOccurs="unbounded" minOccurs="0">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;sequence>
-             *                   &lt;element name="medicineTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-             *                   &lt;element name="medicineDose" type="{http://www.w3.org/2001/XMLSchema}string"/>
-             *                   &lt;element name="medicineDesc" maxOccurs="unbounded" minOccurs="0">
-             *                     &lt;complexType>
-             *                       &lt;complexContent>
-             *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                           &lt;sequence>
-             *                             &lt;element name="indication" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-             *                             &lt;element name="comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-             *                           &lt;/sequence>
-             *                         &lt;/restriction>
-             *                       &lt;/complexContent>
-             *                     &lt;/complexType>
-             *                   &lt;/element>
-             *                 &lt;/sequence>
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
-             * </pre>
+             * &lt;pre&gt;{&#064;code
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="informationAvailable" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}informationAvailableDT"/&gt;
+             *         &lt;element name="medicine" maxOccurs="unbounded" minOccurs="0"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;sequence&gt;
+             *                   &lt;element name="medicineTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+             *                   &lt;element name="medicineDose" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+             *                   &lt;element name="medicineDesc" maxOccurs="unbounded" minOccurs="0"&gt;
+             *                     &lt;complexType&gt;
+             *                       &lt;complexContent&gt;
+             *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                           &lt;sequence&gt;
+             *                             &lt;element name="indication" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+             *                             &lt;element name="comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+             *                           &lt;/sequence&gt;
+             *                         &lt;/restriction&gt;
+             *                       &lt;/complexContent&gt;
+             *                     &lt;/complexType&gt;
+             *                   &lt;/element&gt;
+             *                 &lt;/sequence&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
+             * }&lt;/pre&gt;
              * 
              * 
              */
@@ -2940,34 +2940,34 @@ public class HealthRecordOverviewResponse {
 
 
                 /**
-                 * <p>Java class for anonymous complex type.
+                 * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
                  * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
+                 * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
                  * 
-                 * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;sequence>
-                 *         &lt;element name="medicineTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-                 *         &lt;element name="medicineDose" type="{http://www.w3.org/2001/XMLSchema}string"/>
-                 *         &lt;element name="medicineDesc" maxOccurs="unbounded" minOccurs="0">
-                 *           &lt;complexType>
-                 *             &lt;complexContent>
-                 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *                 &lt;sequence>
-                 *                   &lt;element name="indication" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-                 *                   &lt;element name="comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-                 *                 &lt;/sequence>
-                 *               &lt;/restriction>
-                 *             &lt;/complexContent>
-                 *           &lt;/complexType>
-                 *         &lt;/element>
-                 *       &lt;/sequence>
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
-                 * </pre>
+                 * &lt;pre&gt;{&#064;code
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;sequence&gt;
+                 *         &lt;element name="medicineTitle" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+                 *         &lt;element name="medicineDose" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+                 *         &lt;element name="medicineDesc" maxOccurs="unbounded" minOccurs="0"&gt;
+                 *           &lt;complexType&gt;
+                 *             &lt;complexContent&gt;
+                 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *                 &lt;sequence&gt;
+                 *                   &lt;element name="indication" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+                 *                   &lt;element name="comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+                 *                 &lt;/sequence&gt;
+                 *               &lt;/restriction&gt;
+                 *             &lt;/complexContent&gt;
+                 *           &lt;/complexType&gt;
+                 *         &lt;/element&gt;
+                 *       &lt;/sequence&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
+                 * }&lt;/pre&gt;
                  * 
                  * 
                  */
@@ -3065,22 +3065,22 @@ public class HealthRecordOverviewResponse {
 
 
                     /**
-                     * <p>Java class for anonymous complex type.
+                     * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
                      * 
-                     * <p>The following schema fragment specifies the expected content contained within this class.
+                     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
                      * 
-                     * <pre>
-                     * &lt;complexType>
-                     *   &lt;complexContent>
-                     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                     *       &lt;sequence>
-                     *         &lt;element name="indication" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-                     *         &lt;element name="comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-                     *       &lt;/sequence>
-                     *     &lt;/restriction>
-                     *   &lt;/complexContent>
-                     * &lt;/complexType>
-                     * </pre>
+                     * &lt;pre&gt;{&#064;code
+                     * &lt;complexType&gt;
+                     *   &lt;complexContent&gt;
+                     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                     *       &lt;sequence&gt;
+                     *         &lt;element name="indication" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+                     *         &lt;element name="comment" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+                     *       &lt;/sequence&gt;
+                     *     &lt;/restriction&gt;
+                     *   &lt;/complexContent&gt;
+                     * &lt;/complexType&gt;
+                     * }&lt;/pre&gt;
                      * 
                      * 
                      */
@@ -3150,33 +3150,33 @@ public class HealthRecordOverviewResponse {
 
 
             /**
-             * <p>Java class for anonymous complex type.
+             * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
              * 
-             * <p>The following schema fragment specifies the expected content contained within this class.
+             * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
              * 
-             * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="entitlement" maxOccurs="unbounded" minOccurs="0">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;sequence>
-             *                   &lt;element name="entitlementNumberId" type="{http://www.w3.org/2001/XMLSchema}string"/>
-             *                   &lt;element name="entitlementType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-             *                   &lt;element name="entitlementEffectiveTime" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-             *                 &lt;/sequence>
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
-             * </pre>
+             * &lt;pre&gt;{&#064;code
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="entitlement" maxOccurs="unbounded" minOccurs="0"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;sequence&gt;
+             *                   &lt;element name="entitlementNumberId" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+             *                   &lt;element name="entitlementType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+             *                   &lt;element name="entitlementEffectiveTime" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+             *                 &lt;/sequence&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
+             * }&lt;/pre&gt;
              * 
              * 
              */
@@ -3220,23 +3220,23 @@ public class HealthRecordOverviewResponse {
 
 
                 /**
-                 * <p>Java class for anonymous complex type.
+                 * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
                  * 
-                 * <p>The following schema fragment specifies the expected content contained within this class.
+                 * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
                  * 
-                 * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;sequence>
-                 *         &lt;element name="entitlementNumberId" type="{http://www.w3.org/2001/XMLSchema}string"/>
-                 *         &lt;element name="entitlementType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/>
-                 *         &lt;element name="entitlementEffectiveTime" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/>
-                 *       &lt;/sequence>
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
-                 * </pre>
+                 * &lt;pre&gt;{&#064;code
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;sequence&gt;
+                 *         &lt;element name="entitlementNumberId" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+                 *         &lt;element name="entitlementType" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}CodedType"/&gt;
+                 *         &lt;element name="entitlementEffectiveTime" type="{http://ns.electronichealth.net.au/pcehr/xsd/view/ViewCommonType/1.0}timeStampDT" minOccurs="0"/&gt;
+                 *       &lt;/sequence&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
+                 * }&lt;/pre&gt;
                  * 
                  * 
                  */
@@ -3336,46 +3336,46 @@ public class HealthRecordOverviewResponse {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
      * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="individualProfile">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/>
-     *                   &lt;element name="individual" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}individualTypeSupp"/>
-     *                   &lt;element name="indigenousStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *                   &lt;element name="veteranAndADFStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="viewParameters">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="clinicalSynopsisLength" type="{http://www.w3.org/2001/XMLSchema}int"/>
-     *                   &lt;element name="viewVersionNumber" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="individualProfile"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/&gt;
+     *                   &lt;element name="individual" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}individualTypeSupp"/&gt;
+     *                   &lt;element name="indigenousStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+     *                   &lt;element name="veteranAndADFStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+     *                 &lt;/sequence&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="viewParameters"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="clinicalSynopsisLength" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+     *                   &lt;element name="viewVersionNumber" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *                 &lt;/sequence&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
+     * }&lt;/pre&gt;
      * 
      * 
      */
@@ -3441,24 +3441,24 @@ public class HealthRecordOverviewResponse {
 
 
         /**
-         * <p>Java class for anonymous complex type.
+         * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
          * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
+         * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
          * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/>
-         *         &lt;element name="individual" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}individualTypeSupp"/>
-         *         &lt;element name="indigenousStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-         *         &lt;element name="veteranAndADFStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
-         * </pre>
+         * &lt;pre&gt;{&#064;code
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/&gt;
+         *         &lt;element name="individual" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}individualTypeSupp"/&gt;
+         *         &lt;element name="indigenousStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+         *         &lt;element name="veteranAndADFStatus" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
+         * }&lt;/pre&gt;
          * 
          * 
          */
@@ -3578,22 +3578,22 @@ public class HealthRecordOverviewResponse {
 
 
         /**
-         * <p>Java class for anonymous complex type.
+         * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
          * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
+         * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
          * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="clinicalSynopsisLength" type="{http://www.w3.org/2001/XMLSchema}int"/>
-         *         &lt;element name="viewVersionNumber" type="{http://www.w3.org/2001/XMLSchema}string"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
-         * </pre>
+         * &lt;pre&gt;{&#064;code
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="clinicalSynopsisLength" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+         *         &lt;element name="viewVersionNumber" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
+         * }&lt;/pre&gt;
          * 
          * 
          */

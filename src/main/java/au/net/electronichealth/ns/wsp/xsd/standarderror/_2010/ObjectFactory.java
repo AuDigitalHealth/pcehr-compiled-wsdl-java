@@ -1,7 +1,7 @@
 
 package au.net.electronichealth.ns.wsp.xsd.standarderror._2010;
 
-import javax.xml.bind.annotation.XmlRegistry;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**

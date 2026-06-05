@@ -1,41 +1,41 @@
 
 package oasis.names.tc.ebxml_regrep.xsd.query._3;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>Java class for CompoundFilterType complex type.
+ * &lt;p&gt;Java class for CompoundFilterType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="CompoundFilterType">
- *   &lt;complexContent>
- *     &lt;extension base="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}FilterType">
- *       &lt;sequence>
- *         &lt;element name="LeftFilter" type="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}FilterType"/>
- *         &lt;element name="RightFilter" type="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}FilterType"/>
- *       &lt;/sequence>
- *       &lt;attribute name="logicalOperator" use="required">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NCName">
- *             &lt;enumeration value="AND"/>
- *             &lt;enumeration value="OR"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="CompoundFilterType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}FilterType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="LeftFilter" type="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}FilterType"/&gt;
+ *         &lt;element name="RightFilter" type="{urn:oasis:names:tc:ebxml-regrep:xsd:query:3.0}FilterType"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="logicalOperator" use="required"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NCName"&gt;
+ *             &lt;enumeration value="AND"/&gt;
+ *             &lt;enumeration value="OR"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */

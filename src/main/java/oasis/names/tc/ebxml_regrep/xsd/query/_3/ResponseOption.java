@@ -1,39 +1,39 @@
 
 package oasis.names.tc.ebxml_regrep.xsd.query._3;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
- * <p>Java class for ResponseOptionType complex type.
+ * &lt;p&gt;Java class for ResponseOptionType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="ResponseOptionType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;attribute name="returnType" default="RegistryObject">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NCName">
- *             &lt;enumeration value="ObjectRef"/>
- *             &lt;enumeration value="RegistryObject"/>
- *             &lt;enumeration value="LeafClass"/>
- *             &lt;enumeration value="LeafClassWithRepositoryItem"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *       &lt;attribute name="returnComposedObjects" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="ResponseOptionType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;attribute name="returnType" default="RegistryObject"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NCName"&gt;
+ *             &lt;enumeration value="ObjectRef"/&gt;
+ *             &lt;enumeration value="RegistryObject"/&gt;
+ *             &lt;enumeration value="LeafClass"/&gt;
+ *             &lt;enumeration value="LeafClassWithRepositoryItem"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="returnComposedObjects" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */

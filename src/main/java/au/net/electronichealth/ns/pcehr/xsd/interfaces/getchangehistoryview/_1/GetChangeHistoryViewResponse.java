@@ -2,44 +2,44 @@
 package au.net.electronichealth.ns.pcehr.xsd.interfaces.getchangehistoryview._1;
 
 import java.math.BigInteger;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlAttribute;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 import oasis.names.tc.ebxml_regrep.xsd.rim._3.RegistryObjectList;
 import oasis.names.tc.ebxml_regrep.xsd.rs._3.RegistryResponseType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="AdhocQueryResponse">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;extension base="{urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0}RegistryResponseType">
- *                 &lt;sequence>
- *                   &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}RegistryObjectList"/>
- *                 &lt;/sequence>
- *                 &lt;attribute name="startIndex" type="{http://www.w3.org/2001/XMLSchema}integer" />
- *                 &lt;attribute name="totalResultCount" type="{http://www.w3.org/2001/XMLSchema}integer" />
- *               &lt;/extension>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="AdhocQueryResponse"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;extension base="{urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0}RegistryResponseType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}RegistryObjectList"/&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attribute name="startIndex" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+ *                 &lt;attribute name="totalResultCount" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -79,23 +79,23 @@ public class GetChangeHistoryViewResponse {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
      * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;extension base="{urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0}RegistryResponseType">
-     *       &lt;sequence>
-     *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}RegistryObjectList"/>
-     *       &lt;/sequence>
-     *       &lt;attribute name="startIndex" type="{http://www.w3.org/2001/XMLSchema}integer" />
-     *       &lt;attribute name="totalResultCount" type="{http://www.w3.org/2001/XMLSchema}integer" />
-     *     &lt;/extension>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;extension base="{urn:oasis:names:tc:ebxml-regrep:xsd:rs:3.0}RegistryResponseType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element ref="{urn:oasis:names:tc:ebxml-regrep:xsd:rim:3.0}RegistryObjectList"/&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="startIndex" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+     *       &lt;attribute name="totalResultCount" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
+     * }&lt;/pre&gt;
      * 
      * 
      */

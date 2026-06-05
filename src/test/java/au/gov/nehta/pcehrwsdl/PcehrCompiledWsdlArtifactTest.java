@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Enumeration;
 import java.util.List;
-import javax.xml.ws.WebServiceClient;
+import jakarta.xml.ws.WebServiceClient;
 import org.junit.Test;
 
 /**

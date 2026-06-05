@@ -3,11 +3,11 @@ package au.net.electronichealth.ns.pcehr.xsd.interfaces.getindividualdetailsview
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ContactDetailsType;
 import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.ContactPersonTypeSupp;
 import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.DateAccuracyIndicatorType;
@@ -18,59 +18,59 @@ import au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1.StatusT
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="responseStatus" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}responseStatusType"/>
- *         &lt;element name="individual" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;extension base="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}individualTypeSupp">
- *                 &lt;sequence>
- *                   &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}dateAccuracyIndicatorType" minOccurs="0"/>
- *                   &lt;element name="ihiRecordStatus" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}recordStatusType" minOccurs="0"/>
- *                   &lt;element name="ihiStatus" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}statusType" minOccurs="0"/>
- *                   &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/>
- *                   &lt;element name="contactDetails" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}contactDetailsType" minOccurs="0"/>
- *                   &lt;element name="contactPersons" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="contactPerson" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}contactPersonTypeSupp" maxOccurs="unbounded"/>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="indigenousStatus">
- *                     &lt;simpleType>
- *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                         &lt;minLength value="1"/>
- *                         &lt;enumeration value="1"/>
- *                         &lt;enumeration value="2"/>
- *                         &lt;enumeration value="3"/>
- *                         &lt;enumeration value="4"/>
- *                         &lt;enumeration value="9"/>
- *                       &lt;/restriction>
- *                     &lt;/simpleType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/extension>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="responseStatus" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}responseStatusType"/&gt;
+ *         &lt;element name="individual" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;extension base="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}individualTypeSupp"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}dateAccuracyIndicatorType" minOccurs="0"/&gt;
+ *                   &lt;element name="ihiRecordStatus" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}recordStatusType" minOccurs="0"/&gt;
+ *                   &lt;element name="ihiStatus" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}statusType" minOccurs="0"/&gt;
+ *                   &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/&gt;
+ *                   &lt;element name="contactDetails" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}contactDetailsType" minOccurs="0"/&gt;
+ *                   &lt;element name="contactPersons" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="contactPerson" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}contactPersonTypeSupp" maxOccurs="unbounded"/&gt;
+ *                           &lt;/sequence&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="indigenousStatus"&gt;
+ *                     &lt;simpleType&gt;
+ *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                         &lt;minLength value="1"/&gt;
+ *                         &lt;enumeration value="1"/&gt;
+ *                         &lt;enumeration value="2"/&gt;
+ *                         &lt;enumeration value="3"/&gt;
+ *                         &lt;enumeration value="4"/&gt;
+ *                         &lt;enumeration value="9"/&gt;
+ *                       &lt;/restriction&gt;
+ *                     &lt;/simpleType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -136,48 +136,48 @@ public class GetIndividualDetailsViewResponse {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
      * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;extension base="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}individualTypeSupp">
-     *       &lt;sequence>
-     *         &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}dateAccuracyIndicatorType" minOccurs="0"/>
-     *         &lt;element name="ihiRecordStatus" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}recordStatusType" minOccurs="0"/>
-     *         &lt;element name="ihiStatus" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}statusType" minOccurs="0"/>
-     *         &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/>
-     *         &lt;element name="contactDetails" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}contactDetailsType" minOccurs="0"/>
-     *         &lt;element name="contactPersons" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="contactPerson" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}contactPersonTypeSupp" maxOccurs="unbounded"/>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="indigenousStatus">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *               &lt;minLength value="1"/>
-     *               &lt;enumeration value="1"/>
-     *               &lt;enumeration value="2"/>
-     *               &lt;enumeration value="3"/>
-     *               &lt;enumeration value="4"/>
-     *               &lt;enumeration value="9"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/extension>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;extension base="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}individualTypeSupp"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}dateAccuracyIndicatorType" minOccurs="0"/&gt;
+     *         &lt;element name="ihiRecordStatus" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}recordStatusType" minOccurs="0"/&gt;
+     *         &lt;element name="ihiStatus" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}statusType" minOccurs="0"/&gt;
+     *         &lt;element ref="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}ihiNumber"/&gt;
+     *         &lt;element name="contactDetails" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}contactDetailsType" minOccurs="0"/&gt;
+     *         &lt;element name="contactPersons" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="contactPerson" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}contactPersonTypeSupp" maxOccurs="unbounded"/&gt;
+     *                 &lt;/sequence&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="indigenousStatus"&gt;
+     *           &lt;simpleType&gt;
+     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *               &lt;minLength value="1"/&gt;
+     *               &lt;enumeration value="1"/&gt;
+     *               &lt;enumeration value="2"/&gt;
+     *               &lt;enumeration value="3"/&gt;
+     *               &lt;enumeration value="4"/&gt;
+     *               &lt;enumeration value="9"/&gt;
+     *             &lt;/restriction&gt;
+     *           &lt;/simpleType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
+     * }&lt;/pre&gt;
      * 
      * 
      */
@@ -376,21 +376,21 @@ public class GetIndividualDetailsViewResponse {
 
 
         /**
-         * <p>Java class for anonymous complex type.
+         * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
          * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
+         * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
          * 
-         * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="contactPerson" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}contactPersonTypeSupp" maxOccurs="unbounded"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
-         * </pre>
+         * &lt;pre&gt;{&#064;code
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="contactPerson" type="{http://ns.electronichealth.net.au/pcehr/xsd/common/CommonCoreElements/1.0}contactPersonTypeSupp" maxOccurs="unbounded"/&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
+         * }&lt;/pre&gt;
          * 
          * 
          */

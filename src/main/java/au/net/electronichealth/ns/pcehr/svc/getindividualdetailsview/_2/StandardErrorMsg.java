@@ -1,7 +1,7 @@
 
 package au.net.electronichealth.ns.pcehr.svc.getindividualdetailsview._2;
 
-import javax.xml.ws.WebFault;
+import jakarta.xml.ws.WebFault;
 import au.net.electronichealth.ns.wsp.xsd.standarderror._2010.StandardError;
 
 

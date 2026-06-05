@@ -4,80 +4,80 @@ package au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlSchemaType;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import au.gov.nehta.schema.DateAdapter;
 
 
 /**
- * <p>Java class for organisationServiceType complex type.
+ * &lt;p&gt;Java class for organisationServiceType complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType name="organisationServiceType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="organisationType">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *               &lt;maxLength value="7"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
- *         &lt;element name="organisationServiceType">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *               &lt;maxLength value="7"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
- *         &lt;element name="organisationServiceUnit" minOccurs="0">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *               &lt;maxLength value="1000"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
- *         &lt;element name="serviceComments" minOccurs="0">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *               &lt;maxLength value="250"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
- *         &lt;element name="complexDate" maxOccurs="unbounded">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="type">
- *                     &lt;simpleType>
- *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                         &lt;enumeration value="StartDate"/>
- *                         &lt;enumeration value="EndDate"/>
- *                       &lt;/restriction>
- *                     &lt;/simpleType>
- *                   &lt;/element>
- *                   &lt;element name="date" type="{http://www.w3.org/2001/XMLSchema}date"/>
- *                   &lt;element name="accuracyIndicator" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType name="organisationServiceType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="organisationType"&gt;
+ *           &lt;simpleType&gt;
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *               &lt;maxLength value="7"/&gt;
+ *             &lt;/restriction&gt;
+ *           &lt;/simpleType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="organisationServiceType"&gt;
+ *           &lt;simpleType&gt;
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *               &lt;maxLength value="7"/&gt;
+ *             &lt;/restriction&gt;
+ *           &lt;/simpleType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="organisationServiceUnit" minOccurs="0"&gt;
+ *           &lt;simpleType&gt;
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *               &lt;maxLength value="1000"/&gt;
+ *             &lt;/restriction&gt;
+ *           &lt;/simpleType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="serviceComments" minOccurs="0"&gt;
+ *           &lt;simpleType&gt;
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *               &lt;maxLength value="250"/&gt;
+ *             &lt;/restriction&gt;
+ *           &lt;/simpleType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="complexDate" maxOccurs="unbounded"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="type"&gt;
+ *                     &lt;simpleType&gt;
+ *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                         &lt;enumeration value="StartDate"/&gt;
+ *                         &lt;enumeration value="EndDate"/&gt;
+ *                       &lt;/restriction&gt;
+ *                     &lt;/simpleType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="date" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
+ *                   &lt;element name="accuracyIndicator" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -227,30 +227,30 @@ public class OrganisationServiceType {
 
 
     /**
-     * <p>Java class for anonymous complex type.
+     * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
      * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="type">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *               &lt;enumeration value="StartDate"/>
-     *               &lt;enumeration value="EndDate"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="date" type="{http://www.w3.org/2001/XMLSchema}date"/>
-     *         &lt;element name="accuracyIndicator" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
+     * &lt;pre&gt;{&#064;code
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="type"&gt;
+     *           &lt;simpleType&gt;
+     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *               &lt;enumeration value="StartDate"/&gt;
+     *               &lt;enumeration value="EndDate"/&gt;
+     *             &lt;/restriction&gt;
+     *           &lt;/simpleType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="date" type="{http://www.w3.org/2001/XMLSchema}date"/&gt;
+     *         &lt;element name="accuracyIndicator" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
+     * }&lt;/pre&gt;
      * 
      * 
      */
@@ -345,18 +345,17 @@ public class OrganisationServiceType {
 
 
         /**
-         * <p>Java class for null.
+         * &lt;p&gt;Java class for null&lt;/p&gt;.
          * 
-         * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
-         * <pre>
-         * &lt;simpleType>
-         *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-         *     &lt;enumeration value="StartDate"/>
-         *     &lt;enumeration value="EndDate"/>
-         *   &lt;/restriction>
-         * &lt;/simpleType>
-         * </pre>
+         * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+         * &lt;pre&gt;{&#064;code
+         * &lt;simpleType&gt;
+         *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+         *     &lt;enumeration value="StartDate"/&gt;
+         *     &lt;enumeration value="EndDate"/&gt;
+         *   &lt;/restriction&gt;
+         * &lt;/simpleType&gt;
+         * }&lt;/pre&gt;
          * 
          */
         @XmlType(name = "")

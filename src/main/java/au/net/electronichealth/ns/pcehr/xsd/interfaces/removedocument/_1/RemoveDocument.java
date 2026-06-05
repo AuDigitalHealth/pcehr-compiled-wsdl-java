@@ -1,40 +1,40 @@
 
 package au.net.electronichealth.ns.pcehr.xsd.interfaces.removedocument._1;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * &lt;p&gt;Java class for anonymous complex type&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
  * 
- * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="documentID" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="reasonForRemoval">
- *           &lt;simpleType>
- *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *               &lt;enumeration value="Withdrawn"/>
- *               &lt;enumeration value="ElectToRemove"/>
- *               &lt;enumeration value="IncorrectIdentity"/>
- *             &lt;/restriction>
- *           &lt;/simpleType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
- * </pre>
+ * &lt;pre&gt;{&#064;code
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="documentID" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="reasonForRemoval"&gt;
+ *           &lt;simpleType&gt;
+ *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *               &lt;enumeration value="Withdrawn"/&gt;
+ *               &lt;enumeration value="ElectToRemove"/&gt;
+ *               &lt;enumeration value="IncorrectIdentity"/&gt;
+ *             &lt;/restriction&gt;
+ *           &lt;/simpleType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
+ * }&lt;/pre&gt;
  * 
  * 
  */
@@ -101,19 +101,18 @@ public class RemoveDocument {
 
 
     /**
-     * <p>Java class for null.
+     * &lt;p&gt;Java class for null&lt;/p&gt;.
      * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * <p>
-     * <pre>
-     * &lt;simpleType>
-     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *     &lt;enumeration value="Withdrawn"/>
-     *     &lt;enumeration value="ElectToRemove"/>
-     *     &lt;enumeration value="IncorrectIdentity"/>
-     *   &lt;/restriction>
-     * &lt;/simpleType>
-     * </pre>
+     * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+     * &lt;pre&gt;{&#064;code
+     * &lt;simpleType&gt;
+     *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *     &lt;enumeration value="Withdrawn"/&gt;
+     *     &lt;enumeration value="ElectToRemove"/&gt;
+     *     &lt;enumeration value="IncorrectIdentity"/&gt;
+     *   &lt;/restriction&gt;
+     * &lt;/simpleType&gt;
+     * }&lt;/pre&gt;
      * 
      */
     @XmlType(name = "")

@@ -1,25 +1,24 @@
 
 package au.net.electronichealth.ns.pcehr.xsd.common.commoncoreelements._1;
 
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlEnum;
+import jakarta.xml.bind.annotation.XmlEnumValue;
+import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for recordStatusTypeSupp.
+ * &lt;p&gt;Java class for recordStatusTypeSupp&lt;/p&gt;.
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
- * <pre>
- * &lt;simpleType name="recordStatusTypeSupp">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="Verified"/>
- *     &lt;enumeration value="Unverified"/>
- *     &lt;enumeration value="Provisional"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
- * </pre>
+ * &lt;p&gt;The following schema fragment specifies the expected content contained within this class.&lt;/p&gt;
+ * &lt;pre&gt;{&#064;code
+ * &lt;simpleType name="recordStatusTypeSupp"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="Verified"/&gt;
+ *     &lt;enumeration value="Unverified"/&gt;
+ *     &lt;enumeration value="Provisional"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
+ * }&lt;/pre&gt;
  * 
  */
 @XmlType(name = "recordStatusTypeSupp")
